@@ -22,10 +22,10 @@ DATA_PATH = REPO_ROOT / "digests" / "data.json"
 MODEL = "claude-sonnet-4-6"
 MAX_ENTRIES = 300  # cap file size; oldest entries drop off the end
 
-PROMPT = """Search the web and find the most notable AI / tech news from the
-last few hours. If nothing genuinely new has happened since typical news
-cycles, it's fine to return fewer bullets rather than padding with old or
-speculative stories.
+PROMPT = """Search the web (at most 1-2 searches) and find the most notable
+AI / tech news from the last few hours. If nothing genuinely new has happened
+since typical news cycles, it's fine to return fewer bullets rather than
+padding with old or speculative stories.
 
 Respond with ONLY a raw JSON object (no markdown fences, no commentary)
 matching exactly this schema:
