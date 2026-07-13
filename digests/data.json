@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-13T15:40:46.783518+00:00",
+    "headline": "AI liability debate surges as chatbot/agent responsibility questions intensify; Anthropic's Claude Fable 5 returns after export ban lifted",
+    "bullets": [
+      {
+        "title": "Who's Responsible When AI Goes Wrong?",
+        "summary": "The rapid spread of chatbots and AI agents is intensifying a debate over who should be held responsible when something goes wrong, with regulators and courts increasingly scrutinizing the industry.",
+        "source": "Washington Post"
+      },
+      {
+        "title": "OpenAI Issues Fix After Reset Bug Hits ChatGPT and Codex Users",
+        "summary": "OpenAI granted a banked reset to approximately 500,000 ChatGPT Work and Codex users after a reset bug impacted under 10% of users on the platform.",
+        "source": "Crypto Integrated"
+      },
+      {
+        "title": "Anthropic's Claude Fable 5 Returns After Export Controls Lifted",
+        "summary": "The US Commerce Department lifted export controls on Anthropic's flagship Claude Fable 5 model, bringing it back online with enhanced security features including a new classifier blocking the jailbreak technique that triggered the original ban.",
+        "source": "Crescendo AI / Washington Post"
+      },
+      {
+        "title": "Qualcomm in Early Talks to Acquire AI Chip Firm Tenstorrent for $8\u201310B",
+        "summary": "Qualcomm is reportedly in early discussions to acquire RISC-V AI chipmaker Tenstorrent \u2014 led by chip veteran Jim Keller \u2014 for between $8 and $10 billion, a move that would give Qualcomm a stronger foothold in the AI hardware market dominated by Nvidia.",
+        "source": "Crescendo AI"
+      },
+      {
+        "title": "Google Gemini 2.5 Pro with Deep Think Tops Science Benchmarks",
+        "summary": "Google launched Gemini 2.5 Pro featuring a Deep Think reasoning mode, achieving scores that surpass OpenAI's GPT-5.5 and Anthropic's Fable 5 on major science benchmarks, available to Google AI Ultra subscribers.",
+        "source": "Crescendo AI"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-13T12:29:27.096417+00:00",
     "headline": "Google's Gemini 2.5 Pro tops science benchmarks; Anthropic's Claude Fable 5 returns after export-control ban; Qualcomm eyes $8\u201310B Tenstorrent acquisition",
     "bullets": [
