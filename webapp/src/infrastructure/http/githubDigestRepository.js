@@ -3,13 +3,15 @@ import { DigestEntry } from '@/domain/digest/DigestEntry'
 const DEFAULT_DATA_URL =
   'https://raw.githubusercontent.com/KicKerBNU/tech-news/master/digests/data.json'
 
+const DATA_URL = import.meta.env.VITE_DATA_URL || DEFAULT_DATA_URL
+
 /**
  * Repository for digest entries, backed by a raw file on GitHub's CDN.
  * Everything above this layer (store, views) only knows "fetchAll() -> DigestEntry[]",
  * not that it happens to be a raw GitHub URL — swap this file alone if the
  * data source ever changes (a real API, etc.) and nothing else needs to move.
  */
-export function createGithubDigestRepository(dataUrl = DEFAULT_DATA_URL) {
+export function createGithubDigestRepository(dataUrl = DATA_URL) {
   return {
     async fetchAll() {
       const response = await fetch(`${dataUrl}?t=${Date.now()}`) // cache-bust the CDN

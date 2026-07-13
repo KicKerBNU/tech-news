@@ -35,15 +35,15 @@ to confirm it works without waiting.
 `webapp/src/App.vue` already points at:
 
 ```
-https://raw.githubusercontent.com/KicKerBNU/tech-news/main/digests/data.json
+https://raw.githubusercontent.com/KicKerBNU/tech-news/master/digests/data.json
 ```
 
-Nothing to change — this works as-is once you push to `main`. If you ever
+Nothing to change — this works as-is once you push to `master`. If you ever
 fork or rename the repo, either edit that line or set an environment
 variable in Netlify instead (no code edit needed):
 
 - Variable name: `VITE_DATA_URL`
-- Value: `https://raw.githubusercontent.com/<you>/<repo>/main/digests/data.json`
+- Value: `https://raw.githubusercontent.com/<you>/<repo>/master/digests/data.json`
 
 ## 5. Deploy to Netlify
 

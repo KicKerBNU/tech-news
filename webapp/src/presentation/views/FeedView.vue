@@ -23,7 +23,14 @@ const lastSyncedLabel = computed(() =>
     <AppHeader />
 
     <main class="mx-auto w-full max-w-[780px] flex-1 px-5 pb-16 pt-8">
-      <EmptyState v-if="!store.hasEntries" />
+      <p
+        v-if="store.status === 'loading' && !store.hasEntries"
+        class="px-5 py-20 text-center font-mono text-[13px] tracking-[0.1em] text-text-muted"
+      >
+        — SYNCING TRANSMISSIONS —
+      </p>
+
+      <EmptyState v-else-if="store.status === 'ready' && !store.hasEntries" />
 
       <RouterLink
         v-for="(entry, i) in store.entries"
