@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "timestamp": "2026-07-13T09:53:39.181110+00:00",
+    "headline": "Apple sues OpenAI for trade secret theft in high-stakes AI hardware battle",
+    "bullets": [
+      {
+        "title": "Apple Sues OpenAI Over Alleged Trade Secret Theft",
+        "summary": "Apple filed a federal lawsuit against OpenAI on July 10, alleging the company orchestrated a systematic campaign to steal hardware trade secrets by poaching and coaching former Apple engineers. The suit names OpenAI's Chief Hardware Officer Tang Tan and engineer Chang Liu as defendants, and demands OpenAI destroy proprietary materials and redesign products built on Apple IP.",
+        "source": "CNN / Bloomberg / Macworld"
+      },
+      {
+        "title": "OpenAI Launches GPT-5.6 Model Family After U.S. Government Clearance",
+        "summary": "OpenAI officially rolled out its GPT-5.6 family \u2014 flagship Sol, balanced Terra, and budget Luna \u2014 on July 9 after completing a U.S. government review. The models feature improved agentic capabilities in coding, biology, and cybersecurity, with Sol priced at $5/$30 per million tokens.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Cloudflare to Block AI Training & Agent Bots by Default Starting Sept. 15",
+        "summary": "Cloudflare announced that starting September 15, 2026, all new domains will have AI Training and Agent bots blocked by default on ad-supported pages, while Search crawlers remain permitted. The move, available to all users including free tier, replaces a single blanket toggle with three independent controls for Search, Agent, and Training bot categories.",
+        "source": "Cloudflare Blog / TechTimes"
+      },
+      {
+        "title": "China's ByteDance & Alibaba Disable Humanlike AI Features Ahead of New Regulations",
+        "summary": "ByteDance's Doubao and Alibaba's Qwen are disabling or modifying customizable, humanlike AI agent features as Chinese regulations governing anthropomorphic AI services take effect July 15. The rules target AI systems designed to simulate human personalities, relationships, and emotional interaction.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Anthropic's Claude Fable 5 Returns After U.S. Export Control Lift",
+        "summary": "The U.S. Commerce Department lifted export controls on Anthropic's Claude Fable 5 on July 1, after nearly three weeks offline following a jailbreak incident. The model returned with enhanced security, including a new classifier blocking the technique that triggered the original ban.",
+        "source": "Crescendo AI News"
+      }
+    ]
+  }
+]
