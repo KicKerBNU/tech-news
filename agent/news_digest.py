@@ -46,7 +46,7 @@ def call_claude() -> dict:
     response = client.messages.create(
         model=MODEL,
         max_tokens=1200,
-        tools=[{"type": "web_search_20250305", "name": "web_search"}],
+        tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 2}],
         messages=[{"role": "user", "content": PROMPT}],
     )
 
