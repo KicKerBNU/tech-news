@@ -1,7 +1,7 @@
 import { DigestEntry } from '@/domain/digest/DigestEntry'
 
 const DEFAULT_DATA_URL =
-  'https://raw.githubusercontent.com/KicKerBNU/tech-news/main/digests/data.json'
+  'https://raw.githubusercontent.com/KicKerBNU/tech-news/master/digests/data.json'
 
 /**
  * Repository for digest entries, backed by a raw file on GitHub's CDN.
