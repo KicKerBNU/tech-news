@@ -14,6 +14,17 @@ export function getNextDailyUtcAt(hour = 8, now = new Date()) {
   return next.getTime()
 }
 
+const MONTH_LABELS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+
+/** e.g. "14 JUL 08:00 UTC" — when the next daily transmission lands */
+export function formatNextDailyTransmissionAt(hour = 8, now = new Date()) {
+  const next = new Date(getNextDailyUtcAt(hour, now))
+  const day = String(next.getUTCDate()).padStart(2, '0')
+  const month = MONTH_LABELS[next.getUTCMonth()]
+  const time = `${String(hour).padStart(2, '0')}:00 UTC`
+  return `${day} ${month} ${time}`
+}
+
 /** Countdown string between now and a future timestamp (ms). Includes hours when needed. */
 export function formatCountdown(targetMs, nowMs) {
   const totalSeconds = Math.floor(Math.max(0, targetMs - nowMs) / 1000)

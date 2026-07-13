@@ -1,15 +1,18 @@
 <script setup>
 import { computed } from 'vue'
-import { useDigestStore } from '@/application/stores/digestStore'
+import { useDigestStore, DAILY_UPDATE_HOUR_UTC } from '@/application/stores/digestStore'
 import { useClock } from '@/presentation/composables/useClock'
-import { formatUtcClock, formatCountdown } from '@/shared/utils/time'
+import { formatUtcClock, formatCountdown, formatNextDailyTransmissionAt, getNextDailyUtcAt } from '@/shared/utils/time'
 
 const store = useDigestStore()
 const { now } = useClock()
 
 const clockLabel = computed(() => formatUtcClock(now.value))
+const nextTransmissionLabel = computed(() =>
+  formatNextDailyTransmissionAt(DAILY_UPDATE_HOUR_UTC, now.value)
+)
 const countdownLabel = computed(() =>
-  formatCountdown(store.nextRefreshAt, now.value.getTime())
+  formatCountdown(getNextDailyUtcAt(DAILY_UPDATE_HOUR_UTC, now.value), now.value.getTime())
 )
 </script>
 
@@ -31,7 +34,7 @@ const countdownLabel = computed(() =>
     <div class="font-mono text-xs tracking-[0.04em] text-text-muted">
       <span>{{ clockLabel }}</span>
       <span class="mx-2 opacity-50">·</span>
-      <span>NEXT TRANSMISSION 08:00 UTC · {{ countdownLabel }}</span>
+      <span>NEXT TRANSMISSION {{ nextTransmissionLabel }} · IN {{ countdownLabel }}</span>
     </div>
   </header>
 </template>
