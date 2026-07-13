@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-13T12:29:27.096417+00:00",
+    "headline": "Google's Gemini 2.5 Pro tops science benchmarks; Anthropic's Claude Fable 5 returns after export-control ban; Qualcomm eyes $8\u201310B Tenstorrent acquisition",
+    "bullets": [
+      {
+        "title": "Google Gemini 2.5 Pro Surpasses GPT-5.5 and Claude Fable 5 on Science Benchmarks",
+        "summary": "Google launched Gemini 2.5 Pro with a Deep Think reasoning mode, scoring 82.4% on GPQA Diamond and 89.8% on MMLU-Pro \u2014 outperforming OpenAI's GPT-5.5 and Anthropic's Fable 5. The model features a 2-million-token context window and is available to Google AI Ultra subscribers.",
+        "source": "Crescendo AI / crescendo.ai"
+      },
+      {
+        "title": "Anthropic's Claude Fable 5 Returns After US Export-Control Suspension",
+        "summary": "The US Commerce Department lifted export controls on Anthropic's Claude Fable 5 on July 1, after the flagship model was taken offline for nearly three weeks. It returns with enhanced security, including a new classifier that blocks the jailbreak technique that triggered the original ban.",
+        "source": "Crescendo AI / crescendo.ai"
+      },
+      {
+        "title": "Qualcomm in Early Talks to Acquire AI Chip Firm Tenstorrent for $8\u201310 Billion",
+        "summary": "Qualcomm is reportedly in early discussions to acquire Tenstorrent, an AI chip designer using the open RISC-V standard led by chip veteran Jim Keller. The deal would give Qualcomm a stronger foothold in the AI hardware market currently dominated by Nvidia and AMD.",
+        "source": "Crescendo AI / crescendo.ai"
+      },
+      {
+        "title": "China's Z.ai GLM-5.2 Sparks Debate Over US\u2013China AI Parity",
+        "summary": "Z.ai's GLM-5.2 model is fueling debate over whether China is closing the AI gap with the US, demonstrating capabilities comparable to leading models from Anthropic and OpenAI at a lower cost. Analysts say it reflects China's systematic push to achieve technological parity across consumer and enterprise AI.",
+        "source": "Crescendo AI / crescendo.ai"
+      },
+      {
+        "title": "NVIDIA and SK Hynix Ink Multiyear Memory Partnership for AI Infrastructure",
+        "summary": "NVIDIA and SK Hynix announced a multiyear co-development partnership for next-generation memory spanning NVIDIA's Vera Rubin AI supercomputers, Vera CPUs, RTX Spark PCs, and Jetson Thor robotics platforms. SK Hynix will also use NVIDIA tools to build digital twins for autonomous semiconductor fab operations.",
+        "source": "Crescendo AI / crescendo.ai"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-13T09:53:39.181110+00:00",
     "headline": "Apple sues OpenAI for trade secret theft in high-stakes AI hardware battle",
     "bullets": [
