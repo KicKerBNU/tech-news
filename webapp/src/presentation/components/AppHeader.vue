@@ -31,7 +31,7 @@ const countdownLabel = computed(() =>
     <div class="font-mono text-xs tracking-[0.04em] text-text-muted">
       <span>{{ clockLabel }}</span>
       <span class="mx-2 opacity-50">·</span>
-      <span>NEXT TRANSMISSION {{ countdownLabel }}</span>
+      <span>NEXT TRANSMISSION 08:00 UTC · {{ countdownLabel }}</span>
     </div>
   </header>
 </template>

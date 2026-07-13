@@ -1,7 +1,9 @@
 import { defineStore } from 'pinia'
 import { createGithubDigestRepository } from '@/infrastructure/http/githubDigestRepository'
+import { getNextDailyUtcAt } from '@/shared/utils/time'
 
-export const REFRESH_INTERVAL_MS = 10 * 60 * 1000 // matches the agent's cadence
+export const DAILY_UPDATE_HOUR_UTC = 8 // matches .github/workflows/digest.yml cron
+export const REFRESH_INTERVAL_MS = 30 * 60 * 1000 // poll every 30 min to catch the daily drop
 
 const repository = createGithubDigestRepository()
 
@@ -10,7 +12,7 @@ export const useDigestStore = defineStore('digest', {
     entries: /** @type {import('@/domain/digest/DigestEntry').DigestEntry[]} */ ([]),
     status: 'idle', // 'idle' | 'loading' | 'ready' | 'error'
     lastFetchedAt: /** @type {Date|null} */ (null),
-    nextRefreshAt: Date.now() + REFRESH_INTERVAL_MS,
+    nextRefreshAt: getNextDailyUtcAt(DAILY_UPDATE_HOUR_UTC),
   }),
 
   getters: {
@@ -29,7 +31,7 @@ export const useDigestStore = defineStore('digest', {
         this.status = 'error'
       } finally {
         this.lastFetchedAt = new Date()
-        this.nextRefreshAt = Date.now() + REFRESH_INTERVAL_MS
+        this.nextRefreshAt = getNextDailyUtcAt(DAILY_UPDATE_HOUR_UTC)
       }
     },
 

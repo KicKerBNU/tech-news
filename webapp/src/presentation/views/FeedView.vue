@@ -43,7 +43,8 @@ const lastSyncedLabel = computed(() =>
     </main>
 
     <footer class="border-t border-border px-4 py-4 text-center font-mono text-[11px] text-text-muted">
-      <span v-if="lastSyncedLabel">Last synced {{ lastSyncedLabel }}</span>
+      <span>Updated daily at 08:00 UTC</span>
+      <span v-if="lastSyncedLabel"> · last synced {{ lastSyncedLabel }}</span>
       <span v-if="store.hasError" class="text-error"> · sync failed, retrying next cycle</span>
     </footer>
   </div>

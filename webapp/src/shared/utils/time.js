@@ -3,10 +3,23 @@ export function formatUtcClock(date) {
   return date.toISOString().slice(11, 19) + ' UTC'
 }
 
-/** mm:ss countdown string between now and a future timestamp (ms) */
+/** Next occurrence of `hour`:00 UTC (e.g. 08:00 UTC for the daily digest). */
+export function getNextDailyUtcAt(hour = 8, now = new Date()) {
+  const next = new Date(
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), hour, 0, 0, 0)
+  )
+  if (next.getTime() <= now.getTime()) {
+    next.setUTCDate(next.getUTCDate() + 1)
+  }
+  return next.getTime()
+}
+
+/** Countdown string between now and a future timestamp (ms). Includes hours when needed. */
 export function formatCountdown(targetMs, nowMs) {
   const totalSeconds = Math.floor(Math.max(0, targetMs - nowMs) / 1000)
-  const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, '0')
+  const hours = Math.floor(totalSeconds / 3600)
+  const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0')
   const seconds = String(totalSeconds % 60).padStart(2, '0')
-  return `${minutes}:${seconds}`
+  if (hours > 0) return `${hours}:${minutes}:${seconds}`
+  return `${String(Math.floor(totalSeconds / 60)).padStart(2, '0')}:${seconds}`
 }
