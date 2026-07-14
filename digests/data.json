@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-14T09:47:24.068864+00:00",
+    "headline": "OpenAI offers US government a $42.6B stake as Google prepares Gemini 3.5 Pro launch and Shanghai AI summit looms on July 17",
+    "bullets": [
+      {
+        "title": "OpenAI Proposes 5% Government Stake Worth $42.6 Billion",
+        "summary": "OpenAI has proposed giving the US government a 5% equity stake worth roughly $42.6 billion at its $852B valuation, with Sam Altman pitching the idea directly to President Trump and senior cabinet members. A new survey shows 69% of US workers support requiring AI firms to transfer significant equity to a public sovereign wealth fund, suggesting real political pressure behind the move.",
+        "source": "Build Fast With AI"
+      },
+      {
+        "title": "Google Gemini 3.5 Pro Launch and Shanghai World AI Conference Set for July 17",
+        "summary": "Google's Gemini 3.5 Pro is expected to launch on July 17, the same day Shanghai's 2026 World Artificial Intelligence Conference opens \u2014 with President Xi Jinping attending in person for the first time since the event began in 2018. The convergence makes July 17 the single most consequential day on the AI calendar this year.",
+        "source": "Build Fast With AI"
+      },
+      {
+        "title": "TSMC Posts Record Revenue on AI Demand; Google Rations Gemini Access to Meta",
+        "summary": "TSMC reported record quarterly revenue driven by surging AI chip demand, while Google reportedly ran short on compute capacity and began rationing Gemini model access to Meta. The twin developments underscore intensifying pressure on global AI infrastructure.",
+        "source": "Build Fast With AI"
+      },
+      {
+        "title": "Qualcomm in Early Talks to Acquire AI Chip Startup Tenstorrent for $8\u201310 Billion",
+        "summary": "Qualcomm is reportedly in early-stage talks to acquire Tenstorrent, a RISC-V-based AI chip designer led by chip veteran Jim Keller, for between $8 and $10 billion. The deal would give Qualcomm a meaningful foothold in AI hardware currently dominated by Nvidia and AMD.",
+        "source": "Crescendo AI"
+      },
+      {
+        "title": "US Senate Judiciary Committee Examines AI Patent Law on July 14",
+        "summary": "The Senate Judiciary Committee convened today to examine how AI intersects with intellectual property and patent law, part of a broader Washington effort to determine how existing legal frameworks apply when AI systems are involved in invention and creation.",
+        "source": "Build Fast With AI"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-13T15:40:46.783518+00:00",
     "headline": "AI liability debate surges as chatbot/agent responsibility questions intensify; Anthropic's Claude Fable 5 returns after export ban lifted",
     "bullets": [
