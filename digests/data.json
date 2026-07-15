@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-15T09:51:30.310548+00:00",
+    "headline": "TSMC posts all-time revenue record as Anthropic enters Samsung chip talks \u2014 AI infrastructure dominates July 15 news cycle",
+    "bullets": [
+      {
+        "title": "TSMC Posts All-Time Revenue Record Driven by AI Chip Demand",
+        "summary": "TSMC reported June revenue up 68% year-over-year and Q2 revenue of $39.6B, with its N3 process node sold out through year-end \u2014 underscoring the relentless compounding of AI chip spending.",
+        "source": "AIToolsRecap"
+      },
+      {
+        "title": "Anthropic in Early Talks with Samsung for Custom Claude Inference Chips",
+        "summary": "Anthropic is reportedly in early discussions with Samsung to develop custom inference chips, a move directly aimed at reducing its estimated $1.25B/month compute bill.",
+        "source": "AIToolsRecap"
+      },
+      {
+        "title": "Google Unveils Gemini Enterprise at Cloud Next '26",
+        "summary": "Google announced Gemini Enterprise, a governance-focused AI product aimed at competing head-on with Anthropic's Claude for Work and OpenAI's ChatGPT Work in the enterprise market.",
+        "source": "AIToolsRecap"
+      },
+      {
+        "title": "Z.ai Founder Publishes Open AI Memo Amid China Restriction Concerns",
+        "summary": "Z.ai founder Tang Jie published a public memo arguing that AI should remain open, framed as the clearest pushback yet against discussions in China about restricting overseas AI access.",
+        "source": "AIToolsRecap"
+      },
+      {
+        "title": "New York Becomes First U.S. State to Impose AI Data Center Ban",
+        "summary": "New York enacted legislation banning new AI data centers, making it the first U.S. state to take such a step, as concerns over energy consumption and environmental impact intensify.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-14T09:47:24.068864+00:00",
     "headline": "OpenAI offers US government a $42.6B stake as Google prepares Gemini 3.5 Pro launch and Shanghai AI summit looms on July 17",
     "bullets": [
