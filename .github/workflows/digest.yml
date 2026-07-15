@@ -28,6 +28,9 @@ jobs:
       - name: Run digest agent
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          HONEYCOMB_API_KEY: ${{ secrets.HONEYCOMB_API_KEY }}
+          OTEL_SERVICE_NAME: signal-news-digest
+          OTEL_EXPORTER_OTLP_ENDPOINT: https://api.honeycomb.io
         run: python agent/news_digest.py
 
       - name: Commit and push if data changed

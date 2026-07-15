@@ -2,7 +2,7 @@
 
 Repo: https://github.com/KicKerBNU/tech-news
 
-Fully autonomous pipeline: GitHub Actions runs the agent every 10 minutes,
+Fully autonomous pipeline: GitHub Actions runs the agent daily at 08:00 UTC,
 commits results to `digests/data.json`, and a Vue app on Netlify polls that
 file to show a live feed. No server, no human step after setup.
 
@@ -17,16 +17,21 @@ git commit -m "initial: autonomous news wire agent + webapp"
 git push
 ```
 
-## 2. Add your API key as a secret
+## 2. Add your API keys as secrets
 
 In the repo: **Settings → Secrets and variables → Actions → New repository secret**
-- Name: `ANTHROPIC_API_KEY`
-- Value: your Anthropic API key
+
+| Name | Purpose |
+|------|---------|
+| `ANTHROPIC_API_KEY` | Claude API for the digest agent |
+| `HONEYCOMB_API_KEY` | OpenTelemetry traces to Honeycomb (optional) |
+
+Copy `.env.example` to `.env` for local runs. Never commit API keys.
 
 ## 3. Enable Actions (if needed)
 
 Go to the **Actions** tab of your repo and enable workflows if prompted.
-The workflow is already set to run every 10 minutes (`.github/workflows/digest.yml`).
+The workflow runs daily at 08:00 UTC (`.github/workflows/digest.yml`).
 You can also trigger a run manually from that tab (**Run workflow** button)
 to confirm it works without waiting.
 
@@ -69,6 +74,30 @@ webapp/src/
   router/index.js    "/" (feed) and "/entry/:id" (single transmission — reachable via a real permalink)
   shared/utils/time.js                 generic formatting with no domain meaning (clock, countdown)
 ```
+
+## Honeycomb tracing (OpenTelemetry)
+
+The digest agent exports traces to Honeycomb when `HONEYCOMB_API_KEY` is set.
+
+**Dataset:** `signal-news-digest`
+
+**Custom spans:**
+- `digest.run` — full daily job
+- `digest.call_claude` — Anthropic API + web search (auto-instrumented httpx child spans)
+- `digest.load_entries` / `digest.save_entries` — JSON I/O
+
+**Verify locally:**
+```bash
+cd agent
+pip install -r requirements.txt
+export HONEYCOMB_API_KEY=your-key
+python verify_traces.py
+```
+
+**Verify in Honeycomb UI** (query-patterns skill):
+- `COUNT` grouped by `name` — see span volume per operation
+- `P99(duration_ms)` where `name = digest.call_claude` — Claude latency tail
+- `COUNT` where `error = true` grouped by `exception.slug` — failure sites
 
 Deliberately **not** included, per YAGNI: no repository interface/abstract class
 (there's one data source, so one concrete implementation is enough — add an
