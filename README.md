@@ -28,6 +28,8 @@ In the repo: **Settings → Secrets and variables → Actions → New repository
 | `RESEND_API_KEY` | Newsletter — subscribers + email delivery |
 | `RESEND_FROM_EMAIL` | e.g. `SIGNAL <newsletter@yourdomain.com>` |
 | `UNSUBSCRIBE_SECRET` | Random string for signed unsubscribe links |
+| `TELEGRAM_BOT_TOKEN` | Bot token from @BotFather (optional) |
+| `TELEGRAM_CHAT_ID` | Group chat id, e.g. `-1001234567890` (optional) |
 
 Copy `.env.example` to `.env` for local runs. Never commit API keys.
 
@@ -87,6 +89,39 @@ Daily cron → digest agent → commit data.json → send_newsletter.py → Rese
 ```
 
 Each email includes a signed unsubscribe link (`/unsubscribe?email=…&sig=…`).
+
+## 7. Telegram group posts
+
+After each daily digest, GitHub Actions can post the latest transmission to a Telegram group via the **Bot API** (recommended — stable and works in CI).
+
+> **Personal account vs bot:** Messages will appear from your **bot**, not your personal user. That's the supported way to automate posts. You can name/avatar the bot to match SIGNAL. Posting as your personal account would require unofficial user-client APIs (Telethon), phone/session storage, and is fragile in GitHub Actions — not recommended.
+
+### One-time setup
+
+1. Open Telegram → message **@BotFather** → `/newbot` → copy the **token**
+2. Add the bot to your group (promote to admin if the group restricts posting)
+3. Send any message in the group, then open in a browser:
+   ```
+   https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates
+   ```
+   Copy `message.chat.id` (groups are negative numbers like `-1001234567890`)
+4. Add GitHub Secrets: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`
+5. Optional: `TELEGRAM_THREAD_ID` if posting into a specific topic in a forum group
+
+### Test locally
+
+```bash
+cd agent
+export TELEGRAM_BOT_TOKEN=...
+export TELEGRAM_CHAT_ID=...
+python send_telegram.py
+```
+
+### Flow
+
+```
+Daily cron → digest agent → commit data.json → send_telegram.py → Telegram group
+```
 
 ## Webapp architecture (DDD-layered, Vue 3 + Composition API + Pinia + Router + Tailwind v4)
 

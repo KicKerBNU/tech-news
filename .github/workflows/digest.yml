@@ -56,3 +56,12 @@ jobs:
           UNSUBSCRIBE_SECRET: ${{ secrets.UNSUBSCRIBE_SECRET }}
           SITE_URL: https://signal-news-agent.netlify.app
         run: python agent/send_newsletter.py
+
+      - name: Post to Telegram
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          SITE_URL: https://signal-news-agent.netlify.app
+        run: python agent/send_telegram.py
