@@ -25,6 +25,9 @@ In the repo: **Settings → Secrets and variables → Actions → New repository
 |------|---------|
 | `ANTHROPIC_API_KEY` | Claude API for the digest agent |
 | `HONEYCOMB_API_KEY` | OpenTelemetry traces to Honeycomb (optional) |
+| `RESEND_API_KEY` | Newsletter — subscribers + email delivery |
+| `RESEND_FROM_EMAIL` | e.g. `SIGNAL <newsletter@yourdomain.com>` |
+| `UNSUBSCRIBE_SECRET` | Random string for signed unsubscribe links |
 
 Copy `.env.example` to `.env` for local runs. Never commit API keys.
 
@@ -53,11 +56,37 @@ variable in Netlify instead (no code edit needed):
 ## 5. Deploy to Netlify
 
 - New site from Git → pick this repo
-- Netlify will read `netlify.toml` automatically (base: `webapp`, build: `npm run build`, publish: `webapp/dist`)
+- Netlify will read `netlify.toml` automatically (base: `webapp`, build: `yarn build`, publish: `webapp/dist`)
 - If you set `VITE_DATA_URL` above, add it under **Site settings → Environment variables**
+- For newsletter subscribe/unsubscribe, set on Netlify: `RESEND_API_KEY`, `UNSUBSCRIBE_SECRET`
 
 That's it. Once the first Action run completes and pushes a commit,
-the site will show it on its next 10-minute poll (or on page reload).
+the site will show it on its next poll (or on page reload).
+
+## 6. Newsletter (email digest)
+
+Subscribers enter their email on the site; after each daily digest run, GitHub Actions emails them the latest transmission. **No database required** — subscribers are stored as [Resend Contacts](https://resend.com/docs/dashboard/audiences/contacts).
+
+### One-time setup
+
+1. **Resend** — [resend.com](https://resend.com) → create an API key with **Full access** (send-only keys cannot add subscribers)
+2. **POC / no domain** — use `RESEND_FROM_EMAIL=SIGNAL <onboarding@resend.dev>`. Resend only delivers to the email you signed up with (sandbox limit).
+3. **Unsubscribe secret** — generate a random string:
+   ```bash
+   openssl rand -base64 32
+   ```
+4. **GitHub Secrets** — `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `UNSUBSCRIBE_SECRET`
+5. **Netlify env vars** — same `RESEND_API_KEY` and `UNSUBSCRIBE_SECRET` (for subscribe/unsubscribe functions)
+6. Redeploy Netlify after adding env vars
+
+### Flow
+
+```
+Visitor → Subscribe form → Netlify Function → Resend Contacts
+Daily cron → digest agent → commit data.json → send_newsletter.py → Resend → inbox
+```
+
+Each email includes a signed unsubscribe link (`/unsubscribe?email=…&sig=…`).
 
 ## Webapp architecture (DDD-layered, Vue 3 + Composition API + Pinia + Router + Tailwind v4)
 
@@ -67,8 +96,8 @@ webapp/src/
   infrastructure/http/                 the one place that knows data comes from raw.githubusercontent.com
   application/stores/digestStore.js    Pinia store — orchestrates repository + state, single source of truth
   presentation/
-    views/          FeedView.vue, EntryDetailView.vue
-    components/     AppHeader.vue, DigestCard.vue, EmptyState.vue  (DigestCard reused on both views — DRY)
+    views/          FeedView.vue, EntryDetailView.vue, UnsubscribeView.vue
+    components/     AppHeader.vue, DigestCard.vue, EmptyState.vue, NewsletterSubscribe.vue
     composables/     useClock.js, usePolling.js                     (reusable, framework-facing logic)
     styles/global.css                  design tokens, defined once
   router/index.js    "/" (feed) and "/entry/:id" (single transmission — reachable via a real permalink)

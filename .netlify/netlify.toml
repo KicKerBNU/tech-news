@@ -1,10 +1,8 @@
+functionsDirectory = "/Users/evertonbuzzi/Dev/signal-news-agent/netlify/functions"
+functionsDirectoryOrigin = "config"
 redirectsOrigin = "config"
 plugins = []
 headers = []
-
-[functions]
-
-[functions."*"]
 
 [build]
 publish = "/Users/evertonbuzzi/Dev/signal-news-agent/webapp/dist"
@@ -12,6 +10,7 @@ publishOrigin = "config"
 commandOrigin = "config"
 command = "yarn build"
 base = "/Users/evertonbuzzi/Dev/signal-news-agent/webapp"
+functions = "/Users/evertonbuzzi/Dev/signal-news-agent/netlify/functions"
 
 [build.environment]
 
@@ -26,6 +25,10 @@ base = "/Users/evertonbuzzi/Dev/signal-news-agent/webapp"
 [build.processing.js]
 
 [build.services]
+
+[functions]
+
+[functions."*"]
 
 [[redirects]]
 from = "/*"

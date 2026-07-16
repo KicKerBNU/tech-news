@@ -3,6 +3,9 @@
   command = "yarn build"
   publish = "webapp/dist"
 
+[functions]
+  directory = "netlify/functions"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

@@ -7,6 +7,7 @@ import { formatUtcClock } from '@/shared/utils/time'
 import AppHeader from '@/presentation/components/AppHeader.vue'
 import DigestCard from '@/presentation/components/DigestCard.vue'
 import EmptyState from '@/presentation/components/EmptyState.vue'
+import NewsletterSubscribe from '@/presentation/components/NewsletterSubscribe.vue'
 
 const store = useDigestStore()
 const { now } = useClock()
@@ -23,14 +24,21 @@ const lastSyncedLabel = computed(() =>
     <AppHeader />
 
     <main class="mx-auto w-full max-w-[780px] flex-1 px-5 pb-16 pt-8">
+      <NewsletterSubscribe
+        v-if="store.hasEntries || store.status === 'loading'"
+        class="mb-10"
+      />
+
       <p
         v-if="store.status === 'loading' && !store.hasEntries"
-        class="px-5 py-20 text-center font-mono text-[13px] tracking-[0.1em] text-text-muted"
+        class="py-12 text-center font-mono text-[13px] tracking-[0.1em] text-text-muted"
       >
         — SYNCING TRANSMISSIONS —
       </p>
 
-      <EmptyState v-else-if="store.status === 'ready' && !store.hasEntries" />
+      <EmptyState v-else-if="store.status === 'ready' && !store.hasEntries">
+        <NewsletterSubscribe variant="embedded" />
+      </EmptyState>
 
       <RouterLink
         v-for="(entry, i) in store.entries"
