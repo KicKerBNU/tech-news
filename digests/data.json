@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-16T09:58:54.897602+00:00",
+    "headline": "Alibaba and Baidu shares surge on Apple AI partnership; Anthropic nears mega-IPO as AI market heats up",
+    "bullets": [
+      {
+        "title": "Alibaba & Baidu Shares Jump on Apple AI Partnership",
+        "summary": "Alibaba and Baidu shares rose sharply in Hong Kong following news of an Apple AI partnership, with Alibaba's U.S.-listed shares climbing ~4% after Alibaba's Qwen AI was set to be integrated into Apple Intelligence.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Anthropic Moves Closer to Mega-IPO",
+        "summary": "Anthropic is advancing toward a major IPO, with bankers now lining up investor meetings, signaling strong market appetite for the AI safety-focused startup's public debut.",
+        "source": "CNBC"
+      },
+      {
+        "title": "New York Becomes First U.S. State to Impose AI Data Center Ban",
+        "summary": "New York has enacted a moratorium on new AI data centers, making it the first U.S. state to do so. President Trump publicly blasted New York Governor Hochul over the move.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Qualcomm in Talks to Acquire AI Chip Startup Tenstorrent for $8\u201310B",
+        "summary": "Qualcomm is in early discussions to acquire Tenstorrent, a RISC-V-based AI chip designer led by chip veteran Jim Keller, for between $8 and $10 billion \u2014 a deal that would sharpen Qualcomm's competition against Nvidia and AMD in AI hardware.",
+        "source": "Crescendo AI News"
+      },
+      {
+        "title": "SpaceX Stock Drops Below $135 IPO Price for First Time",
+        "summary": "SpaceX shares fell below their $135 IPO price for the first time, marking a notable reversal for one of the most high-profile recent public offerings in the tech sector.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-15T09:51:30.310548+00:00",
     "headline": "TSMC posts all-time revenue record as Anthropic enters Samsung chip talks \u2014 AI infrastructure dominates July 15 news cycle",
     "bullets": [
