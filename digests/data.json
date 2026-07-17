@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-17T09:48:03.678871+00:00",
+    "headline": "Google launches Gemini 3.5 Pro & Shanghai's World AI Conference opens with Xi Jinping on the same day \u2014 July 17",
+    "bullets": [
+      {
+        "title": "Moonshot AI Releases Kimi K3: World's First 3-Trillion-Parameter Open Model",
+        "summary": "Moonshot AI officially released Kimi K3, the first open model in the 3-trillion-parameter class, featuring 2.8T parameters, Kimi Delta Attention, and 1M-token native vision context. Full weights are set to be available on July 27.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Google Renames NotebookLM to Gemini Notebook, Adds Cloud Compute Features",
+        "summary": "Google has rebranded NotebookLM as Gemini Notebook and added a secure cloud computer to every notebook for native code execution and data analysis, along with cross-app syncing with the Gemini app.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "29 Countries Sign Agreement to Establish World AI Cooperation Organization (WAICO) in Shanghai",
+        "summary": "29 nations including Russia, Brazil, Pakistan, and Indonesia signed an agreement in Shanghai to create WAICO, an independent intergovernmental AI body headquartered in Shanghai. UN Secretary-General Guterres attended, and China's Wang Yi signed for Beijing.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Apple Intelligence Approved in China, Powered by Alibaba's Qwen Models",
+        "summary": "Apple Intelligence received regulatory approval from China's Cyberspace Administration, clearing the way for generative AI features for hundreds of millions of Chinese iPhone users. The features will be powered by Alibaba's Qwen models, with additional work with Baidu underway.",
+        "source": "Build Fast with AI"
+      },
+      {
+        "title": "TSMC Q2 Earnings: Record Profits, US Investment Raised to $265B",
+        "summary": "TSMC reported Q2 profit surging 77.4% year-over-year to a record ~$22B, raised its 2026 capex guidance to $60\u201364B, and announced an additional $100B Arizona investment lifting its total US commitment to $265B.",
+        "source": "AI Weekly"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-16T09:58:54.897602+00:00",
     "headline": "Alibaba and Baidu shares surge on Apple AI partnership; Anthropic nears mega-IPO as AI market heats up",
     "bullets": [
