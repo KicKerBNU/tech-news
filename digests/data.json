@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-18T09:16:13.270159+00:00",
+    "headline": "Apple sues OpenAI for hardware trade secret theft as Google delays Gemini 3.5 Pro amid fierce AI competition",
+    "bullets": [
+      {
+        "title": "Google Delays Gemini 3.5 Pro by Several Months",
+        "summary": "Google has pushed back the broader release of Gemini 3.5 Pro after internal testing revealed shortfalls in coding and complex reasoning performance. Alphabet shares fell more than 4% on the news, highlighting investor anxiety over Google's position in the frontier-model race.",
+        "source": "Bloomberg via Tech Startups"
+      },
+      {
+        "title": "Apple Files Lawsuit Accusing OpenAI of Stealing Hardware Trade Secrets",
+        "summary": "Apple launched a major lawsuit accusing OpenAI of stealing hardware trade secrets, marking a significant escalation of tensions between two of tech's biggest players. The suit emerged as the AI arms race intensifies across the industry.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "China's Moonshot AI Releases Kimi K3, a Major Open Frontier Model",
+        "summary": "Moonshot AI released Kimi K3, described as one of the largest open-weight frontier models yet from a Chinese lab, posting strong benchmark results that further pressured Google and other U.S. AI leaders. The release strengthens China's position in global frontier AI development.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Meta Poaches Senior AWS Executive to Lead Data Center Expansion",
+        "summary": "Meta is hiring Dave Brown, a nearly two-decade Amazon Web Services veteran, to help oversee its growing AI data center network. The move comes as Meta plans to spend up to $145 billion in capital this year, largely on AI infrastructure.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Anthropic Moves Closer to Mega-IPO as Bankers Line Up Investor Meetings",
+        "summary": "Anthropic is advancing toward a large-scale IPO, with bankers now actively setting up investor meetings. The news comes shortly after the US Commerce Department lifted export controls on Anthropic's Claude flagship model earlier in July.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-17T09:48:03.678871+00:00",
     "headline": "Google launches Gemini 3.5 Pro & Shanghai's World AI Conference opens with Xi Jinping on the same day \u2014 July 17",
     "bullets": [
