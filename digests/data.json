@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-19T09:44:47.021214+00:00",
+    "headline": "Oracle cuts 30,000 jobs to fund Stargate AI infrastructure as Microsoft launches multi-model AI security tool",
+    "bullets": [
+      {
+        "title": "Oracle Cuts 30,000 Jobs to Fund $500B Stargate AI Infrastructure",
+        "summary": "Oracle is laying off up to 30,000 employees to fund its participation in the $500 billion Stargate AI infrastructure partnership, marking one of the starkest examples of how AI hardware investment is being financed across the industry.",
+        "source": "AIToolsRecap"
+      },
+      {
+        "title": "Microsoft Launches 'Project Perception' Multi-Model AI Security Tool",
+        "summary": "Microsoft released Project Perception, a multi-model AI security product drawing on Anthropic, OpenAI, and its own models, positioning it as a cheaper alternative to Anthropic's Fable 5 with broader global distribution advantages.",
+        "source": "AIToolsRecap"
+      },
+      {
+        "title": "Anthropic in Early Talks with Meta to Acquire Compute Power",
+        "summary": "Anthropic is reportedly in early discussions with Meta to secure additional compute resources, highlighting the intense demand for AI infrastructure among frontier model developers.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Trump Administration Dictating Access to Frontier AI Models",
+        "summary": "The Trump administration is reportedly shaping which entities can access frontier AI models, raising new questions about government oversight and control over cutting-edge AI capabilities.",
+        "source": "CNBC"
+      },
+      {
+        "title": "TSMC Q2 2026 Profit Surges 77%, Boosts Arizona Investment by $100B",
+        "summary": "TSMC reported Q2 2026 net income up 77.4% year-on-year, raised its full-year revenue growth guidance above 40%, and announced an additional $100 billion investment in Arizona, with AI chips now comprising 66% of quarterly revenue.",
+        "source": "AIToolsRecap"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-18T09:16:13.270159+00:00",
     "headline": "Apple sues OpenAI for hardware trade secret theft as Google delays Gemini 3.5 Pro amid fierce AI competition",
     "bullets": [
