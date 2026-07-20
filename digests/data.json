@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-20T10:42:11.234691+00:00",
+    "headline": "Moonshot AI's Kimi K3 shakes up global AI rankings while EU orders Google to open Android to AI rivals and Oracle cuts 30,000 jobs for Stargate",
+    "bullets": [
+      {
+        "title": "Kimi K3 Tops Coding Leaderboard, Rattles US AI Industry",
+        "summary": "Moonshot AI's Kimi K3, a 2.8-trillion-parameter open model, claimed the top spot on a major coding leaderboard over the weekend, reigniting debate about the US-China AI rivalry and prompting American labs and investors to publicly reassess the frontier gap.",
+        "source": "Build Fast with AI"
+      },
+      {
+        "title": "EU Orders Google to Open Android to Rival AI Agents",
+        "summary": "The European Union has directed Google to open Android to competing AI agents, a significant regulatory move that also includes forcing Google to share search data with rivals.",
+        "source": "Computerworld / Build Fast with AI"
+      },
+      {
+        "title": "Oracle Cuts 30,000 Jobs to Fund AI Data Center Push",
+        "summary": "Oracle is laying off up to 30,000 employees to redirect capital toward its Stargate AI data center infrastructure, underscoring the massive workforce reshaping underway across Big Tech as AI investment accelerates.",
+        "source": "Capacity / Build Fast with AI"
+      },
+      {
+        "title": "World AI Conference Closes in Shanghai; China Launches 29-Nation AI Cooperation Body",
+        "summary": "The 2026 World AI Conference concluded in Shanghai today after Xi Jinping delivered his first-ever keynote, and 29 countries including Russia and Pakistan founded the World Artificial Intelligence Cooperation Organization. Huawei showcased its Atlas 950 SuperPoD domestic computing system on the show floor.",
+        "source": "Build Fast with AI"
+      },
+      {
+        "title": "SpaceX Secretly Acquired APR Energy for ~$1B, Deepening Musk's AI Power Control",
+        "summary": "An FTC filing revealed that SpaceX quietly acquired Jacksonville-based APR Energy for roughly $1 billion, giving Musk direct ownership of over 1 GW of mobile turbine capacity \u2014 the same class of turbines powering xAI's Grok-training Colossus supercomputers.",
+        "source": "TechCrunch / AI Weekly"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-19T09:44:47.021214+00:00",
     "headline": "Oracle cuts 30,000 jobs to fund Stargate AI infrastructure as Microsoft launches multi-model AI security tool",
     "bullets": [
