@@ -2,7 +2,7 @@
 
 Repo: https://github.com/KicKerBNU/tech-news
 
-Fully autonomous pipeline: GitHub Actions runs the agent daily at 08:00 UTC,
+Fully autonomous pipeline: GitHub Actions runs the agent daily (08:00 UTC primary, 11:00 UTC backup),
 commits results to `digests/data.json`, and a Vue app on Netlify polls that
 file to show a live feed. No server, no human step after setup.
 
@@ -36,7 +36,8 @@ Copy `.env.example` to `.env` for local runs. Never commit API keys.
 ## 3. Enable Actions (if needed)
 
 Go to the **Actions** tab of your repo and enable workflows if prompted.
-The workflow runs daily at 08:00 UTC (`.github/workflows/digest.yml`).
+The workflow runs daily at 08:00 UTC with an 11:00 UTC backup slot (`.github/workflows/digest.yml`).
+If the first run succeeds, the second is a no-op (same-day idempotency).
 You can also trigger a run manually from that tab (**Run workflow** button)
 to confirm it works without waiting.
 
@@ -180,8 +181,16 @@ exactly one file, not copy-pasted across five component `<style>` tags.
 ## Notes / things worth knowing
 
 - **Timing isn't exact.** GitHub's own docs note that scheduled workflow
-  runs can be delayed during periods of high platform load — 10 minutes is
-  the target, not a guarantee.
+  runs can be delayed during periods of high platform load — often by 1–3+ hours,
+  and sometimes skipped entirely on busy days. This repo mitigates that with:
+  - **Two cron slots** (08:00 and 11:00 UTC) — only the first successful run
+    writes a digest; the backup skips if today already has an entry.
+  - **`workflow_dispatch`** — Actions → *News Digest Agent* → *Run workflow*
+    (check *force* to re-run even if today already has a digest).
+  - **Optional external trigger** — a free cron service (e.g. [cron-job.org](https://cron-job.org))
+    can POST to GitHub's API to fire `workflow_dispatch` or `repository_dispatch`
+    (`run-digest`) if you want a third, independent clock. Requires a fine-grained
+    PAT with *Actions: write* on this repo.
 - **Inactive repos pause schedules.** GitHub automatically disables scheduled
   workflows after 60 days with no repository activity. Since this workflow
   commits on every successful run, the repo stays active on its own — but if

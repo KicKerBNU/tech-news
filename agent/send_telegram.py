@@ -31,8 +31,8 @@ TELEGRAM_API = "https://api.telegram.org"
 def _require_env(name: str) -> str:
     value = os.getenv(name)
     if not value:
-        print(f"[telegram] Skipping — {name} is not set")
-        sys.exit(0)
+        print(f"[telegram] ERROR — {name} is not set")
+        sys.exit(1)
     return value
 
 

@@ -2,12 +2,18 @@ name: News Digest Agent
 
 on:
   schedule:
-    
-    # timing isn't guaranteed under high platform load — expect small drift.
-    #- cron: '*/10 * * * *' # # Every 10 minutes. GitHub's minimum granularity is 5 min, and exact
-    #- cron: '0 * * * *' # every hours update
-    - cron: '0 8 * * *' # # every day update. 
-  workflow_dispatch: {}   # lets you trigger a run manually from the Actions tab
+    # GitHub scheduled runs are best-effort — often delayed, sometimes skipped.
+    # Primary + backup slots; the agent skips if today's digest already exists.
+    - cron: '0 8 * * *'   # primary: 08:00 UTC
+    - cron: '0 11 * * *'  # backup:  11:00 UTC
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Run even if today's digest already exists
+        type: boolean
+        default: false
+  repository_dispatch:
+    types: [run-digest]
 
 permissions:
   contents: write   # needed so the workflow can commit the new digest back
@@ -31,6 +37,7 @@ jobs:
           HONEYCOMB_API_KEY: ${{ secrets.HONEYCOMB_API_KEY }}
           OTEL_SERVICE_NAME: signal-news-digest
           OTEL_EXPORTER_OTLP_ENDPOINT: https://api.honeycomb.io
+          FORCE_DIGEST: ${{ github.event_name == 'workflow_dispatch' && inputs.force && 'true' || '' }}
         run: python agent/news_digest.py
 
       - name: Commit and push if data changed

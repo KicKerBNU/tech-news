@@ -11,7 +11,9 @@ touches the JSON file.
 """
 
 import json
+import os
 import re
+import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -121,13 +123,32 @@ def save(entries: list):
         DATA_PATH.write_text(json.dumps(entries, indent=2))
 
 
+def already_ran_today(entries: list, now: datetime) -> bool:
+    """True if the newest digest entry is from today's UTC date."""
+    if not entries:
+        return False
+    latest = entries[0].get("timestamp", "")
+    try:
+        dt = datetime.fromisoformat(latest.replace("Z", "+00:00"))
+        return dt.date() == now.date()
+    except ValueError:
+        return False
+
+
 def main():
     now = datetime.now(timezone.utc)
+    force = os.getenv("FORCE_DIGEST", "").lower() in ("1", "true", "yes")
 
     with tracer.start_as_current_span("digest.run") as span:
         span.set_attribute("digest.model", MODEL)
         span.set_attribute("digest.max_entries", MAX_ENTRIES)
         print(f"[{now.isoformat()}] Running digest agent...")
+
+        entries = load_existing()
+        if not force and already_ran_today(entries, now):
+            print(f"[{now.isoformat()}] Digest already exists for today (UTC) — skipping")
+            span.set_attribute("digest.skipped", True)
+            return
 
         try:
             parsed = call_claude()
@@ -137,7 +158,7 @@ def main():
             span.record_exception(e)
             span.set_status(Status(StatusCode.ERROR, str(e)))
             print(f"[{now.isoformat()}] Failed to get/parse digest: {e}")
-            return
+            sys.exit(1)
 
         entry = {
             "timestamp": now.isoformat(),
@@ -145,7 +166,6 @@ def main():
             "bullets": parsed.get("bullets", []),
         }
 
-        entries = load_existing()
         entries.insert(0, entry)
         entries = entries[:MAX_ENTRIES]
 
