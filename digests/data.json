@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-21T10:16:20.137442+00:00",
+    "headline": "China weighs tightening AI & chip export controls as global AI infrastructure race intensifies",
+    "bullets": [
+      {
+        "title": "China Considers Tightening AI and Chip Export Controls",
+        "summary": "Chinese regulators are weighing new restrictions on AI and chip technology exports and are consulting leading domestic AI companies as part of the effort to slow advanced tech from leaving the country.",
+        "source": "Financial Times / LLM Stats"
+      },
+      {
+        "title": "Moonshot AI Pauses New Subscriptions for Kimi K3 After Demand Surge",
+        "summary": "Chinese AI startup Moonshot AI temporarily stopped accepting new subscribers for its Kimi K3 model after demand overwhelmed available computing capacity. Existing users retain access, highlighting the severe infrastructure pressure facing Chinese AI developers.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "South Korea to Launch Free National AI Chatbot",
+        "summary": "South Korea announced plans to launch a free AI chatbot service powered by domestic technology this year, aiming to reduce the country's reliance on foreign AI platforms.",
+        "source": "LLM Stats"
+      },
+      {
+        "title": "Xiaomi Trains Robotics Model on 100,000+ Hours of Motion Data",
+        "summary": "Xiaomi trained its Xiaomi-Robotics-1 model on over 100,000 hours of motion data collected via camera-equipped handheld grippers, finding that adding more data drove performance improvements far more than other factors.",
+        "source": "LLM Stats"
+      },
+      {
+        "title": "World AI Conference in Shanghai Showcases China's AI & Robotics Push",
+        "summary": "China's leading tech companies displayed hundreds of cutting-edge products at the World AI Conference in Shanghai, ranging from advanced robotics to new AI systems, underscoring the country's ambitions in the global AI race.",
+        "source": "LLM Stats"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-20T10:42:11.234691+00:00",
     "headline": "Moonshot AI's Kimi K3 shakes up global AI rankings while EU orders Google to open Android to AI rivals and Oracle cuts 30,000 jobs for Stargate",
     "bullets": [
