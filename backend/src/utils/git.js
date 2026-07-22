@@ -31,17 +31,25 @@ export async function ensureGitRepo() {
   const gitDir = path.join(repoRoot, '.git');
 
   if (!fs.existsSync(gitDir)) {
-    console.log('[git] Initializing repository clone…');
+    console.log('[git] Initializing repository from GitHub…');
     await run('git', ['init'], { cwd: repoRoot, label: 'git' });
     await run('git', ['remote', 'add', 'origin', url], { cwd: repoRoot, label: 'git' });
+    await run('git', ['config', 'user.name', 'signal-digest-bot'], { cwd: repoRoot, label: 'git' });
+    await run('git', ['config', 'user.email', 'digest@signal-news-agent'], { cwd: repoRoot, label: 'git' });
+    await run('git', ['add', '-A'], { cwd: repoRoot, label: 'git' });
+    try {
+      await run('git', ['commit', '-m', 'docker baseline'], { cwd: repoRoot, label: 'git' });
+    } catch {
+      // nothing to commit — fine
+    }
     await run('git', ['fetch', 'origin', branch], { cwd: repoRoot, label: 'git' });
     await run('git', ['checkout', '-B', branch, `origin/${branch}`], { cwd: repoRoot, label: 'git' });
+    await run('git', ['reset', '--hard', `origin/${branch}`], { cwd: repoRoot, label: 'git' });
   } else {
     await run('git', ['remote', 'set-url', 'origin', url], { cwd: repoRoot, label: 'git' });
+    await run('git', ['config', 'user.name', 'signal-digest-bot'], { cwd: repoRoot, label: 'git' });
+    await run('git', ['config', 'user.email', 'digest@signal-news-agent'], { cwd: repoRoot, label: 'git' });
   }
-
-  await run('git', ['config', 'user.name', 'signal-digest-bot'], { cwd: repoRoot, label: 'git' });
-  await run('git', ['config', 'user.email', 'digest@signal-news-agent'], { cwd: repoRoot, label: 'git' });
 }
 
 export async function syncLatest() {
