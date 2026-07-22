@@ -2,11 +2,11 @@
 """
 AI/Tech News Digest Agent
 --------------------------
-Called by the GitHub Actions workflow on a schedule. Asks Claude to find and
+Called by the backend scheduler on Railway. Asks Claude to find and
 summarize recent AI/tech news via web search, and appends the result as a
 structured entry to digests/data.json (newest entry first).
 
-The GitHub Actions workflow handles git add/commit/push — this script only
+The backend server handles git add/commit/push — this script only
 touches the JSON file.
 """
 

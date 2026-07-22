@@ -1,0 +1,8 @@
+node_modules
+webapp/node_modules
+webapp/dist
+.git
+.env
+.env.*
+*.log
+.DS_Store

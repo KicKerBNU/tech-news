@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { createGithubDigestRepository } from '@/infrastructure/http/githubDigestRepository'
 import { getNextDailyUtcAt } from '@/shared/utils/time'
 
-export const DAILY_UPDATE_HOUR_UTC = 8 // matches .github/workflows/digest.yml cron
+export const DAILY_UPDATE_HOUR_UTC = 8 // matches backend CRON_SCHEDULE (default 08:00 UTC)
 export const REFRESH_INTERVAL_MS = 30 * 60 * 1000 // poll every 30 min to catch the daily drop
 
 const repository = createGithubDigestRepository()

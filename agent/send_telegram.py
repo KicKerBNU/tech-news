@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Post the latest digest to a Telegram group via Bot API.
-Called by GitHub Actions after a successful digest run.
+Called by the backend scheduler after a successful digest run.
 
 Setup:
   1. Message @BotFather → /newbot → copy token
