@@ -6,19 +6,18 @@ RUN apt-get update \
 
 WORKDIR /app
 
-COPY agent/requirements.txt agent/requirements.txt
-RUN pip3 install --break-system-packages --no-cache-dir -r agent/requirements.txt
+COPY agent/requirements.txt /tmp/agent-requirements.txt
+RUN pip3 install --break-system-packages --no-cache-dir -r /tmp/agent-requirements.txt
 
 COPY backend/package.json backend/yarn.lock backend/
 WORKDIR /app/backend
 RUN corepack enable && yarn install --frozen-lockfile
 
 WORKDIR /app
-COPY agent agent/
-COPY digests digests/
+RUN mkdir -p /app/repo
 COPY backend backend/
 
-ENV REPO_ROOT=/app
+ENV REPO_ROOT=/app/repo
 ENV NODE_ENV=production
 
 WORKDIR /app/backend
