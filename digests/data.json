@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-22T10:39:33.233440+00:00",
+    "headline": "Google ships three Gemini Flash models, starts Gemini 4 pretraining \u2014 flagship Pro still delayed",
+    "bullets": [
+      {
+        "title": "Google Launches Gemini 3.6 Flash, 3.5 Flash-Lite & 3.5 Flash Cyber",
+        "summary": "Google released three new Gemini models on July 21, covering efficiency, throughput, and a security-tuned variant restricted to governments. Notably absent was Gemini 3.5 Pro, which has missed its ship target multiple times; Google confirmed it is still not shipping.",
+        "source": "Build Fast with AI / 9to5Google"
+      },
+      {
+        "title": "Microsoft and Mistral Announce Expanded Strategic Partnership",
+        "summary": "Microsoft and Mistral announced a multibillion-dollar joint investment to grow GPU-backed data center capacity in Europe using Nvidia Vera Rubin systems. Mistral Medium 3.5 and Mistral OCR 4 are being added to Microsoft Foundry as part of the deal.",
+        "source": "AI Weekly / news.microsoft.com"
+      },
+      {
+        "title": "Anthropic Outspends Nvidia on Federal Lobbying in Q2 2026",
+        "summary": "Federal lobbying disclosures show Anthropic spent $1.97M in Q2 2026 (up 26% quarter-over-quarter), outspending Nvidia and nearly matching Oracle's $2M. Combined AI-lab lobbying spend hit $3.17M for the quarter, up 23% from Q1, with cybersecurity, copyright, and defense procurement listed as priority issues.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "DeepSeek V4 and Free Kimi K3 Weights Coming This Week",
+        "summary": "DeepSeek V4 is expected to land on July 24, and free Kimi K3 model weights are slated to arrive on July 27, marking significant upcoming open-weight releases.",
+        "source": "Build Fast with AI"
+      },
+      {
+        "title": "Big Tech's AI-Driven Off-Balance-Sheet Debt Grows 8x to $1.65T Since 2022",
+        "summary": "A Nikkei-cited study finds Alphabet, Microsoft, Amazon, Meta, and Oracle now carry an estimated $1.65T in off-balance-sheet debt driven by AI infrastructure buildout, up eightfold since 2022.",
+        "source": "AI Weekly / Nikkei Asia"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-21T10:16:20.137442+00:00",
     "headline": "China weighs tightening AI & chip export controls as global AI infrastructure race intensifies",
     "bullets": [
