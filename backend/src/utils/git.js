@@ -30,19 +30,18 @@ export async function ensureGitRepo() {
   const url = remoteUrl(token, repo);
   const gitDir = path.join(repoRoot, '.git');
 
-  await run('git', ['config', 'user.name', 'signal-digest-bot'], { cwd: repoRoot, label: 'git' });
-  await run('git', ['config', 'user.email', 'digest@signal-news-agent'], { cwd: repoRoot, label: 'git' });
-
   if (!fs.existsSync(gitDir)) {
     console.log('[git] Initializing repository clone…');
     await run('git', ['init'], { cwd: repoRoot, label: 'git' });
     await run('git', ['remote', 'add', 'origin', url], { cwd: repoRoot, label: 'git' });
     await run('git', ['fetch', 'origin', branch], { cwd: repoRoot, label: 'git' });
     await run('git', ['checkout', '-B', branch, `origin/${branch}`], { cwd: repoRoot, label: 'git' });
-    return;
+  } else {
+    await run('git', ['remote', 'set-url', 'origin', url], { cwd: repoRoot, label: 'git' });
   }
 
-  await run('git', ['remote', 'set-url', 'origin', url], { cwd: repoRoot, label: 'git' });
+  await run('git', ['config', 'user.name', 'signal-digest-bot'], { cwd: repoRoot, label: 'git' });
+  await run('git', ['config', 'user.email', 'digest@signal-news-agent'], { cwd: repoRoot, label: 'git' });
 }
 
 export async function syncLatest() {
