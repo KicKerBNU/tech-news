@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-23T08:00:01.245457+00:00",
+    "headline": "Microsoft becomes AMD's first named customer for Helios rack-scale AI platform, signaling a major challenge to Nvidia's dominance",
+    "bullets": [
+      {
+        "title": "Microsoft Adopts AMD Helios to Rival Nvidia on Azure",
+        "summary": "Microsoft is the first publicly named customer for AMD's Helios rack-scale AI platform, deploying 72-GPU MI455X systems with 31.1TB of HBM4 memory on Azure for frontier-model inference. AMD will begin shipments in H2 2026, and Azure is adding two new EPYC-based VM families for agentic AI and semiconductor design workloads.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Anthropic Surpasses Nvidia in AI Lobbying Spend",
+        "summary": "Federal lobbying disclosures show Anthropic spent $1.97M in Q2 2026 \u2014 up 26% quarter-over-quarter \u2014 outspending Nvidia and nearly matching Oracle's $2M. Combined AI-lab lobbying spend hit $3.17M for the quarter, up 23% from Q1, with cybersecurity and copyright listed as top priorities.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Meta's AI Moderation Wrongly Bans Real Businesses on Instagram and Facebook",
+        "summary": "Meta's automated moderation system has wrongly deleted accounts built over years, with appeals often handled by the same AI that made the original decision. Meta restored some accounts after media intervention, while defending its newer AI tools as making fewer mistakes than older systems.",
+        "source": "NYT / AI Weekly"
+      },
+      {
+        "title": "U.S. and China Set to Hold First Formal AI Talks in September",
+        "summary": "The United States and China are preparing to hold official diplomatic talks on artificial intelligence in September, marking the first such dialogue under President Trump. The talks are expected to focus on shared definitions for frontier models, proliferation risks, and model-release standards.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "OpenAI Appoints Two New Board Members",
+        "summary": "OpenAI has appointed two new members to its board of directors, continuing to expand its governance structure amid growing scrutiny of frontier AI labs.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-22T10:39:33.233440+00:00",
     "headline": "Google ships three Gemini Flash models, starts Gemini 4 pretraining \u2014 flagship Pro still delayed",
     "bullets": [
