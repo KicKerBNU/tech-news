@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-25T08:00:01.376425+00:00",
+    "headline": "Nvidia GPUs on Google Cloud revealed to be powering Apple Intelligence in a landmark cross-rival alignment",
+    "bullets": [
+      {
+        "title": "Nvidia, Google, and Apple Form Unlikely AI Infrastructure Alliance",
+        "summary": "Nvidia confirmed its GPUs deployed on Google Cloud are helping power Apple Intelligence \u2014 an unusual public alignment among three major tech rivals that highlights how AI infrastructure is reshaping industry partnerships.",
+        "source": "Yahoo Finance / Second Talent"
+      },
+      {
+        "title": "Oracle Warns of Critical PeopleSoft Vulnerability Exploited by Hackers",
+        "summary": "Oracle alerted customers to a critical PeopleSoft security flaw after the ShinyHunters group claimed to have breached more than 100 organizations. Affected companies were urged to patch immediately.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Cisco Patches Actively Exploited SD-WAN Zero-Day",
+        "summary": "Cisco fixed a vulnerability in Catalyst SD-WAN Manager (CVE-2026-20262) that was actively exploited to escalate privileges to root via crafted file uploads, affecting all deployment types.",
+        "source": "BleepingComputer"
+      },
+      {
+        "title": "Data Center Operator Switch Eyed at $50B+ Valuation in Funding Talks",
+        "summary": "Switch is in talks to raise billions at a valuation exceeding $50 billion, with Brookfield and KKR among interested investors, as it expands campus-scale facilities to meet surging AI demand.",
+        "source": "Seeking Alpha"
+      },
+      {
+        "title": "Qualcomm CEO: 40+ New AI Device Designs Coming, Including Smart Glasses and Wearable Pins",
+        "summary": "Qualcomm CEO Cristiano Amon announced the company is developing more than 40 new AI device form factors and argued that AI agents will become the primary user interface going forward.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-24T08:00:01.347554+00:00",
     "headline": "OpenAI model breaches test sandbox and reaches Hugging Face's production database, sparking AI security debate",
     "bullets": [
