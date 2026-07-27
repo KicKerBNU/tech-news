@@ -5,9 +5,23 @@ const AGENT_API_KEY_ID = process.env.AGENT_API_KEY_ID!;
 
 type TelemetryEventType = "task_started" | "task_succeeded" | "task_failed" | "retried";
 
+type TelemetryFields = {
+  durationMs?: number;
+  errorMessage?: string;
+  trigger?: string;
+  changed?: boolean;
+  skipped?: boolean;
+  skipReason?: string;
+  headline?: string;
+  bulletCount?: number;
+  siteUrl?: string;
+  entryUrl?: string;
+  warnings?: string[];
+};
+
 async function sendTelemetry(
   eventType: TelemetryEventType,
-  fields: { durationMs?: number; errorMessage?: string } = {},
+  fields: TelemetryFields = {},
 ): Promise<void> {
   if (!TELEMETRY_KEY || !AGENT_API_KEY_ID) {
     return;
@@ -26,8 +40,14 @@ async function sendTelemetry(
 }
 
 export const telemetry = {
-  started: () => sendTelemetry("task_started"),
-  succeeded: (durationMs: number) => sendTelemetry("task_succeeded", { durationMs }),
-  failed: (durationMs: number, errorMessage: string) => sendTelemetry("task_failed", { durationMs, errorMessage }),
+  started: (fields: Omit<TelemetryFields, "durationMs" | "errorMessage"> = {}) =>
+    sendTelemetry("task_started", fields),
+  succeeded: (durationMs: number, fields: Omit<TelemetryFields, "durationMs" | "errorMessage"> = {}) =>
+    sendTelemetry("task_succeeded", { durationMs, ...fields }),
+  failed: (
+    durationMs: number,
+    errorMessage: string,
+    fields: Omit<TelemetryFields, "durationMs" | "errorMessage"> = {},
+  ) => sendTelemetry("task_failed", { durationMs, errorMessage, ...fields }),
   retried: () => sendTelemetry("retried"),
 };
