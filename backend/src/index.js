@@ -58,6 +58,12 @@ async function start() {
     console.warn('[server] ANTHROPIC_API_KEY is not set — digest runs will fail');
   }
 
+  if (!process.env.TELEMETRY_INGESTION_KEY || !process.env.AGENT_API_KEY_ID) {
+    console.warn('[telemetry] TELEMETRY_INGESTION_KEY or AGENT_API_KEY_ID not set — Zanshin events disabled');
+  } else {
+    console.log('[telemetry] Zanshin reporting enabled');
+  }
+
   if (!cron.validate(cronSchedule)) {
     throw new Error(`Invalid CRON_SCHEDULE: ${cronSchedule}`);
   }

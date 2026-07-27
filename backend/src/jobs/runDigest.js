@@ -1,5 +1,6 @@
 import path from 'node:path';
 
+import { telemetry } from '../telemetry.ts';
 import { run } from '../utils/exec.js';
 import { commitDigestIfChanged, ensureGitRepo, getRepoRoot, syncLatest } from '../utils/git.js';
 
@@ -41,6 +42,63 @@ async function runPython(script, env = {}) {
 }
 
 /**
+ * @template T
+ * @param {() => Promise<T>} task
+ * @param {number} [maxRetries]
+ * @returns {Promise<T>}
+ */
+async function runTaskWithTelemetry(task, maxRetries = 2) {
+  await telemetry.started();
+  const start = Date.now();
+  let attempt = 0;
+
+  while (true) {
+    try {
+      const result = await task();
+      await telemetry.succeeded(Date.now() - start);
+      return result;
+    } catch (err) {
+      attempt++;
+      if (attempt <= maxRetries) {
+        await telemetry.retried();
+        continue;
+      }
+      const message = err instanceof Error ? err.message : String(err);
+      await telemetry.failed(Date.now() - start, message);
+      throw err;
+    }
+  }
+}
+
+/**
+ * @param {{ force?: boolean }} options
+ * @returns {Promise<{ changed: boolean }>}
+ */
+async function runExistingDigestTask({ force = false } = {}) {
+  await ensureGitRepo();
+  await syncLatest();
+
+  await runPython('news_digest.py', force ? { FORCE_DIGEST: 'true' } : {});
+
+  const changed = await commitDigestIfChanged();
+
+  if (changed) {
+    for (const script of ['send_newsletter.py', 'send_telegram.py']) {
+      try {
+        await runPython(script);
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        console.error(`[digest] ${script} failed (digest was committed): ${message}`);
+      }
+    }
+  } else {
+    console.log('[digest] Skipping newsletter/Telegram — no new digest committed');
+  }
+
+  return { changed };
+}
+
+/**
  * @param {{ force?: boolean, trigger?: string }} options
  */
 export async function runDigestJob(options = {}) {
@@ -55,25 +113,7 @@ export async function runDigestJob(options = {}) {
   console.log(`[digest] Starting job (trigger=${trigger}, force=${force})`);
 
   try {
-    await ensureGitRepo();
-    await syncLatest();
-
-    await runPython('news_digest.py', force ? { FORCE_DIGEST: 'true' } : {});
-
-    const changed = await commitDigestIfChanged();
-
-    if (changed) {
-      for (const script of ['send_newsletter.py', 'send_telegram.py']) {
-        try {
-          await runPython(script);
-        } catch (error) {
-          const message = error instanceof Error ? error.message : String(error);
-          console.error(`[digest] ${script} failed (digest was committed): ${message}`);
-        }
-      }
-    } else {
-      console.log('[digest] Skipping newsletter/Telegram — no new digest committed');
-    }
+    const { changed } = await runTaskWithTelemetry(() => runExistingDigestTask({ force }));
 
     digestState.lastRun = {
       startedAt,

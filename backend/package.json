@@ -4,14 +4,20 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "node --watch src/index.js"
+    "start": "tsx src/index.js",
+    "dev": "tsx --watch src/index.js",
+    "verify:telemetry": "tsx scripts/verifyTelemetry.js"
   },
   "engines": {
     "node": ">=20"
   },
   "dependencies": {
     "express": "^5.1.0",
-    "node-cron": "^4.2.1"
+    "node-cron": "^4.2.1",
+    "tsx": "^4.20.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.15",
+    "typescript": "^5.8.3"
   }
 }
