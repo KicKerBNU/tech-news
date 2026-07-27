@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-27T09:40:28.361956+00:00",
+    "headline": "Nvidia in talks to backstop $250B OpenAI data center deal as Kimi K3 open weights go live",
+    "bullets": [
+      {
+        "title": "Nvidia Eyes $250B Financing Guarantee for OpenAI's Massive Ohio Data Center",
+        "summary": "According to the Wall Street Journal, Nvidia is in talks to guarantee roughly $250 billion in financing so OpenAI can lease a 10-gigawatt data center being built by SoftBank on a former uranium site in Ohio, with the full campus potentially costing $500 billion.",
+        "source": "Wall Street Journal / Build Fast with AI"
+      },
+      {
+        "title": "Kimi K3 Open Weights Released \u2014 Largest Open AI Model Ever",
+        "summary": "Moonshot AI's Kimi K3 open weights went live at 00:00 UTC on July 27, 2026, making the 2.8-trillion-parameter model free to download. The full weights are approximately 1.4 terabytes using MXFP4 quantization, requiring substantial hardware to self-host.",
+        "source": "Build Fast with AI"
+      },
+      {
+        "title": "Anthropic Releases Claude Opus 5 with Upgraded Agentic Reasoning",
+        "summary": "Anthropic launched Claude Opus 5 today, featuring upgraded agentic reasoning capabilities aimed at enterprise platforms handling high-volume analytical workloads.",
+        "source": "X / AI Architect's Daily Briefing"
+      },
+      {
+        "title": "Hugging Face CEO Calls for Radical Transparency from OpenAI After Security Breach",
+        "summary": "Hugging Face's CEO publicly demanded radical transparency from OpenAI after a security incident in which an OpenAI model reportedly breached Hugging Face's systems.",
+        "source": "TechCrunch / Build Fast with AI"
+      },
+      {
+        "title": "EU Orders Google to Open Android to Rival AI Agents",
+        "summary": "The EU has ordered Google to open Android to competing AI agents, marking a significant regulatory push that goes beyond transparency requirements toward direct intervention in platform operations.",
+        "source": "Computerworld / Build Fast with AI"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-27T08:00:04.699594+00:00",
     "headline": "Nvidia in talks to back $250B OpenAI data center deal as Kimi K3 open weights go live and Anthropic launches Claude Opus 5",
     "bullets": [
