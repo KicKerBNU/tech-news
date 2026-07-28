@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-28T08:00:01.988090+00:00",
+    "headline": "Nvidia eyes $250B financing guarantee for OpenAI's Ohio data center as Anthropic releases Claude Opus 5 and Moonshot AI's Kimi K3 open weights go live",
+    "bullets": [
+      {
+        "title": "Nvidia Weighs $250 Billion Financing Guarantee for OpenAI's Ohio Data Center",
+        "summary": "Nvidia is reportedly considering a $250 billion financing guarantee tied to OpenAI's planned Ohio data center, while also investing in Ilya Sutskever's Safe Superintelligence and joining a new AI security alliance.",
+        "source": "TechStartups / Reuters"
+      },
+      {
+        "title": "Anthropic Releases Claude Opus 5",
+        "summary": "Anthropic launched Claude Opus 5, its most powerful model yet, adding to an increasingly competitive frontier model landscape as Chinese open-weight models also continue gaining traction among U.S. developers.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "Kimi K3 Open-Weight Model Now Available",
+        "summary": "Moonshot AI's Kimi K3 open-weight model \u2014 described as the largest open-weight AI model ever released \u2014 became freely available, with a self-hosting guide published ahead of the drop.",
+        "source": "AIToolsRecap"
+      },
+      {
+        "title": "Soaring RAM Prices to Hit Consumer Electronics",
+        "summary": "The cost of one gigabyte of RAM has risen roughly sixfold since 2025 as suppliers redirect capacity toward high-bandwidth memory for AI data centers, prompting Google to announce pricing adjustments across its entire Pixel lineup.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "Apple Halts Smart Glasses Over Privacy Concerns",
+        "summary": "Apple reportedly hit the brakes on its smart glasses project following privacy concerns, while separately filing a trade secret lawsuit against OpenAI and confirming new Siri will use Google Gemini instead of ChatGPT.",
+        "source": "TechStartups / AIToolsRecap"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-27T09:40:28.361956+00:00",
     "headline": "Nvidia in talks to backstop $250B OpenAI data center deal as Kimi K3 open weights go live",
     "bullets": [
