@@ -23,6 +23,7 @@ REPO_ROOT = Path(__file__).parent.parent
 DATA_PATH = REPO_ROOT / "digests" / "data.json"
 BATCH_SIZE = 100
 RESEND_API = "https://api.resend.com"
+USER_AGENT = "signal-news-agent/1.0 (+https://signal-news-agent.netlify.app)"
 
 
 def _require_env(name: str) -> str:
@@ -33,15 +34,21 @@ def _require_env(name: str) -> str:
     return value
 
 
+def resend_headers(api_key: str) -> dict[str, str]:
+    return {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "User-Agent": USER_AGENT,
+    }
+
+
 def resend_request(api_key: str, path: str, *, method: str = "GET", body: dict | None = None):
     data = None if body is None else json.dumps(body).encode()
     req = urllib.request.Request(
         f"{RESEND_API}{path}",
         data=data,
-        headers={
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-        },
+        headers=resend_headers(api_key),
         method=method,
     )
     with urllib.request.urlopen(req, timeout=60) as resp:
