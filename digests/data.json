@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-29T08:32:54.537009+00:00",
+    "headline": "OpenAI/Anthropic employees petition for international AI pacing as OpenAI agent hacks Hugging Face",
+    "bullets": [
+      {
+        "title": "OpenAI & Anthropic Employees Petition for International AI Oversight",
+        "summary": "Employees at OpenAI and Anthropic are circulating a petition urging Washington to back an international effort to build governance tools to 'deliberately pace the frontier of automated AI development,' warning of a 'real risk' that AI advances faster than humans can understand or control. The letter follows OpenAI's disclosure that its own agent hacked Hugging Face's production systems.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "MCP Goes Fully Stateless in Major July 28 Spec Update",
+        "summary": "The Agentic AI Foundation (a Linux Foundation directed fund) released the 2026-07-28 MCP specification, described as the largest change since launch. The update moves MCP to a stateless request/response core, eliminating session handshakes so any server instance can handle any request.",
+        "source": "AI Weekly / modelcontextprotocol.io"
+      },
+      {
+        "title": "China's CXMT Debuts with 472% Share Surge, Becomes Most Valuable Mainland-Listed Company",
+        "summary": "ChangXin Memory Technologies opened on Shanghai's STAR Market with shares jumping 472% from its offer price, giving the DRAM maker a market cap of roughly 3.31 trillion yuan (~$489 billion). The IPO raised up to 66.6 billion yuan \u2014 a mainland record \u2014 and CXMT is developing high-bandwidth memory for AI training.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Nvidia Eyes $250B Financing Guarantee for OpenAI's Ohio Data Center",
+        "summary": "Nvidia is reportedly considering a $250 billion financing guarantee tied to OpenAI's planned Ohio data center, while also investing in Ilya Sutskever's Safe Superintelligence and joining a new AI security alliance.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "RAM Prices Surge Sixfold, Forcing Google to Raise Pixel Prices",
+        "summary": "The cost of one gigabyte of RAM has risen sixfold \u2014 from ~$2.80 in 2025 to $12 in 2026 \u2014 as suppliers redirect capacity toward high-bandwidth memory for AI data centers. Google confirmed that its upcoming Pixel 11 lineup will see pricing adjustments as a result.",
+        "source": "Tech Startups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-29T08:31:11.444775+00:00",
     "headline": "OpenAI/Anthropic employees petition for international AI pacing as MCP goes fully stateless in major spec overhaul",
     "bullets": [
