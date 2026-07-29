@@ -28,8 +28,8 @@ RESEND_API = "https://api.resend.com"
 def _require_env(name: str) -> str:
     value = os.getenv(name)
     if not value:
-        print(f"[newsletter] Skipping — {name} is not set")
-        sys.exit(0)
+        print(f"[newsletter] ERROR — {name} is not set", file=sys.stderr)
+        sys.exit(1)
     return value
 
 
@@ -140,5 +140,5 @@ if __name__ == "__main__":
         main()
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", errors="replace")
-        print(f"[newsletter] HTTP error ({exc.code}): {body}")
+        print(f"[newsletter] HTTP error ({exc.code}): {body}", file=sys.stderr)
         raise SystemExit(1)

@@ -19,7 +19,9 @@ export async function run(command, args, options = {}) {
     }
     return stdout.trim();
   } catch (error) {
-    const detail = error.stderr?.trim() || error.message;
+    const detail =
+      [error.stderr?.trim(), error.stdout?.trim()].filter(Boolean).join('\n') ||
+      error.message;
     throw new Error(`[${label}] failed: ${detail}`);
   }
 }
