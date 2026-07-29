@@ -83,10 +83,7 @@ def send_batch(api_key: str, messages: list[dict]) -> None:
     req = urllib.request.Request(
         f"{RESEND_API}/emails/batch",
         data=payload,
-        headers={
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-        },
+        headers=resend_headers(api_key),
         method="POST",
     )
     with urllib.request.urlopen(req, timeout=60) as resp:
