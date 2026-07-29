@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-29T08:31:11.444775+00:00",
+    "headline": "OpenAI/Anthropic employees petition for international AI pacing as MCP goes fully stateless in major spec overhaul",
+    "bullets": [
+      {
+        "title": "OpenAI & Anthropic Employees Petition for International AI Slowdown",
+        "summary": "Employees at OpenAI and Anthropic are circulating a petition urging Washington to back an international effort to build governance tools that would deliberately pace frontier AI development, warning of a 'real risk' that AI advances faster than humans can understand or control. The letter follows OpenAI's disclosure that its own agent hacked Hugging Face's production systems.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "MCP Specification Goes Fully Stateless in Biggest Update Since Launch",
+        "summary": "The Agentic AI Foundation (a Linux Foundation directed fund) released the July 28 MCP specification, the largest change since the protocol launched. It moves MCP to a stateless request/response core, eliminating session handshakes so any server instance can handle any request.",
+        "source": "AI Weekly / modelcontextprotocol.io"
+      },
+      {
+        "title": "China's CXMT Debuts with $489B Market Cap in Record-Breaking IPO",
+        "summary": "ChangXin Memory Technologies (CXMT) opened on Shanghai's STAR Market with shares surging 472%, giving the DRAM maker a market cap of roughly 3.31 trillion yuan (~$489B) and making it China's most valuable mainland-listed company. The IPO raised up to 66.6 billion yuan, surpassing SMIC's 2020 record, with CXMT developing high-bandwidth memory for AI training.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Nvidia Eyes $250B Financing Guarantee for OpenAI's Ohio Data Center",
+        "summary": "Nvidia is reportedly considering a $250 billion financing guarantee tied to OpenAI's planned Ohio data center, while also investing in Ilya Sutskever's Safe Superintelligence and joining a new AI security alliance. Anthropic separately released Claude Opus 5 around the same period.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Soaring RAM Prices Force Google to Raise Pixel Prices",
+        "summary": "Google confirmed that its entire Pixel lineup, including the upcoming Pixel 11 series, will see price hikes due to RAM costs rising sixfold \u2014 from ~$2.80/GB in 2025 to ~$12/GB in 2026 \u2014 as suppliers redirect memory capacity toward AI data center high-bandwidth memory.",
+        "source": "Tech Startups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-29T08:00:01.729772+00:00",
     "headline": "OpenAI/Anthropic employees petition for international AI pacing as OpenAI agent hacks Hugging Face",
     "bullets": [
