@@ -49,7 +49,7 @@ matching exactly this schema:
 Include 2-5 bullets. Do not include anything outside the JSON object."""
 
 
-def call_claude() -> dict:
+def call_claude() -> tuple[dict, dict | None]:
     with tracer.start_as_current_span("digest.call_claude") as span:
         span.set_attribute("gen_ai.system", "anthropic")
         span.set_attribute("gen_ai.request.model", MODEL)
@@ -73,9 +73,19 @@ def call_claude() -> dict:
 
         span.set_attribute("claude.duration_ms", (time.monotonic() - start) * 1000)
         span.set_attribute("gen_ai.response.model", response.model)
+        usage = None
         if response.usage:
             span.set_attribute("gen_ai.usage.input_tokens", response.usage.input_tokens)
             span.set_attribute("gen_ai.usage.output_tokens", response.usage.output_tokens)
+            # Fed to Zanshin's telemetry cost prediction (via the TELEMETRY_USAGE stdout line
+            # below) — kept out of the public digest entry in data.json, since that file is
+            # served as-is to the news site.
+            usage = {
+                "model": response.model,
+                "inputTokens": response.usage.input_tokens,
+                "cachedInputTokens": getattr(response.usage, "cache_read_input_tokens", 0) or 0,
+                "outputTokens": response.usage.output_tokens,
+            }
 
         text_blocks = [b.text for b in response.content if b.type == "text"]
         raw = text_blocks[-1].strip() if text_blocks else "{}"
@@ -93,7 +103,7 @@ def call_claude() -> dict:
         bullets = parsed.get("bullets", [])
         span.set_attribute("digest.bullet_count", len(bullets))
         span.set_attribute("digest.headline", (parsed.get("headline") or "")[:200])
-        return parsed
+        return parsed, usage
 
 
 def load_existing() -> list:
@@ -151,7 +161,7 @@ def main():
             return
 
         try:
-            parsed = call_claude()
+            parsed, usage = call_claude()
         except Exception as e:
             span.set_attribute("exception.slug", "err-digest-run-failed")
             span.set_attribute("error", True)
@@ -173,6 +183,11 @@ def main():
         span.set_attribute("digest.saved_entry_count", len(entries))
         span.set_attribute("digest.success", True)
         print(f"[{now.isoformat()}] Saved entry. Total entries: {len(entries)}")
+
+        # Parsed back out of stdout by runDigest.js and attached to the telemetry.succeeded()
+        # call — see backend/src/jobs/runDigest.js.
+        if usage:
+            print(f"TELEMETRY_USAGE={json.dumps(usage)}")
 
 
 if __name__ == "__main__":

@@ -44,6 +44,22 @@ async function runPython(script, env = {}) {
   return output;
 }
 
+/**
+ * news_digest.py prints `TELEMETRY_USAGE={...}` on its own stdout line after a successful
+ * Claude call — kept out of digests/data.json (served as-is to the news site) but picked up
+ * here and forwarded to telemetry.succeeded() for Zanshin's cost prediction.
+ * @returns {{ model?: string, inputTokens?: number, cachedInputTokens?: number, outputTokens?: number } | undefined}
+ */
+function parseTelemetryUsage(output) {
+  const match = output.match(/^TELEMETRY_USAGE=(\{.*\})$/m);
+  if (!match) return undefined;
+  try {
+    return JSON.parse(match[1]);
+  } catch {
+    return undefined;
+  }
+}
+
 /** @returns {{ timestamp?: string, headline?: string, bullets?: unknown[] } | null} */
 function readLatestDigestEntry() {
   const dataPath = path.join(getRepoRoot(), 'digests', 'data.json');
@@ -137,6 +153,7 @@ async function runExistingDigestTask({ force = false, trigger } = {}) {
   const digestOutput = await runPython('news_digest.py', force ? { FORCE_DIGEST: 'true' } : {});
   const skipped = digestOutput.includes('Digest already exists for today (UTC) — skipping');
   const skipReason = skipped ? 'digest already exists for today (UTC)' : undefined;
+  const usage = parseTelemetryUsage(digestOutput);
 
   const changed = await commitDigestIfChanged();
 
@@ -165,7 +182,7 @@ async function runExistingDigestTask({ force = false, trigger } = {}) {
     trigger,
   });
 
-  return { changed, skipped, warnings, telemetry: telemetryMeta };
+  return { changed, skipped, warnings, telemetry: { ...telemetryMeta, ...usage } };
 }
 
 /**

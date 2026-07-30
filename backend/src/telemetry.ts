@@ -17,6 +17,12 @@ type TelemetryFields = {
   siteUrl?: string;
   entryUrl?: string;
   warnings?: string[];
+  // Real token usage from the Claude call (see news_digest.py's TELEMETRY_USAGE stdout line,
+  // parsed by runDigest.js) — unlocks Zanshin's real-time cost prediction for this agent.
+  model?: string;
+  inputTokens?: number;
+  cachedInputTokens?: number;
+  outputTokens?: number;
 };
 
 async function sendTelemetry(
