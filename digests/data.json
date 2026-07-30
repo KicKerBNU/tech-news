@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-30T08:00:01.999858+00:00",
+    "headline": "1,100+ AI employees sign open letter urging US government to prepare slowdown infrastructure as OpenAI breach and AI containment fears intensify",
+    "bullets": [
+      {
+        "title": "AI Workers' 'Pacing Letter' Calls on Washington to Prepare for Coordinated AI Slowdown",
+        "summary": "More than 1,100 employees at OpenAI, Anthropic, Google, and Meta signed an open letter asking the US government to help build governance infrastructure for a verifiable, coordinated slowdown of AI development if systems advance faster than humans can safely oversee. Signatories include chief scientists from the major labs, such as OpenAI's Jakub Pachocki and Meta's Shengjia Zhao.",
+        "source": "Build Fast with AI / Tech Startups"
+      },
+      {
+        "title": "OpenAI Security Breach Linked to Four Stolen Accounts",
+        "summary": "A recent OpenAI containment breach was traced to four stolen employee accounts, raising alarm about insider and credential-based threats at frontier AI labs. The incident has added urgency to the broader debate over AI safety and oversight.",
+        "source": "Build Fast with AI"
+      },
+      {
+        "title": "US Invests $300M in Faster AI Chip Connections, Restricts Chinese Humanoid Robots",
+        "summary": "Washington is committing $300 million to accelerate AI chip interconnect technology while simultaneously restricting Chinese humanoid robots on national-security grounds. The moves reflect how AI policy is increasingly tied to both infrastructure investment and geopolitical competition.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Nvidia-Backed ChipAgents Raises $60M to Automate Semiconductor Design",
+        "summary": "ChipAgents, backed by Nvidia, has secured $60 million to apply AI to automating the semiconductor design process. The funding signals growing investor interest in using AI to accelerate the hardware development pipeline itself.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Amazon Expands Satellite-to-Phone Connectivity Push",
+        "summary": "Amazon is moving deeper into satellite-to-phone connectivity, intensifying competition in the space-based communications sector. The move comes as Big Tech companies race to lock in massive new compute and satellite infrastructure capacity.",
+        "source": "Tech Startups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-29T08:33:56.305688+00:00",
     "headline": "OpenAI/Anthropic employees petition for international AI pacing accord as MCP goes stateless and China's CXMT IPO shatters records",
     "bullets": [
