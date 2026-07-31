@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-07-31T08:00:01.723504+00:00",
+    "headline": "OpenAI July revenue surpasses all of Q2; Microsoft Azure tops $100B as Big Tech AI spending race intensifies",
+    "bullets": [
+      {
+        "title": "OpenAI Revenue Surges Past Q2 Totals in Just One Month",
+        "summary": "OpenAI CFO Sarah Friar told employees that annualized revenue in July alone topped the entirety of Q2 2026, signaling accelerating demand for its AI products and services.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Microsoft Azure Crosses $100 Billion in Full-Year Revenue",
+        "summary": "Microsoft beat cloud expectations as full-year Azure revenue surpassed $100 billion, underscoring strong enterprise appetite for AI-powered cloud infrastructure.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Meta's Reality Labs Posts $4.6B Loss in Q2",
+        "summary": "Meta's hardware and metaverse division lost over $4.6 billion in the second quarter of 2026, even as the company continues heavy investment in AI and VR development.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Sam Altman to Meet White House Ahead of AI Framework Deadline",
+        "summary": "OpenAI CEO Sam Altman is scheduled to meet with the White House's Susie Wiles this week as a key deadline for the administration's AI governance framework approaches.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Big Tech AI Infrastructure Spend on Track to Exceed $700B in 2026",
+        "summary": "Amazon is preparing to spend an estimated $200 billion on AI and related infrastructure this year, with the combined capital expenditure of the largest hyperscalers expected to surpass $700 billion in 2026.",
+        "source": "Tech Startups / The Information"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-30T08:00:01.999858+00:00",
     "headline": "1,100+ AI employees sign open letter urging US government to prepare slowdown infrastructure as OpenAI breach and AI containment fears intensify",
     "bullets": [
