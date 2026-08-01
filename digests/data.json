@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-08-01T08:00:01.964462+00:00",
+    "headline": "OpenAI's ChatGPT nears 1 billion weekly users as AI data scarcity and a government AI shutdown dominate the news cycle",
+    "bullets": [
+      {
+        "title": "ChatGPT Closing In on 1 Billion Weekly Users",
+        "summary": "OpenAI's ChatGPT is reportedly approaching one billion weekly active users, marking a massive milestone for the generative AI platform and underlining the rapid mainstream adoption of large language models.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "A Government Switched Off an AI Model",
+        "summary": "A government has reportedly deactivated an AI model, raising questions about AI governance and state-level control over deployed AI systems. Details on which government and model are still emerging.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Chipmakers Win the Quarter as AI Demand Surges",
+        "summary": "Semiconductor companies posted strong quarterly results, driven by insatiable demand for AI computing infrastructure, with the broader AI investment landscape mapped across six key forces this quarter.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "AI Training Data Crunch Deepens",
+        "summary": "The cheap, clean, and permissionless text that fueled the first wave of large language models is increasingly being polluted by AI-generated output and contested by data owners, pointing to a looming data scarcity problem for future AI development.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Tempus AI Launches Next-Gen Agentic Drug Discovery Platform",
+        "summary": "Tempus AI announced the launch of the next generation of its Lens platform, an agentic AI system designed to accelerate pharmaceutical drug development and precision medicine research.",
+        "source": "BusinessWire"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-07-31T08:00:01.723504+00:00",
     "headline": "OpenAI July revenue surpasses all of Q2; Microsoft Azure tops $100B as Big Tech AI spending race intensifies",
     "bullets": [
