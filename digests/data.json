@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-08-02T08:00:02.385862+00:00",
+    "headline": "Anthropic's AI discovers cryptographic vulnerabilities; DeepSeek wired into cyberattack framework targeting 460+ systems",
+    "bullets": [
+      {
+        "title": "Anthropic AI Uncovers Novel Cryptographic Weaknesses",
+        "summary": "Anthropic disclosed that its AI found a nontrivial lattice automorphism vulnerability in HAWK, a NIST post-quantum signature candidate, cutting its security from 2^64 to 2^38, and also invented a 'M\u00f6bius Bridge' technique speeding attacks on 7-round AES-128 by 200\u2013800x. Anthropic stressed neither finding breaks any deployed system and followed responsible disclosure with government and industry partners.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "DeepSeek Weaponized in Cyberattack Campaign Against 460+ Systems",
+        "summary": "Palo Alto Networks' Unit 42 detailed a Zhuhai-based threat actor who wired DeepSeek into the open-source Hermes Agent framework and directed it via Telegram to enumerate targets, source public exploits, and attack over 460 internet-facing systems.",
+        "source": "AI Weekly / The Hacker News"
+      },
+      {
+        "title": "DeepSeek V4 Flash Launches at $0.14/M, Beats Its Own Pro Model on Agent Benchmarks",
+        "summary": "DeepSeek V4 Flash 0731 officially exited preview priced at $0.14/$0.28 per million tokens, posting a Terminal-Bench score of 82.7% \u2014 outperforming DeepSeek's own 1.6T Pro model on agent benchmarks.",
+        "source": "AI Tools Recap"
+      },
+      {
+        "title": "OpenAI Building 'Astra' Multi-Agent Model Family",
+        "summary": "OpenAI is reportedly developing a new model family called 'Astra' designed to let multiple agents collaborate on complex problems for hours or even days. CEO Sam Altman has already demoed Astra to policymakers.",
+        "source": "LLM Stats"
+      },
+      {
+        "title": "OpenAI Gives 100,000 Academic Researchers Free Access to Frontier Models",
+        "summary": "OpenAI launched a free program called ChatGPT for Academic Researchers, granting 100,000 scientists, mathematicians, and engineers access to its frontier AI models.",
+        "source": "Future Tools"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-01T08:00:01.964462+00:00",
     "headline": "OpenAI's ChatGPT nears 1 billion weekly users as AI data scarcity and a government AI shutdown dominate the news cycle",
     "bullets": [
