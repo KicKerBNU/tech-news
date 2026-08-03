@@ -28,7 +28,7 @@ tracer = get_tracer()
 
 REPO_ROOT = Path(__file__).parent.parent
 DATA_PATH = REPO_ROOT / "digests" / "data.json"
-MODEL = "claude-sonnet-4-6"
+MODEL = "claude-haiku-4-5"
 MAX_ENTRIES = 300  # cap file size; oldest entries drop off the end
 
 PROMPT = """Search the web (at most 1-2 searches) and find the most notable
