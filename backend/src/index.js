@@ -38,13 +38,24 @@ app.post('/api/digest/run', async (req, res) => {
     }
   }
 
-  const force =
+  const forceRequested =
     req.query.force === 'true' ||
     req.query.force === '1' ||
     req.body?.force === true;
 
+  // Cost guard: same-day force re-runs call Claude again. Opt in via ALLOW_FORCE_DIGEST=true.
+  const forceAllowed = process.env.ALLOW_FORCE_DIGEST?.toLowerCase() === 'true';
+  if (forceRequested && !forceAllowed) {
+    res.status(403).json({
+      ok: false,
+      error:
+        'force=true is disabled to avoid extra Claude charges. Set ALLOW_FORCE_DIGEST=true on Railway to override.',
+    });
+    return;
+  }
+
   try {
-    const result = await runDigestJob({ force, trigger: 'api' });
+    const result = await runDigestJob({ force: forceRequested && forceAllowed, trigger: 'api' });
     res.json({ ok: true, result });
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);

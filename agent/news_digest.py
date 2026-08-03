@@ -31,7 +31,7 @@ DATA_PATH = REPO_ROOT / "digests" / "data.json"
 MODEL = "claude-haiku-4-5"
 MAX_ENTRIES = 300  # cap file size; oldest entries drop off the end
 
-PROMPT = """Search the web (at most 1-2 searches) and find the most notable
+PROMPT = """Search the web (at most 1 search) and find the most notable
 AI / tech news from the last few hours. If nothing genuinely new has happened
 since typical news cycles, it's fine to return fewer bullets rather than
 padding with old or speculative stories.
@@ -61,7 +61,7 @@ def call_claude() -> tuple[dict, dict | None]:
             response = client.messages.create(
                 model=MODEL,
                 max_tokens=1200,
-                tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 2}],
+                tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 1}],
                 messages=[{"role": "user", "content": PROMPT}],
             )
         except Exception as exc:

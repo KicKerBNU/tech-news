@@ -110,7 +110,7 @@ function buildDigestTelemetry(entry, context) {
  * @param {number} [maxRetries]
  * @returns {Promise<T>}
  */
-async function runTaskWithTelemetry(task, options = {}, maxRetries = 2) {
+async function runTaskWithTelemetry(task, options = {}, maxRetries = 0) {
   const { trigger } = options;
   await telemetry.started({ trigger });
 
