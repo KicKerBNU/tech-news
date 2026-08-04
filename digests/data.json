@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-04T08:00:01.752015+00:00",
+    "headline": "OpenAI's Astra Model Solves 10 Open Math Problems; DeepSeek V4 Flash and Claude Sonnet 5 Pricing Updates",
+    "bullets": [
+      {
+        "title": "OpenAI's Astra Solves 10 Open Math Problems",
+        "summary": "OpenAI announced on August 1 that an internal version of Astra solved ten previously open problems in mathematics and theoretical computer science with verifiable Lean proofs, all for roughly $2,000 in compute.",
+        "source": "Build Fast with AI"
+      },
+      {
+        "title": "DeepSeek V4 Flash Official Release",
+        "summary": "DeepSeek V4 Flash 0731 officially exited preview at $0.14/M input tokens, beating its own 1.6T Pro model on agent benchmarks like Terminal-Bench with 82.7%.",
+        "source": "AI Tools Recap"
+      },
+      {
+        "title": "Claude Sonnet 5 Pricing Increase Coming",
+        "summary": "Claude Sonnet 5 introductory pricing expires on September 1, with rates increasing from $2/M to $3/M for input tokens, plus a new tokenizer that adds up to 35% more tokens per equivalent text.",
+        "source": "AI Tools Recap"
+      },
+      {
+        "title": "Europe Implements AI Transparency Rules",
+        "summary": "On August 2, Europe switched on continent-wide rules requiring AI systems to identify themselves to the humans they interact with.",
+        "source": "Educational Technology and Change Journal"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-02T08:00:02.385862+00:00",
     "headline": "Anthropic's AI discovers cryptographic vulnerabilities; DeepSeek wired into cyberattack framework targeting 460+ systems",
     "bullets": [
