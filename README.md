@@ -40,7 +40,6 @@ git push
 | `GITHUB_TOKEN` | yes | Fine-grained PAT with **Contents: read and write** on this repo |
 | `CRON_SECRET` | recommended | Protects `POST /api/digest/run` (manual trigger) |
 | `CRON_SCHEDULE` | no | Default `0 8 * * *` (08:00 UTC daily) |
-| `HONEYCOMB_API_KEY` | no | OpenTelemetry traces |
 | `RESEND_API_KEY` | no | Newsletter delivery |
 | `RESEND_FROM_EMAIL` | no | e.g. `SIGNAL <newsletter@yourdomain.com>` |
 | `UNSUBSCRIBE_SECRET` | no | Signed unsubscribe links |
@@ -183,25 +182,6 @@ backend/src/
   jobs/runDigest.js     Orchestrates pull → agent → commit → newsletter → telegram
   utils/git.js          Clone/sync repo and push digest commits via GITHUB_TOKEN
   utils/exec.js         Child-process helper for python/git commands
-```
-
-## Honeycomb tracing (OpenTelemetry)
-
-The digest agent exports traces to Honeycomb when `HONEYCOMB_API_KEY` is set.
-
-**Dataset:** `signal-news-digest`
-
-**Custom spans:**
-- `digest.run` — full daily job
-- `digest.call_claude` — Anthropic API + web search (auto-instrumented httpx child spans)
-- `digest.load_entries` / `digest.save_entries` — JSON I/O
-
-**Verify locally:**
-```bash
-cd agent
-pip install -r requirements.txt
-export HONEYCOMB_API_KEY=your-key
-python verify_traces.py
 ```
 
 Deliberately **not** included, per YAGNI: no repository interface/abstract class

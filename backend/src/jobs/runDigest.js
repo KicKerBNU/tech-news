@@ -17,9 +17,6 @@ export const digestState = {
 function agentEnv(extra = {}) {
   return {
     ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,
-    HONEYCOMB_API_KEY: process.env.HONEYCOMB_API_KEY,
-    OTEL_SERVICE_NAME: process.env.OTEL_SERVICE_NAME || 'signal-news-digest',
-    OTEL_EXPORTER_OTLP_ENDPOINT: process.env.OTEL_EXPORTER_OTLP_ENDPOINT || 'https://api.honeycomb.io',
     RESEND_API_KEY: process.env.RESEND_API_KEY,
     RESEND_FROM_EMAIL: process.env.RESEND_FROM_EMAIL,
     UNSUBSCRIBE_SECRET: process.env.UNSUBSCRIBE_SECRET,
