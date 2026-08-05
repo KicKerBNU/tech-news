@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-05T08:00:02.113203+00:00",
+    "headline": "OpenAI's Astra model solved 10 open math problems; Chinese labs drop pricing-competitive frontier models",
+    "bullets": [
+      {
+        "title": "OpenAI Astra Solves Open Mathematics Problems",
+        "summary": "OpenAI announced that an internal version of its next major model Astra solved ten previously unsolved problems in mathematics and theoretical computer science for roughly $2,000 in compute, including advances in group theory and sphere-packing density.",
+        "source": "Build Fast with AI"
+      },
+      {
+        "title": "Chinese AI Labs Undercut Western Pricing",
+        "summary": "Chinese labs have released frontier models at significantly lower prices, while regulators in Europe and California have begun enforcing real compliance measures.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Critical SonicWall Vulnerabilities Actively Exploited",
+        "summary": "Attackers are actively exploiting two recently patched vulnerabilities (CVE-2026-15409 and CVE-2026-15410) in SonicWall remote-access appliances, with one carrying maximum CVSS severity.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Embodied AI Advances in Logistics",
+        "summary": "Vision-language-action (VLA) models integrated into physical hardware are triggering an 'Embodied AI' boom in major logistics centers.",
+        "source": "TechDG"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-04T08:00:01.752015+00:00",
     "headline": "OpenAI's Astra Model Solves 10 Open Math Problems; DeepSeek V4 Flash and Claude Sonnet 5 Pricing Updates",
     "bullets": [
