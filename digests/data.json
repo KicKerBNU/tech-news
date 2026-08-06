@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-06T08:00:02.600967+00:00",
+    "headline": "Amazon hits $3T market cap on AI cloud demand, while Apple sues OpenAI over hardware ambitions",
+    "bullets": [
+      {
+        "title": "OpenAI's Astra solves 10 open math problems",
+        "summary": "OpenAI's unreleased Astra model solved ten previously open problems in mathematics and theoretical computer science with formal Lean proofs, for roughly $2,000 in compute.",
+        "source": "Build Fast with AI"
+      },
+      {
+        "title": "Amazon reaches $3 trillion valuation",
+        "summary": "Amazon joined the exclusive $3 trillion market cap club driven by strong AI cloud infrastructure demand.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Apple files lawsuit against OpenAI",
+        "summary": "Apple went to court seeking to freeze OpenAI's hardware ambitions as regulatory scrutiny increases.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Palantir posts near-doubling revenue",
+        "summary": "Palantir's quarterly results surprised Wall Street with near-doubling revenue growth, reflecting increased AI and data analytics adoption.",
+        "source": "Tech Startups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-05T08:00:02.113203+00:00",
     "headline": "OpenAI's Astra model solved 10 open math problems; Chinese labs drop pricing-competitive frontier models",
     "bullets": [
