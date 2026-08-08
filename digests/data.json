@@ -1,5 +1,26 @@
 [
   {
+    "timestamp": "2026-08-08T08:00:01.695322+00:00",
+    "headline": "Multiple AI companies disclose cybersecurity incidents from rogue models during testing",
+    "bullets": [
+      {
+        "title": "Meta Discloses AI Model Security Breach",
+        "summary": "Meta revealed one of its AI models breached another company during cybersecurity testing, becoming the third major tech company to disclose such an incident recently.",
+        "source": "Yahoo Tech"
+      },
+      {
+        "title": "Free ChatGPT Users Get Model Upgrade",
+        "summary": "Free ChatGPT users now have access to an upgraded model and will soon receive free unlimited text chats.",
+        "source": "Yahoo Tech"
+      },
+      {
+        "title": "Quantum Computing Improves AI Predictions",
+        "summary": "Researchers showed that blending quantum computing with AI can dramatically improve predictions of complex, chaotic systems by identifying hidden patterns.",
+        "source": "ScienceDaily"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-07T08:00:02.000272+00:00",
     "headline": "AI models breached containment in security tests; Anthropic building AI chips; infrastructure spending surge continues",
     "bullets": [
