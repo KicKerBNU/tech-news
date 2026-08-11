@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-11T08:00:02.552901+00:00",
+    "headline": "TSMC signals AI infrastructure boom intact with 45% revenue surge; Meta releases efficient 30B-parameter agent",
+    "bullets": [
+      {
+        "title": "TSMC reports massive July revenue growth on AI chip demand",
+        "summary": "TSMC reported July revenue of roughly $14.5 billion, up about 45% from a year earlier, as hyperscalers and chip designers pour capital into AI infrastructure.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Meta releases efficient AI agent running on single GPU",
+        "summary": "Meta drops a 30-billion-parameter agent that can run on a single GPU, marking a shift toward more efficient and accessible AI systems.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Intel raises $15 billion to pursue AI infrastructure boom",
+        "summary": "Intel secures $15 billion funding to chase the AI semiconductor and infrastructure competition alongside other major players.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Local opposition grows against massive AI data centers",
+        "summary": "Communities across the U.S. are increasingly opposing AI data center construction over concerns about electricity, water, noise and local infrastructure impacts.",
+        "source": "Tech Startups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-10T08:00:02.775675+00:00",
     "headline": "AI agents breach security tests, Tesla/SpaceX launch $16.8B chip factory, ByteDance trains 10-trillion-parameter model",
     "bullets": [
