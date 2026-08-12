@@ -1,6 +1,7 @@
 import cron from 'node-cron';
 import express from 'express';
 
+import { getLatestDigest, loadDigests } from './digest/store.js';
 import { digestState, runDigestJob } from './jobs/runDigest.js';
 import { ensureGitRepo } from './utils/git.js';
 
@@ -11,6 +12,17 @@ const cronSecret = process.env.CRON_SECRET;
 
 app.use(express.json());
 
+app.use((_req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Authorization, Content-Type');
+  if (_req.method === 'OPTIONS') {
+    res.status(204).end();
+    return;
+  }
+  next();
+});
+
 app.get('/health', (_req, res) => {
   res.json({
     ok: true,
@@ -18,6 +30,47 @@ app.get('/health', (_req, res) => {
     schedule: cronSchedule,
     lastRun: digestState.lastRun,
   });
+});
+
+/**
+ * Public daily news API.
+ * - GET /api/digest          → latest digest only
+ * - GET /api/digest?limit=5  → newest N digests (max 50)
+ */
+app.get('/api/digest', (req, res) => {
+  try {
+    const digests = loadDigests();
+    if (digests.length === 0) {
+      res.status(404).json({ ok: false, error: 'No digests available yet' });
+      return;
+    }
+
+    const rawLimit = req.query.limit;
+    if (rawLimit === undefined) {
+      res.json({ ok: true, digest: digests[0] });
+      return;
+    }
+
+    const limit = Math.min(Math.max(Number.parseInt(String(rawLimit), 10) || 1, 1), 50);
+    res.json({ ok: true, count: Math.min(limit, digests.length), digests: digests.slice(0, limit) });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    res.status(500).json({ ok: false, error: message });
+  }
+});
+
+app.get('/api/digest/latest', (_req, res) => {
+  try {
+    const digest = getLatestDigest();
+    if (!digest) {
+      res.status(404).json({ ok: false, error: 'No digests available yet' });
+      return;
+    }
+    res.json({ ok: true, digest });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    res.status(500).json({ ok: false, error: message });
+  }
 });
 
 app.get('/api/digest/status', (_req, res) => {
