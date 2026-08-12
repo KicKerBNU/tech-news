@@ -53,6 +53,21 @@ git push
 4. Deploy. Check logs for `[server] Listening` and `[cron] Schedule: 0 8 * * * (UTC)`.
 5. Hit `https://<your-railway-domain>/health` — should return `{ ok: true, ... }`.
 
+### Public news API
+
+```bash
+# Latest daily digest
+curl -sS "https://tech-news-production-af46.up.railway.app/api/digest"
+
+# Or alias
+curl -sS "https://tech-news-production-af46.up.railway.app/api/digest/latest"
+
+# Recent history (newest first, max 50)
+curl -sS "https://tech-news-production-af46.up.railway.app/api/digest?limit=5"
+```
+
+No auth required — same content as Telegram/email/the website feed.
+
 ### Manual run (don't wait for cron)
 
 ```bash
