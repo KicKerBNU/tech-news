@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-13T08:00:01.985808+00:00",
+    "headline": "AI infrastructure race accelerates with Gemini hitting 1 billion users, Anthropic preparing IPO, and half-trillion in new financing",
+    "bullets": [
+      {
+        "title": "Gemini crosses 1 billion users",
+        "summary": "Google's Gemini has reached the billion-user milestone, with growth accelerating from earlier 2026 figures near 950 million. The platform is deeply integrated across Google Search, Gmail, and Android.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "Anthropic prepares for potential IPO",
+        "summary": "Anthropic is meeting with potential investors in preparation for a possible public-market debut this fall, seeking to reassure investors about growth prospects.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "AI infrastructure financing boom",
+        "summary": "Half a trillion dollars in new infrastructure financing is taking shape as the AI race shifts from models to chips, memory, energy, and physical supply chains required for global-scale deployment.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "Major supply-chain breach affects 2,500+ companies",
+        "summary": "A significant supply-chain breach has exposed more than 2,500 companies, highlighting new cybersecurity risks as autonomous AI systems expand.",
+        "source": "TechStartups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-12T08:00:01.919695+00:00",
     "headline": "Nvidia secures $500 billion financing alliance for AI infrastructure expansion",
     "bullets": [
