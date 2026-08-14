@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-14T08:00:02.436319+00:00",
+    "headline": "Google launches Pixel 11 with Gemini AI integration as trillion-dollar AI infrastructure race intensifies",
+    "bullets": [
+      {
+        "title": "Google Pixel 11 Launch",
+        "summary": "Google launched Pixel 11, Pixel 11 Pro, and Pixel 11 Pro XL smartphones with new Tensor G6 chip, major camera upgrades, and deeper Gemini AI integration including Magic Capture features. Pre-orders began with availability set for August 20.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Anthropic Acquires Decart AI",
+        "summary": "Anthropic is negotiating to buy Israeli startup Decart AI, which specializes in real-time generative video and GPU optimization, in a deal valued around $6 billion.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "ChatGPT and Gemini Hit 1 Billion Users",
+        "summary": "Both ChatGPT and Google's Gemini have reached 1 billion users, reflecting massive adoption of AI chatbot interfaces across the consumer market.",
+        "source": "The Verge"
+      },
+      {
+        "title": "SpaceXAI Launches Grok Bot",
+        "summary": "SpaceXAI has launched Grok Bot in beta, AI agents that can sign into apps and websites, retain context between tasks, and coordinate with each other.",
+        "source": "TNW"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-13T08:00:01.985808+00:00",
     "headline": "AI infrastructure race accelerates with Gemini hitting 1 billion users, Anthropic preparing IPO, and half-trillion in new financing",
     "bullets": [
