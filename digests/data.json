@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-15T08:00:02.839831+00:00",
+    "headline": "Google releases faster, cheaper AI model while Apple quietly trains model for China with Alibaba",
+    "bullets": [
+      {
+        "title": "Google Releases New AI Model",
+        "summary": "Google dropped a sharper, cheaper AI workhorse overnight, marking continued competition in model efficiency and cost optimization.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Apple Partners with Alibaba on China AI Model",
+        "summary": "Apple quietly trained its own model for China with Alibaba's help, expanding localized AI capabilities.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "AI Infrastructure Expansion Accelerates",
+        "summary": "Big Tech's AI purchase commitments are approaching $1.5 trillion, with companies preparing to deploy thousands of robotaxis and building massive data centers globally.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Pricing Shifts in AI Market",
+        "summary": "OpenAI and Anthropic are cutting prices while DeepSeek is raising them, as faster inference becomes a competitive differentiator.",
+        "source": "Tech Startups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-14T08:00:02.436319+00:00",
     "headline": "Google launches Pixel 11 with Gemini AI integration as trillion-dollar AI infrastructure race intensifies",
     "bullets": [
