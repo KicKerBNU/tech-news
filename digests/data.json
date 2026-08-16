@@ -1,5 +1,26 @@
 [
   {
+    "timestamp": "2026-08-16T08:00:01.794447+00:00",
+    "headline": "Gemini reaches 1 billion monthly active users, matching ChatGPT's growth pace",
+    "bullets": [
+      {
+        "title": "Google Gemini hits 1 billion MAU milestone",
+        "summary": "Google's Gemini app has reached 1 billion monthly active users, with 63% engaging voice features and 150M+ images generated daily. The milestone puts it on pace with ChatGPT.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Manus returns to independence as Meta deal unwinds",
+        "summary": "Manus confirmed it will return to operating as an independent company as its Meta acquisition unwinds under a Beijing order, with user data deletion occurring August 23-24.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Pony.ai and Uber expand robotaxi partnership to Europe",
+        "summary": "Pony.ai and Uber have expanded their partnership to deploy over 2,000 robotaxis on European roads, giving the Chinese autonomous-driving company continental presence.",
+        "source": "AIToolCrunch"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-15T08:00:02.839831+00:00",
     "headline": "Google releases faster, cheaper AI model while Apple quietly trains model for China with Alibaba",
     "bullets": [
