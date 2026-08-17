@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-17T08:00:02.375463+00:00",
+    "headline": "Gemini crosses 1 billion monthly active users, reaching milestone in record time",
+    "bullets": [
+      {
+        "title": "Google Gemini Hits 1 Billion MAU Milestone",
+        "summary": "Gemini has crossed 1 billion monthly active users, becoming Google's fastest-growing product and 14th app to hit the billion-user mark. The milestone puts Gemini roughly on pace with ChatGPT's growth trajectory.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Alibaba Releases Qwen 3.8 27B Model",
+        "summary": "Alibaba's Qwen team released Qwen 3.8 27B under Apache 2.0 license, featuring integrated vision capabilities, 262K native context window extensible to 1M tokens, and a Gated DeltaNet architecture.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "AI Model Discovers Chrome V8 Security Vulnerabilities",
+        "summary": "An AI model discovered two previously unknown V8 vulnerabilities in Chrome that could be chained to corrupt memory and bypass the V8 heap sandbox. Google patched the issues under CVE-2026-15903.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Manus to Return as Independent Company",
+        "summary": "Manus confirmed it will return to operating as an independent company as its Meta acquisition unwinds following a Beijing order. User data from after the acquisition date will be deleted between August 23-24, 2026.",
+        "source": "AI Weekly"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-16T08:00:01.794447+00:00",
     "headline": "Gemini reaches 1 billion monthly active users, matching ChatGPT's growth pace",
     "bullets": [
