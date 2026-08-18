@@ -1,5 +1,26 @@
 [
   {
+    "timestamp": "2026-08-18T08:00:02.244139+00:00",
+    "headline": "Nvidia reportedly backing $100B OpenAI financing as AI infrastructure race accelerates with multi-billion-dollar deals",
+    "bullets": [
+      {
+        "title": "AI Video Startup Higgsfield Reaches $5.4B Valuation",
+        "summary": "AI video generation startup Higgsfield raised $400 million backed by Goldman Sachs, Intel, and others. The company's annualized revenue jumped from $20 million to $700 million in the past year.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "Multi-Billion-Dollar AI Infrastructure Deals Announced",
+        "summary": "Microsoft faces physical limits of data centers and electricity, while Nvidia prepares to back roughly $100 billion in OpenAI financing. Big Tech's total AI commitments may exceed trillions.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "DNA-Semiconductor Hybrid Memory Technology",
+        "summary": "Researchers combined synthetic DNA with semiconductors to create an ultra-low-power memory device that stores and processes information in the same location, potentially advancing AI systems.",
+        "source": "ScienceDaily"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-17T08:00:02.375463+00:00",
     "headline": "Gemini crosses 1 billion monthly active users, reaching milestone in record time",
     "bullets": [
