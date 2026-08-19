@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-19T08:00:01.729597+00:00",
+    "headline": "AI moves into physical world with robotaxis, wearables, and infrastructure expansion as companies pour billions into chips and data centers",
+    "bullets": [
+      {
+        "title": "Google acquires Spirit Airlines data trove for AI training",
+        "summary": "Google agreed to pay $10 million for de-identified data from bankrupt Spirit Airlines, including 100 million employee emails and 500 million Teams chats, pending bankruptcy court review.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "AI video startup Higgsfield raises $400M at $5.4B valuation",
+        "summary": "AI video generation company Higgsfield raised $400 million backed by Goldman Sachs and Intel, with annualized revenue climbing to $700 million and 30+ million users across 238 countries.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "Pony.ai and Uber preparing 2,000+ robotaxis for European roads",
+        "summary": "Companies are scaling autonomous vehicle deployments across Europe as AI infrastructure investments approach $1.5 trillion globally.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "Chip startup Etched surges to $21B valuation",
+        "summary": "Etched's valuation jump reflects growing competition in AI chip design as companies race to build specialized semiconductor solutions.",
+        "source": "TechStartups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-18T08:00:02.244139+00:00",
     "headline": "Nvidia reportedly backing $100B OpenAI financing as AI infrastructure race accelerates with multi-billion-dollar deals",
     "bullets": [
