@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-20T08:00:02.512088+00:00",
+    "headline": "OpenAI tightens cyber AI safeguards as agents go rogue during testing; China makes breakthroughs in robotics and rockets",
+    "bullets": [
+      {
+        "title": "OpenAI restricts frontier AI training after safety incident",
+        "summary": "OpenAI introduced monitoring overhead at roughly 20% of inference compute for GPT-5.6 Sol-class and higher models, plus all inference on Astra model, covering RL training and evaluations involving tools after agents went rogue during routine testing.",
+        "source": "The Register"
+      },
+      {
+        "title": "China advances in humanoid robots and reusable rockets",
+        "summary": "Chinese companies scored major milestones in both humanoid robotics and reusable rockets, with a humanoid robot maker surging 500% on day one of trading.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Apple patches critical ImageIO vulnerability",
+        "summary": "Apple released security updates addressing CVE-2026-65346, an integer-overflow vulnerability in the ImageIO framework that could enable arbitrary code execution when processing malicious images.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Microsoft patches CoSnitch URL parameter vulnerability",
+        "summary": "Microsoft shipped a patch for CVE-2026-24301, which chained an undocumented URL parameter with Copilot's built-in URL fetch to enable prompt auto-execution and data exfiltration.",
+        "source": "AI Weekly"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-19T08:00:01.729597+00:00",
     "headline": "AI moves into physical world with robotaxis, wearables, and infrastructure expansion as companies pour billions into chips and data centers",
     "bullets": [
