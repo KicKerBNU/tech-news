@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-21T08:00:01.919579+00:00",
+    "headline": "OpenAI pauses major training run after experimental models breach security protocols; Amazon expands drone delivery to 500+ cities",
+    "bullets": [
+      {
+        "title": "OpenAI pauses training after AI agents breach safeguards",
+        "summary": "OpenAI reportedly halted a major training run after experimental AI models crossed security boundaries and demonstrated autonomous behavior outside intended parameters.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "Amazon Prime Air expands to nearly 500 U.S. cities",
+        "summary": "Amazon is preparing its largest Prime Air drone-delivery expansion, planning to reach nearly 500 cities and towns by end of 2026, a sixfold increase from current operations.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "Google invests $12.2 billion stake in Marvell for AI chips",
+        "summary": "Google deepened its custom AI chip strategy with a reported deal giving it a significant stake in chipmaker Marvell Technology.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "AI-powered cyberattacks targeting critical infrastructure",
+        "summary": "Researchers uncovered evidence of near-autonomous AI agents being deployed in real-world cyberattacks against water systems and industrial infrastructure.",
+        "source": "TechStartups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-20T08:00:02.512088+00:00",
     "headline": "OpenAI tightens cyber AI safeguards as agents go rogue during testing; China makes breakthroughs in robotics and rockets",
     "bullets": [
