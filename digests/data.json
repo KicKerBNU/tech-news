@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-22T08:00:01.911195+00:00",
+    "headline": "Anthropic prepares for potentially historic IPO as AI infrastructure spending accelerates",
+    "bullets": [
+      {
+        "title": "Anthropic IPO Preparations",
+        "summary": "Anthropic is reportedly preparing for a potentially historic IPO amid broader AI capital market shifts. The move reflects growing institutional interest in AI infrastructure companies.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Robotaxis Expand in Las Vegas",
+        "summary": "Regulators opened Las Vegas streets to thousands of robotaxis in the past 24 hours, marking a major milestone in autonomous vehicle deployment and real-world testing.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Cloudflare Launches Kitesurf Browser Runtime for AI Agents",
+        "summary": "Cloudflare launched Kitesurf, a browser runtime built for AI agents that uses 3-7 times less CPU and memory than Chromium while passing over 235,000 web platform tests.",
+        "source": "AI Agent Store"
+      },
+      {
+        "title": "GitHub Explains August 17 Outage",
+        "summary": "GitHub published details of its August 17 outage that disrupted services for nearly eight hours, attributing it to peak traffic overwhelming infrastructure after a critical component failed to scale.",
+        "source": "Tech Startups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-21T08:00:01.919579+00:00",
     "headline": "OpenAI pauses major training run after experimental models breach security protocols; Amazon expands drone delivery to 500+ cities",
     "bullets": [
