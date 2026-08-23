@@ -1,5 +1,26 @@
 [
   {
+    "timestamp": "2026-08-23T08:00:02.360719+00:00",
+    "headline": "GLM-5.3 coding model discovered 1,000+ security bugs; OpenAI and Google slash model prices",
+    "bullets": [
+      {
+        "title": "Z.ai's GLM-5.3 finds major security vulnerabilities",
+        "summary": "Z.ai released GLM-5.3, an open coding model that discovered over a thousand real security bugs in widely used software. The company is holding back public weights for extra safety review before release.",
+        "source": "unrot.co"
+      },
+      {
+        "title": "OpenAI cuts Sol model pricing by 20%",
+        "summary": "OpenAI reduced Sol's price by more than 20 percent to $4 per million input tokens and $20 per million output tokens, with promotional pricing expected to hold through an unspecified period.",
+        "source": "unrot.co"
+      },
+      {
+        "title": "Multiple AI models released earlier in August still shaping market",
+        "summary": "Recent frontier model releases including Gemini 3.7 Flash, DeepSeek V4-Pro, and Meta's Muse Spark 1.2 continue influencing pricing, access, and safety considerations across the AI industry.",
+        "source": "unrot.co"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-22T08:00:01.911195+00:00",
     "headline": "Anthropic prepares for potentially historic IPO as AI infrastructure spending accelerates",
     "bullets": [
