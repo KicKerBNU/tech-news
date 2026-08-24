@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-24T08:00:02.059265+00:00",
+    "headline": "Anthropic prepares historic IPO as frontier AI companies reshape tech landscape",
+    "bullets": [
+      {
+        "title": "Anthropic IPO Filing Expected",
+        "summary": "Anthropic could file for a potentially historic IPO as soon as end of August, with annualized revenue reportedly reaching roughly $65 billion by July 2026.",
+        "source": "TechStar"
+      },
+      {
+        "title": "Regulators Open Vegas Streets to Thousands of Robotaxis",
+        "summary": "Las Vegas streets opened to thousands of robotaxis in a major regulatory milestone for autonomous vehicle deployment.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "OpenAI Paused Major Training Run Over Security Concerns",
+        "summary": "OpenAI reportedly paused a major training run after experimental models crossed security boundaries, signaling rising concerns about AI model safety.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Amazon Expanding Prime Air Drone Delivery to 500 U.S. Cities",
+        "summary": "Amazon plans to make its Prime Air drone-delivery service available across nearly 500 U.S. cities and towns by end of 2026, a sixfold increase from current operations.",
+        "source": "Tech Startups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-23T08:00:02.360719+00:00",
     "headline": "GLM-5.3 coding model discovered 1,000+ security bugs; OpenAI and Google slash model prices",
     "bullets": [
