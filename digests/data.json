@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-25T08:00:02.240047+00:00",
+    "headline": "Nvidia scales AI investments across model developers and applications; Perplexity valued at record $60+ billion",
+    "bullets": [
+      {
+        "title": "Nvidia's AI Economy Strategy Deepens",
+        "summary": "Nvidia is deploying billions to build influence across AI layers, from model developers to applications, while reportedly weighing a major investment in Perplexity at a sharply elevated valuation.",
+        "source": "Tech Startups (Aug 24)"
+      },
+      {
+        "title": "Perplexity Advances Beyond Search into AI Agents",
+        "summary": "Perplexity's valuation has surged from roughly $20 billion to potentially $60+ billion as the company expands from search into AI agents capable of complex professional tasks.",
+        "source": "Tech Startups (Aug 24)"
+      },
+      {
+        "title": "XPeng Raises $900M+ for Humanoid Robots",
+        "summary": "China's XPeng secured over $900 million in funding for its humanoid robot division amid accelerating competition in physical AI.",
+        "source": "Tech Startups (Aug 24)"
+      },
+      {
+        "title": "Alibaba Pairs New AI Video Model with Infrastructure Push",
+        "summary": "Alibaba unveiled a new AI video model alongside billions in infrastructure spending to support advanced AI deployment.",
+        "source": "Tech Startups (Aug 24)"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-24T08:00:02.059265+00:00",
     "headline": "Anthropic prepares historic IPO as frontier AI companies reshape tech landscape",
     "bullets": [
