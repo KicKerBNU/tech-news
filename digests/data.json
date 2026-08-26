@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-26T08:00:02.729902+00:00",
+    "headline": "Nvidia earnings and China outlook set to drive AI market mood as sector consolidates around infrastructure",
+    "bullets": [
+      {
+        "title": "Nvidia Q2 Earnings Today",
+        "summary": "Nvidia reports earnings August 26 after market close, with Q3 guidance and China commentary expected to determine broader AI sentiment for the next quarter.",
+        "source": "TIKR/Forbes"
+      },
+      {
+        "title": "Reddit Citations in ChatGPT Collapse 86%",
+        "summary": "Reddit's presence in ChatGPT search results has dropped dramatically by 86% over two weeks following OpenAI's recent search feature updates.",
+        "source": "Search Engine Journal"
+      },
+      {
+        "title": "Apple Launches New Mac Mini for On-Device AI",
+        "summary": "Apple quietly released a new Mac mini designed for the on-device AI era as the industry shifts toward local inference capabilities.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Infineon Acquires C2i Semiconductors for AI Power Tech",
+        "summary": "German semiconductor giant Infineon is acquiring Bengaluru-based C2i Semiconductors to bolster digital power technologies for AI data centers, addressing critical energy efficiency challenges.",
+        "source": "Tech Startups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-25T08:00:02.240047+00:00",
     "headline": "Nvidia scales AI investments across model developers and applications; Perplexity valued at record $60+ billion",
     "bullets": [
