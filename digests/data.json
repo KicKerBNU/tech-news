@@ -1,5 +1,26 @@
 [
   {
+    "timestamp": "2026-08-27T08:00:05.722620+00:00",
+    "headline": "OpenAI terminates Russian ChatGPT accounts in misinformation crackdown",
+    "bullets": [
+      {
+        "title": "OpenAI Shuts Down Russian Misinformation Operation",
+        "summary": "OpenAI terminated multiple ChatGPT accounts from Russia accused of participating in clandestine misinformation operations, discovered while analyzing AI-generated social media posts.",
+        "source": "Yahoo Tech"
+      },
+      {
+        "title": "MIT Develops AI Physical Therapy System",
+        "summary": "MIT engineers introduced an adaptive physical therapy system using generative AI to learn from physical therapists and support stroke patients.",
+        "source": "MIT News"
+      },
+      {
+        "title": "Study Shows Non-Experts Over-Trust AI Diagnosis",
+        "summary": "Research found that non-experts deferred to LLM-based diagnostic assistance even when incorrect, while clinicians were better at catching AI errors.",
+        "source": "MIT News"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-26T08:00:02.729902+00:00",
     "headline": "Nvidia earnings and China outlook set to drive AI market mood as sector consolidates around infrastructure",
     "bullets": [
