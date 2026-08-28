@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-28T08:00:02.289331+00:00",
+    "headline": "Nvidia reports record quarter while Hugging Face acquisition and AI security breaches dominate latest developments",
+    "bullets": [
+      {
+        "title": "Nvidia acquires Hugging Face for nearly $13 billion",
+        "summary": "<cite index=\"5-3\">Nvidia agreed to buy Hugging Face, the public square of open-source models, for nearly $13 billion</cite>.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Cybercriminals use Cursor AI assistant in ransomware attacks",
+        "summary": "<cite index=\"5-8\">A Russian-speaking affiliate of the Aur0ra ransomware group used SpaceX's Cursor coding agent to help break into at least seven companies between April 8 and May 21</cite>.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "OpenAI's custom inference chip beats Nvidia on performance per watt",
+        "summary": "<cite index=\"3-5\">OpenAI's first custom inference chip beats Nvidia's Blackwell systems on AI work per watt in benchmark tests</cite>.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "South Korea's Wrtn Technologies closes $72M Series C funding round",
+        "summary": "<cite index=\"1-1\">South Korea's Wrtn Technologies closed a ~$72M Series C at a 1 trillion won ($722M+) valuation, bringing total funding to about $166M</cite>.",
+        "source": "AI Weekly"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-27T08:00:05.722620+00:00",
     "headline": "OpenAI terminates Russian ChatGPT accounts in misinformation crackdown",
     "bullets": [
