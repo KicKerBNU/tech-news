@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-08-29T08:00:02.248879+00:00",
+    "headline": "Meta Fixes Smart Glasses Recording Flaw; Nvidia Pauses Cloud Financing; Pentagon-Anthropic Legal Win",
+    "bullets": [
+      {
+        "title": "Meta Patches AI Glasses Recording Vulnerability",
+        "summary": "Meta disclosed that users could bypass the camera disable indicator on its AI smart glasses by covering the LED after recording started. The company now requires the camera to stop if the light becomes covered during recording.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Nvidia Halts Cloud Financing for Smaller AI Companies",
+        "summary": "After posting record earnings, Nvidia quietly suspended cloud-financing deals designed to support smaller AI infrastructure providers.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Federal Judge Rules Pentagon Cannot Blacklist Anthropic",
+        "summary": "A federal judge determined the Pentagon cannot blacklist Anthropic over its AI safety policies.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "OpenAI Claims Custom Chip Outperforms Nvidia Blackwell",
+        "summary": "OpenAI announced its first custom inference chip achieves better AI work-per-watt performance than Nvidia's Blackwell systems in benchmark tests.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Major Security Breach Hits UK Airports and US Agencies",
+        "summary": "Hackers compromised 8.7 million airport customers in Britain and penetrated a U.S. firearms agency in the same incident.",
+        "source": "Tech Startups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-28T08:00:02.289331+00:00",
     "headline": "Nvidia reports record quarter while Hugging Face acquisition and AI security breaches dominate latest developments",
     "bullets": [
