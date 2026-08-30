@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-08-30T08:00:02.444343+00:00",
+    "headline": "AI infrastructure race escalates as agents gain autonomy, Meta fixes glasses privacy flaw, and Nvidia pauses cloud-financing deals",
+    "bullets": [
+      {
+        "title": "Google and Anthropic-backed AI Agent Foundation consolidates standards",
+        "summary": "Google's A2A protocol formally joined the Linux Foundation-directed Agentic AI Foundation alongside Anthropic's Model Context Protocol, bringing together over 250 members including AWS, Google, Microsoft, and OpenAI to establish unified agent security and authorization standards.",
+        "source": "AI Agent Store"
+      },
+      {
+        "title": "Meta fixes smart glasses privacy vulnerability",
+        "summary": "Meta is updating software on its AI-powered glasses after users discovered they could bypass the recording indicator by covering the LED after recording started, addressing privacy concerns as smart glasses emerge as potential smartphone successors.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Nvidia pauses cloud-financing deals amid record earnings",
+        "summary": "After printing record quarterly results, Nvidia quietly halted the cloud-financing arrangements that were designed to support smaller AI companies, signaling a shift in the competitive landscape.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Federal judge blocks Pentagon from blacklisting Anthropic over safety policies",
+        "summary": "A judge ruled the Pentagon cannot exclude Anthropic from contracts based on its commitment to safety guardrails, marking a significant legal development in AI policy.",
+        "source": "Tech Startups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-29T08:00:02.248879+00:00",
     "headline": "Meta Fixes Smart Glasses Recording Flaw; Nvidia Pauses Cloud Financing; Pentagon-Anthropic Legal Win",
     "bullets": [
