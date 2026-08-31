@@ -1,5 +1,26 @@
 [
   {
+    "timestamp": "2026-08-31T08:00:02.869937+00:00",
+    "headline": "Meta updates AI glasses with privacy protections to prevent covert recording",
+    "bullets": [
+      {
+        "title": "Meta AI Glasses Privacy Feature",
+        "summary": "Meta is updating its AI glasses to stop recording when someone covers the capture LED and cracking down on covert filming and harassment.",
+        "source": "TechRadar"
+      },
+      {
+        "title": "AI Creativity Study Results",
+        "summary": "A major study comparing over 100,000 people with advanced AI systems finds that generative AI can beat the average human on certain creativity tests.",
+        "source": "ScienceDaily"
+      },
+      {
+        "title": "Google's Budget Chromebook Strategy",
+        "summary": "Google is developing a new Chromebook that won't be high-end like the Pixel, hoping to succeed where Copilot+ PCs have struggled.",
+        "source": "Tom's Guide"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-30T08:00:02.444343+00:00",
     "headline": "AI infrastructure race escalates as agents gain autonomy, Meta fixes glasses privacy flaw, and Nvidia pauses cloud-financing deals",
     "bullets": [
