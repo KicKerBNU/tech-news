@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-09-01T08:00:02.263198+00:00",
+    "headline": "Pentagon launches GenAI.mil portal with ChatGPT and Grok for 3M military staff",
+    "bullets": [
+      {
+        "title": "Pentagon Opens GenAI.mil Portal",
+        "summary": "The Department of Defense opened GenAI.mil, a secure portal providing 3M DoD personnel access to OpenAI's ChatGPT Mil, xAI/Starshield's Grok for Government, and Google Gemini, with 1.7M users already onboarded.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Clipto Raises $15M at $250M Valuation",
+        "summary": "Local AI media search startup Clipto closed a $15M Series round at $250M post-money valuation led by HSG, claiming $15M ARR and 30M+ users across 100+ countries.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Tesla Autopilot Involved in Fatal Texas Crash",
+        "summary": "A confidential NHTSA filing reveals Tesla's driver-assist system was engaged during a May 2026 fatal crash in Texas that killed 23-year-old Steven Alvarez, contradicting local police attribution to medical episode.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "EU Signs \u20ac387.8M LUMI-AI Supercomputer Contract",
+        "summary": "The European High Performance Computing Joint Undertaking signed a major contract for a new AI supercomputer powered by AMD chips.",
+        "source": "HPCWire"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-08-31T08:00:02.869937+00:00",
     "headline": "Meta updates AI glasses with privacy protections to prevent covert recording",
     "bullets": [
