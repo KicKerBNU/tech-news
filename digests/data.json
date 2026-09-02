@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-09-02T08:00:03.183458+00:00",
+    "headline": "EU classifies ChatGPT as search engine; Pentagon adds ChatGPT and Grok to military portal; Apple gets new CEO",
+    "bullets": [
+      {
+        "title": "EU Classifies ChatGPT as Search Engine",
+        "summary": "The EU has officially classified ChatGPT as a search engine, marking a significant regulatory shift in how the platform is categorized under European law.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Pentagon Deploys ChatGPT and Grok on Military Portal",
+        "summary": "The Pentagon has added ChatGPT and Grok to its internal portal, which is already used by 1.7 million military personnel.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "EU Invests \u20ac387.8M in LUMI-AI Supercomputer",
+        "summary": "EuroHPC JU signed a \u20ac387.8M contract with Atos to build LUMI-AI in Finland, powered by AMD chips, targeting 10x AI capacity of its predecessor.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Clipto Reaches $15M ARR with 30M+ Users",
+        "summary": "Local video and document indexing startup Clipto has hit $15M annual recurring revenue and attracted over 30 million users across 100+ countries.",
+        "source": "AI Weekly"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-01T08:00:02.263198+00:00",
     "headline": "Pentagon launches GenAI.mil portal with ChatGPT and Grok for 3M military staff",
     "bullets": [
