@@ -1,9 +1,11 @@
 /**
- * Failure alerts via Resend — sent from Node so git/Claude failures still notify.
+ * Failure alerts via Resend — same contacts as the daily newsletter.
+ * Sent from Node so git/Claude failures still notify.
  * Debounced to one alert per UTC day (catch-up retries won't spam).
  */
 
 const RESEND_API = 'https://api.resend.com';
+const USER_AGENT = 'signal-news-agent/1.0 (+https://signal-news-agent.netlify.app)';
 
 /** @type {string | null} */
 let lastFailureAlertDay = null;
@@ -20,21 +22,57 @@ function escapeHtml(text) {
     .replaceAll('"', '&quot;');
 }
 
+function resendHeaders(apiKey) {
+  return {
+    Authorization: `Bearer ${apiKey}`,
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+    'User-Agent': USER_AGENT,
+  };
+}
+
+/** @returns {Promise<string[]>} */
+async function fetchActiveSubscribers(apiKey) {
+  const emails = [];
+  let cursor;
+
+  while (true) {
+    const params = new URLSearchParams({ limit: '100' });
+    if (cursor) params.set('after', cursor);
+
+    const response = await fetch(`${RESEND_API}/contacts?${params}`, {
+      headers: resendHeaders(apiKey),
+      signal: AbortSignal.timeout(15_000),
+    });
+    const body = await response.text();
+    if (!response.ok) {
+      throw new Error(`Resend contacts HTTP ${response.status}: ${body}`);
+    }
+
+    const payload = JSON.parse(body);
+    for (const contact of payload.data || []) {
+      if (!contact.unsubscribed && contact.email) {
+        emails.push(contact.email);
+      }
+    }
+
+    if (!payload.has_more) break;
+    cursor = payload.next;
+    if (!cursor) break;
+  }
+
+  return emails;
+}
+
 /**
  * @param {{ trigger?: string, error: string, startedAt?: string, force?: boolean }} details
- * @returns {Promise<{ sent: boolean, reason?: string }>}
+ * @returns {Promise<{ sent: boolean, reason?: string, recipients?: number, missing?: string[] }>}
  */
 export async function sendFailureAlert(details) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.RESEND_FROM_EMAIL;
-  const to = process.env.ALERT_EMAIL;
 
-  const missing = [
-    !apiKey && 'RESEND_API_KEY',
-    !from && 'RESEND_FROM_EMAIL',
-    !to && 'ALERT_EMAIL',
-  ].filter(Boolean);
-
+  const missing = [!apiKey && 'RESEND_API_KEY', !from && 'RESEND_FROM_EMAIL'].filter(Boolean);
   if (missing.length) {
     console.warn(`[alert] Skipping failure email — missing: ${missing.join(', ')}`);
     return { sent: false, reason: 'missing_config', missing };
@@ -44,6 +82,19 @@ export async function sendFailureAlert(details) {
   if (!details.force && lastFailureAlertDay === day) {
     console.log(`[alert] Failure alert already sent for ${day} — skipping`);
     return { sent: false, reason: 'already_sent_today' };
+  }
+
+  let subscribers;
+  try {
+    subscribers = await fetchActiveSubscribers(apiKey);
+  } catch (error) {
+    console.error(`[alert] Failed to load subscribers: ${error instanceof Error ? error.message : error}`);
+    return { sent: false, reason: 'contacts_failed' };
+  }
+
+  if (!subscribers.length) {
+    console.warn('[alert] Skipping failure email — no active Resend contacts');
+    return { sent: false, reason: 'no_subscribers' };
   }
 
   const when = details.startedAt || new Date().toISOString();
@@ -64,7 +115,7 @@ export async function sendFailureAlert(details) {
         <tr><td style="padding: 4px 12px 4px 0; color: #666;">Trigger</td><td>${escapeHtml(trigger)}</td></tr>
         <tr><td style="padding: 4px 12px 4px 0; color: #666;">Error</td><td><code style="white-space: pre-wrap;">${escapeHtml(error)}</code></td></tr>
       </table>
-      <p style="margin: 0 0 8px;">Catch-up retries run every 5 minutes until today's digest exists.</p>
+      <p style="margin: 0 0 8px;">Catch-up retries run every 5 minutes (max 20 attempts) until today's digest exists.</p>
       <p style="margin: 0;">
         <a href="${escapeHtml(healthUrl)}">Check /health</a>
         ·
@@ -73,22 +124,19 @@ export async function sendFailureAlert(details) {
     </div>
   `;
 
+  const messages = subscribers.map((email) => ({
+    from,
+    to: [email],
+    subject,
+    html,
+  }));
+
   try {
-    const response = await fetch(`${RESEND_API}/emails`, {
+    const response = await fetch(`${RESEND_API}/emails/batch`, {
       method: 'POST',
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-        'User-Agent': 'signal-news-agent/1.0',
-      },
-      body: JSON.stringify({
-        from,
-        to: [to],
-        subject,
-        html,
-      }),
-      signal: AbortSignal.timeout(15_000),
+      headers: resendHeaders(apiKey),
+      body: JSON.stringify(messages),
+      signal: AbortSignal.timeout(30_000),
     });
 
     const body = await response.text();
@@ -98,8 +146,8 @@ export async function sendFailureAlert(details) {
     }
 
     lastFailureAlertDay = day;
-    console.log(`[alert] Failure email sent to ${to}`);
-    return { sent: true };
+    console.log(`[alert] Failure email sent to ${subscribers.length} subscriber(s)`);
+    return { sent: true, recipients: subscribers.length };
   } catch (error) {
     console.error(`[alert] Failed to send failure email: ${error instanceof Error ? error.message : error}`);
     return { sent: false, reason: 'send_failed' };
