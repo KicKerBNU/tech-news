@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-09-03T08:53:22.010201+00:00",
+    "headline": "OpenAI rates next model critical cyber risk; Anthropic faces copyright lawsuits; AI regulatory pressure escalates",
+    "bullets": [
+      {
+        "title": "OpenAI flags next model as critical cyber risk",
+        "summary": "OpenAI has rated its next model a critical cyber risk, highlighting growing security concerns as AI capabilities advance.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Sony Music and Warner Chappell sue Anthropic over song lyrics",
+        "summary": "Sony Music Publishing and Warner Chappell filed a 48-page complaint against Anthropic seeking up to $150,000 per song, adding to legal fights over AI training data.",
+        "source": "AIToolsRecap"
+      },
+      {
+        "title": "Texas freezes data-center power hookups amid AI infrastructure surge",
+        "summary": "Texas halted new data-center power connections following a rush of unaccounted \"ghost\" demand, reflecting infrastructure strain from AI expansion.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Anthropic releases cheaper AI agents; new model versions deployed",
+        "summary": "Anthropic made AI agents more affordable while multiple model updates rolled out, including Fable 5.1 and pricing optimizations.",
+        "source": "LLM Stats"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-02T08:00:03.183458+00:00",
     "headline": "EU classifies ChatGPT as search engine; Pentagon adds ChatGPT and Grok to military portal; Apple gets new CEO",
     "bullets": [
