@@ -26,3 +26,23 @@ export function loadDigests() {
 export function getLatestDigest() {
   return loadDigests()[0] ?? null;
 }
+
+/** True if the newest local digest entry is from today's UTC date. */
+export function hasDigestForToday(now = new Date()) {
+  const latest = getLatestDigest();
+  if (!latest?.timestamp) {
+    return false;
+  }
+
+  try {
+    const dt = new Date(latest.timestamp);
+    if (Number.isNaN(dt.getTime())) {
+      return false;
+    }
+
+    const today = now.toISOString().slice(0, 10);
+    return dt.toISOString().slice(0, 10) === today;
+  } catch {
+    return false;
+  }
+}

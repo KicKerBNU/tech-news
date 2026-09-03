@@ -1,13 +1,14 @@
 import cron from 'node-cron';
 import express from 'express';
 
-import { getLatestDigest, loadDigests } from './digest/store.js';
+import { getLatestDigest, hasDigestForToday, loadDigests } from './digest/store.js';
 import { digestState, runDigestJob } from './jobs/runDigest.js';
 import { ensureGitRepo } from './utils/git.js';
 
 const app = express();
 const port = Number(process.env.PORT || 3000);
 const cronSchedule = process.env.CRON_SCHEDULE || '0 8 * * *';
+const retrySchedule = process.env.CRON_RETRY_SCHEDULE || '*/5 * * * *';
 const cronSecret = process.env.CRON_SECRET;
 
 app.use(express.json());
@@ -23,11 +24,62 @@ app.use((_req, res, next) => {
   next();
 });
 
+/** Parse "m h ..." cron; returns { minute, hour } or null. */
+function parseDailyCron(schedule) {
+  const parts = String(schedule).trim().split(/\s+/);
+  if (parts.length < 2) return null;
+  const minute = Number(parts[0]);
+  const hour = Number(parts[1]);
+  if (!Number.isInteger(minute) || !Number.isInteger(hour)) return null;
+  if (minute < 0 || minute > 59 || hour < 0 || hour > 23) return null;
+  return { minute, hour };
+}
+
+function isPastPrimarySchedule(now = new Date()) {
+  const parsed = parseDailyCron(cronSchedule);
+  if (!parsed) {
+    // Unknown cron shape — allow catch-up anytime.
+    return true;
+  }
+
+  const minutesNow = now.getUTCHours() * 60 + now.getUTCMinutes();
+  const minutesPrimary = parsed.hour * 60 + parsed.minute;
+  return minutesNow >= minutesPrimary;
+}
+
+/**
+ * Catch-up: if today's digest is missing after the primary cron window,
+ * try again (idempotent — Claude is skipped once today's entry exists).
+ */
+async function maybeRunCatchUp() {
+  if (digestState.running) {
+    console.log('[retry] Digest already running — skipping catch-up');
+    return;
+  }
+
+  if (!isPastPrimarySchedule()) {
+    return;
+  }
+
+  if (hasDigestForToday()) {
+    return;
+  }
+
+  console.log('[retry] No digest for today yet — running catch-up job');
+  try {
+    await runDigestJob({ trigger: 'retry' });
+  } catch (error) {
+    console.error(`[retry] Catch-up failed: ${error instanceof Error ? error.message : error}`);
+  }
+}
+
 app.get('/health', (_req, res) => {
   res.json({
     ok: true,
     running: digestState.running,
     schedule: cronSchedule,
+    retrySchedule,
+    hasDigestForToday: hasDigestForToday(),
     lastRun: digestState.lastRun,
   });
 });
@@ -77,6 +129,8 @@ app.get('/api/digest/status', (_req, res) => {
   res.json({
     running: digestState.running,
     schedule: cronSchedule,
+    retrySchedule,
+    hasDigestForToday: hasDigestForToday(),
     lastRun: digestState.lastRun,
   });
 });
@@ -131,6 +185,9 @@ async function start() {
   if (!cron.validate(cronSchedule)) {
     throw new Error(`Invalid CRON_SCHEDULE: ${cronSchedule}`);
   }
+  if (!cron.validate(retrySchedule)) {
+    throw new Error(`Invalid CRON_RETRY_SCHEDULE: ${retrySchedule}`);
+  }
 
   try {
     await ensureGitRepo();
@@ -149,9 +206,27 @@ async function start() {
     { timezone: 'UTC' },
   );
 
+  // If the primary run fails (e.g. GitHub temporary limits), keep trying every 5 minutes
+  // until today's digest exists. Idempotent — no Claude call once today is done.
+  cron.schedule(
+    retrySchedule,
+    () => {
+      maybeRunCatchUp().catch((error) => {
+        console.error(`[retry] Unexpected catch-up error: ${error instanceof Error ? error.message : error}`);
+      });
+    },
+    { timezone: 'UTC' },
+  );
+
   app.listen(port, () => {
     console.log(`[server] Listening on :${port}`);
-    console.log(`[cron] Schedule: ${cronSchedule} (UTC)`);
+    console.log(`[cron] Primary schedule: ${cronSchedule} (UTC)`);
+    console.log(`[cron] Catch-up retry: ${retrySchedule} (UTC) when today's digest is missing`);
+  });
+
+  // If we boot after 08:00 UTC and today is still missing, try once immediately.
+  maybeRunCatchUp().catch((error) => {
+    console.error(`[retry] Startup catch-up failed: ${error instanceof Error ? error.message : error}`);
   });
 }
 

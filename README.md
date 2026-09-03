@@ -217,8 +217,12 @@ exactly one file, not copy-pasted across five component `<style>` tags.
 
 - **Scheduler runs on Railway**, not GitHub Actions. The service stays up 24/7; `node-cron`
   fires at the configured UTC time. Railway also health-checks `/health` and restarts on failure.
+- **Catch-up retries:** if the primary run fails (e.g. GitHub temporary rate limits) and today's
+  digest is still missing, a second cron (`CRON_RETRY_SCHEDULE`, default every 5 minutes) keeps
+  trying until it succeeds. Once today's entry exists, retries are no-ops (no extra Claude calls).
+  Git fetch/push also retries with backoff on transient errors.
 - **Same-day idempotency** — if today's digest already exists (UTC date), the agent skips unless
-  you trigger with `force=true`.
+  you trigger with `force=true` (and `ALLOW_FORCE_DIGEST=true`).
 - **Push triggers redeploy** — each digest commit may redeploy the Railway service if auto-deploy
   is on. That's fine; the job finishes before the new container starts.
 - **Raw file caching.** `raw.githubusercontent.com` caches for a few minutes;
