@@ -9,7 +9,15 @@ const app = express();
 const port = Number(process.env.PORT || 3000);
 const cronSchedule = process.env.CRON_SCHEDULE || '0 8 * * *';
 const retrySchedule = process.env.CRON_RETRY_SCHEDULE || '*/5 * * * *';
+const maxCatchUpAttempts = Number(process.env.CRON_RETRY_MAX_ATTEMPTS || 20);
 const cronSecret = process.env.CRON_SECRET;
+
+/** @type {{ day: string | null, attempts: number, exhausted: boolean }} */
+const catchUpState = {
+  day: null,
+  attempts: 0,
+  exhausted: false,
+};
 
 app.use(express.json());
 
@@ -47,11 +55,27 @@ function isPastPrimarySchedule(now = new Date()) {
   return minutesNow >= minutesPrimary;
 }
 
+function todayUtc() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function resetCatchUpIfNewDay() {
+  const day = todayUtc();
+  if (catchUpState.day !== day) {
+    catchUpState.day = day;
+    catchUpState.attempts = 0;
+    catchUpState.exhausted = false;
+  }
+}
+
 /**
  * Catch-up: if today's digest is missing after the primary cron window,
  * try again (idempotent — Claude is skipped once today's entry exists).
+ * Stops after CRON_RETRY_MAX_ATTEMPTS (default 20) failures for the UTC day.
  */
 async function maybeRunCatchUp() {
+  resetCatchUpIfNewDay();
+
   if (digestState.running) {
     console.log('[retry] Digest already running — skipping catch-up');
     return;
@@ -62,23 +86,53 @@ async function maybeRunCatchUp() {
   }
 
   if (hasDigestForToday()) {
+    catchUpState.attempts = 0;
+    catchUpState.exhausted = false;
     return;
   }
 
-  console.log('[retry] No digest for today yet — running catch-up job');
+  if (catchUpState.exhausted || catchUpState.attempts >= maxCatchUpAttempts) {
+    if (!catchUpState.exhausted) {
+      catchUpState.exhausted = true;
+      console.error(
+        `[retry] Giving up for ${catchUpState.day} after ${maxCatchUpAttempts} catch-up attempts`,
+      );
+    }
+    return;
+  }
+
+  catchUpState.attempts += 1;
+  console.log(
+    `[retry] No digest for today yet — catch-up attempt ${catchUpState.attempts}/${maxCatchUpAttempts}`,
+  );
+
   try {
     await runDigestJob({ trigger: 'retry' });
+    if (hasDigestForToday()) {
+      catchUpState.attempts = 0;
+      catchUpState.exhausted = false;
+    }
   } catch (error) {
     console.error(`[retry] Catch-up failed: ${error instanceof Error ? error.message : error}`);
+    if (catchUpState.attempts >= maxCatchUpAttempts) {
+      catchUpState.exhausted = true;
+      console.error(
+        `[retry] Giving up for ${catchUpState.day} after ${maxCatchUpAttempts} catch-up attempts`,
+      );
+    }
   }
 }
 
 app.get('/health', (_req, res) => {
+  resetCatchUpIfNewDay();
   res.json({
     ok: true,
     running: digestState.running,
     schedule: cronSchedule,
     retrySchedule,
+    maxCatchUpAttempts,
+    catchUpAttempts: catchUpState.attempts,
+    catchUpExhausted: catchUpState.exhausted,
     hasDigestForToday: hasDigestForToday(),
     lastRun: digestState.lastRun,
   });
@@ -126,10 +180,14 @@ app.get('/api/digest/latest', (_req, res) => {
 });
 
 app.get('/api/digest/status', (_req, res) => {
+  resetCatchUpIfNewDay();
   res.json({
     running: digestState.running,
     schedule: cronSchedule,
     retrySchedule,
+    maxCatchUpAttempts,
+    catchUpAttempts: catchUpState.attempts,
+    catchUpExhausted: catchUpState.exhausted,
     hasDigestForToday: hasDigestForToday(),
     lastRun: digestState.lastRun,
   });
@@ -241,7 +299,7 @@ async function start() {
   app.listen(port, () => {
     console.log(`[server] Listening on :${port}`);
     console.log(`[cron] Primary schedule: ${cronSchedule} (UTC)`);
-    console.log(`[cron] Catch-up retry: ${retrySchedule} (UTC) when today's digest is missing`);
+    console.log(`[cron] Catch-up retry: ${retrySchedule} (UTC), max ${maxCatchUpAttempts} attempts/day`);
   });
 
   // If we boot after 08:00 UTC and today is still missing, try once immediately.

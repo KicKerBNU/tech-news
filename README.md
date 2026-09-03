@@ -220,8 +220,9 @@ exactly one file, not copy-pasted across five component `<style>` tags.
   fires at the configured UTC time. Railway also health-checks `/health` and restarts on failure.
 - **Catch-up retries:** if the primary run fails (e.g. GitHub temporary rate limits) and today's
   digest is still missing, a second cron (`CRON_RETRY_SCHEDULE`, default every 5 minutes) keeps
-  trying until it succeeds. Once today's entry exists, retries are no-ops (no extra Claude calls).
-  Git fetch/push also retries with backoff on transient errors.
+  trying until it succeeds or hits `CRON_RETRY_MAX_ATTEMPTS` (default **20**). Once today's entry
+  exists, retries are no-ops (no extra Claude calls). Git fetch/push also retries with backoff on
+  transient errors.
 - **Failure email:** when a digest job fails, Resend emails `ALERT_EMAIL` once per UTC day (retries
   won't spam). Requires `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `ALERT_EMAIL` on Railway.
 - **Same-day idempotency** — if today's digest already exists (UTC date), the agent skips unless
