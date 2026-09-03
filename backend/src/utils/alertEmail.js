@@ -29,11 +29,15 @@ export async function sendFailureAlert(details) {
   const from = process.env.RESEND_FROM_EMAIL;
   const to = process.env.ALERT_EMAIL;
 
-  if (!apiKey || !from || !to) {
-    console.warn(
-      '[alert] Skipping failure email — set RESEND_API_KEY, RESEND_FROM_EMAIL, and ALERT_EMAIL',
-    );
-    return { sent: false, reason: 'missing_config' };
+  const missing = [
+    !apiKey && 'RESEND_API_KEY',
+    !from && 'RESEND_FROM_EMAIL',
+    !to && 'ALERT_EMAIL',
+  ].filter(Boolean);
+
+  if (missing.length) {
+    console.warn(`[alert] Skipping failure email — missing: ${missing.join(', ')}`);
+    return { sent: false, reason: 'missing_config', missing };
   }
 
   const day = todayUtc();
