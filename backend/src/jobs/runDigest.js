@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { telemetry } from '../telemetry.ts';
+import { clearFailureAlertDebounce, sendFailureAlert } from '../utils/alertEmail.js';
 import { run } from '../utils/exec.js';
 import { commitDigestIfChanged, ensureGitRepo, getRepoRoot, syncLatest } from '../utils/git.js';
 
@@ -213,6 +214,10 @@ export async function runDigestJob(options = {}) {
       error: null,
     };
 
+    if (result.changed) {
+      clearFailureAlertDebounce();
+    }
+
     return digestState.lastRun;
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
@@ -229,6 +234,12 @@ export async function runDigestJob(options = {}) {
       status: 'error',
       error: message,
     };
+
+    await sendFailureAlert({ trigger, error: message, startedAt }).catch((alertError) => {
+      console.error(
+        `[digest] Failure alert errored: ${alertError instanceof Error ? alertError.message : alertError}`,
+      );
+    });
 
     throw error;
   } finally {

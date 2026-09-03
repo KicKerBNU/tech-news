@@ -171,6 +171,26 @@ app.post('/api/digest/run', async (req, res) => {
   }
 });
 
+app.post('/api/alert/test', async (req, res) => {
+  if (cronSecret) {
+    const auth = req.headers.authorization || '';
+    const token = auth.startsWith('Bearer ') ? auth.slice(7) : '';
+    if (token !== cronSecret) {
+      res.status(401).json({ error: 'Unauthorized' });
+      return;
+    }
+  }
+
+  const { sendFailureAlert } = await import('./utils/alertEmail.js');
+  const result = await sendFailureAlert({
+    trigger: 'alert-test',
+    error: 'Manual test of SIGNAL failure alerts (safe to ignore).',
+    startedAt: new Date().toISOString(),
+    force: true,
+  });
+  res.status(result.sent ? 200 : 400).json({ ok: result.sent, ...result });
+});
+
 async function start() {
   if (!process.env.ANTHROPIC_API_KEY) {
     console.warn('[server] ANTHROPIC_API_KEY is not set — digest runs will fail');

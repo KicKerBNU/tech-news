@@ -42,6 +42,7 @@ git push
 | `CRON_SCHEDULE` | no | Default `0 8 * * *` (08:00 UTC daily) |
 | `RESEND_API_KEY` | no | Newsletter delivery |
 | `RESEND_FROM_EMAIL` | no | e.g. `SIGNAL <newsletter@yourdomain.com>` |
+| `ALERT_EMAIL` | recommended | Where to email when the daily digest job fails |
 | `UNSUBSCRIBE_SECRET` | no | Signed unsubscribe links |
 | `TELEGRAM_BOT_TOKEN` | no | Telegram bot token |
 | `TELEGRAM_CHAT_ID` | no | Group chat id |
@@ -127,7 +128,7 @@ Subscribers enter their email on the site; after each daily digest run, the back
    ```bash
    openssl rand -base64 32
    ```
-4. **Railway env vars** — `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `UNSUBSCRIBE_SECRET`
+4. **Railway env vars** — `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `UNSUBSCRIBE_SECRET`, `ALERT_EMAIL`
 5. **Netlify env vars** — same `RESEND_API_KEY` and `UNSUBSCRIBE_SECRET` (for subscribe/unsubscribe functions)
 6. Redeploy Netlify after adding env vars
 
@@ -221,6 +222,8 @@ exactly one file, not copy-pasted across five component `<style>` tags.
   digest is still missing, a second cron (`CRON_RETRY_SCHEDULE`, default every 5 minutes) keeps
   trying until it succeeds. Once today's entry exists, retries are no-ops (no extra Claude calls).
   Git fetch/push also retries with backoff on transient errors.
+- **Failure email:** when a digest job fails, Resend emails `ALERT_EMAIL` once per UTC day (retries
+  won't spam). Requires `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `ALERT_EMAIL` on Railway.
 - **Same-day idempotency** — if today's digest already exists (UTC date), the agent skips unless
   you trigger with `force=true` (and `ALLOW_FORCE_DIGEST=true`).
 - **Push triggers redeploy** — each digest commit may redeploy the Railway service if auto-deploy
