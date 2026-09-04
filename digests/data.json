@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-09-04T08:00:02.253548+00:00",
+    "headline": "OpenAI's Astra model exceeds critical cybersecurity threshold; Apple names new CEO as AI regulatory pressures mount",
+    "bullets": [
+      {
+        "title": "OpenAI's Astra Hits Critical Cybersecurity Threshold",
+        "summary": "OpenAI said Astra is the first LLM to exceed its Preparedness Framework 'Critical' cybersecurity threshold, scoring a perfect ExploitBench and autonomously finding and exploiting two zero-days in modified tests.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Apple Names New CEO Amid AI Pressure",
+        "summary": "John Ternus becomes Apple chief executive, taking over the only large technology company without a frontier model of its own.",
+        "source": "AIToolsRecap"
+      },
+      {
+        "title": "Texas Freezes Data Center Power After 'Ghost' Demand Surge",
+        "summary": "Texas froze data-center power hookups after a rush of ghost demand related to AI infrastructure expansion.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Sony Music Publishing, Warner Chappell Sue Anthropic Over Song Lyrics",
+        "summary": "Sony Music Publishing and Warner Chappell filed a 48-page complaint naming Anthropic and its founders, seeking up to $150,000 per song.",
+        "source": "AIToolsRecap"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-03T08:53:22.010201+00:00",
     "headline": "OpenAI rates next model critical cyber risk; Anthropic faces copyright lawsuits; AI regulatory pressure escalates",
     "bullets": [
