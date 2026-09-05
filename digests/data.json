@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-09-05T08:00:02.710716+00:00",
+    "headline": "OpenAI releases GPT-6 Astra with critical-level cyber capabilities, marking claimed AGI era arrival",
+    "bullets": [
+      {
+        "title": "OpenAI Launches GPT-6 Astra",
+        "summary": "OpenAI shipped GPT-6 Astra for a limited group with paid ChatGPT plans, API, Azure and Bedrock access rolling out over days. The model reached what OpenAI calls the 'critical' cyber threshold for AI capabilities.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Tesla Cybercabs Draw Federal Safety Probe",
+        "summary": "Tesla deployed wheel-free Cybercabs on Austin streets and immediately faced a federal safety investigation into the autonomous vehicles.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "Microsoft AI Releases MAI-Transcribe-2",
+        "summary": "Microsoft released a faster, more accurate speech-recognition model with 60-language support at $0.10 per audio hour introductory pricing, claiming superior performance versus OpenAI and Google alternatives.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "Crusoe Energy Reaches $30 Billion Valuation",
+        "summary": "Energy-focused AI infrastructure company Crusoe AI achieved a $30 billion valuation amid surging demand for AI compute capacity.",
+        "source": "TechStartups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-04T08:00:02.253548+00:00",
     "headline": "OpenAI's Astra model exceeds critical cybersecurity threshold; Apple names new CEO as AI regulatory pressures mount",
     "bullets": [
