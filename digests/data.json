@@ -1,5 +1,26 @@
 [
   {
+    "timestamp": "2026-09-06T08:00:02.967735+00:00",
+    "headline": "Meta updates AI glasses with recording safety features and crackdown on covert filming",
+    "bullets": [
+      {
+        "title": "Meta AI Glasses Recording Safety Update",
+        "summary": "Meta is updating its AI glasses to stop recording if someone covers the capture LED and implementing additional measures to crack down on covert filming and harassment.",
+        "source": "Yahoo Tech"
+      },
+      {
+        "title": "Chinese AI Competitors Closing Gap on Silicon Valley",
+        "summary": "A spate of new Chinese AI releases show competitors are closing the gap on Silicon Valley while winning market share with lower prices.",
+        "source": "Bloomberg"
+      },
+      {
+        "title": "Robotics Companies Collecting Human Training Videos",
+        "summary": "Robotics companies are competing to collect videos of humans performing tasks like stitching shoes and welding steel to give their machines new skills.",
+        "source": "Bloomberg"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-05T08:00:02.710716+00:00",
     "headline": "OpenAI releases GPT-6 Astra with critical-level cyber capabilities, marking claimed AGI era arrival",
     "bullets": [
