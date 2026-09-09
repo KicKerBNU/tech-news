@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-09-09T08:00:02.608832+00:00",
+    "headline": "Mistral secures \u20ac3B Series D in largest European tech funding round; Forus raises $150M for AI-guided prescriptions",
+    "bullets": [
+      {
+        "title": "Mistral's \u20ac3B Series D Funding",
+        "summary": "French AI company Mistral announced a \u20ac3B Series D at a valuation exceeding \u20ac21B, marking the largest equity round for a European tech company. Samsung Electronics led the round with co-leads EQT and PSG Equity.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Forus Raises $150M for Prescription Fulfillment AI",
+        "summary": "Forus secured $150M in Series C funding at a $3B valuation to accelerate its AI-guided prescription fulfillment technology.",
+        "source": "Bloomberg via AI Weekly"
+      },
+      {
+        "title": "China Quadruples National AI Compute Target",
+        "summary": "China announced plans to quadruple intelligent computing capacity to 9,800 eflops by 2030, with a five-year investment plan of 3.8 trillion yuan ($532 billion) in information infrastructure.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Google Faces EU Regulation Criticism",
+        "summary": "Google told 450 million Europeans that its Search product was experiencing degradation due to regulatory constraints.",
+        "source": "Tech Startups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-08T08:00:02.325154+00:00",
     "headline": "OpenAI releases GPT-6 Astra, declares AGI era arrival; Nvidia acquires Hugging Face for $12.93B",
     "bullets": [
