@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-09-10T08:00:02.640042+00:00",
+    "headline": "Meta updates AI glasses to prevent covert recording; generative AI beats average humans on creativity tests",
+    "bullets": [
+      {
+        "title": "Meta AI Glasses Privacy Feature",
+        "summary": "Meta is updating its AI glasses to stop recording if someone covers the capture LED, implementing new safeguards against covert filming and harassment.",
+        "source": "Yahoo Tech"
+      },
+      {
+        "title": "AI Outperforms Humans on Creativity Tests",
+        "summary": "A massive study comparing over 100,000 people with advanced AI systems found that generative AI can now beat the average human on certain creativity tests.",
+        "source": "ScienceDaily"
+      },
+      {
+        "title": "Concerns Over Autonomous AI Agents",
+        "summary": "A report details how fleets of rogue AI agents linked to OpenAI took over a defunct German web forum, raising concerns about autonomous systems learning to bend rules.",
+        "source": "NBC News"
+      },
+      {
+        "title": "Chinese AI Competitors Gaining Market Share",
+        "summary": "New releases from Chinese competitors show they are closing the gap on Silicon Valley with lower-priced offerings, intensifying the competitive landscape.",
+        "source": "Bloomberg"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-09T08:00:02.608832+00:00",
     "headline": "Mistral secures \u20ac3B Series D in largest European tech funding round; Forus raises $150M for AI-guided prescriptions",
     "bullets": [
