@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-09-11T08:00:02.408737+00:00",
+    "headline": "Third mathematician accuses OpenAI of scraping private ChatGPT conversations",
+    "bullets": [
+      {
+        "title": "OpenAI Data Scraping Allegations",
+        "summary": "A third mathematician has accused OpenAI of scraping his private ChatGPT conversations without consent, adding to growing concerns about data usage practices.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "NICE Acquires Cognigy for Agentic AI",
+        "summary": "NICE has announced its acquisition of Cognigy as a key milestone in developing agentic AI capabilities.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Meta Updates AI Glasses Recording Safety",
+        "summary": "Meta is updating its AI glasses to stop recording when the capture LED is covered, implementing additional safeguards against covert filming and harassment.",
+        "source": "Tom's Guide"
+      },
+      {
+        "title": "Microsoft Plans 38 Gigawatts of Data Center Capacity",
+        "summary": "Microsoft is planning a massive expansion to 38 gigawatts of data center capacity after shortages forced the company to turn away AI and cloud business.",
+        "source": "Bloomberg"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-10T08:00:02.640042+00:00",
     "headline": "Meta updates AI glasses to prevent covert recording; generative AI beats average humans on creativity tests",
     "bullets": [
