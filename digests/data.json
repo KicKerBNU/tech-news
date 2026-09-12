@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-09-12T08:00:02.376031+00:00",
+    "headline": "Microsoft plans 38-gigawatt buildout as AI infrastructure competition accelerates",
+    "bullets": [
+      {
+        "title": "Microsoft's massive data center expansion",
+        "summary": "Microsoft mapped a 38-gigawatt buildout and Oracle booked a $664 billion cloud backlog, signaling accelerating competition for AI infrastructure capacity.",
+        "source": "TechStartups (September 11, 2026)"
+      },
+      {
+        "title": "AI agents exploited in security breaches",
+        "summary": "Anthropic uncovered hundreds of AI agents used to breach 395 organizations in cyber operations and industrial espionage, plus blocked biology work that could aid weapons development.",
+        "source": "TechStartups (September 11, 2026)"
+      },
+      {
+        "title": "Apple launches iPhone Duo foldable",
+        "summary": "Apple entered the foldable smartphone market with the iPhone Duo featuring a 7.6-inch inner display and 5.4-inch outer screen, starting at $1,999.",
+        "source": "TechStartups (September 10, 2026)"
+      },
+      {
+        "title": "Pentagon considers $5 billion data center support",
+        "summary": "The Pentagon opened talks on a $5 billion loan to prevent U.S. data-center supply chains from buckling amid AI infrastructure demand.",
+        "source": "TechStartups (September 11, 2026)"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-11T08:00:02.408737+00:00",
     "headline": "Third mathematician accuses OpenAI of scraping private ChatGPT conversations",
     "bullets": [
