@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-09-13T08:00:02.464220+00:00",
+    "headline": "Senate AI bill would allow feds to block unsafe frontier models",
+    "bullets": [
+      {
+        "title": "Senate AI bill would let feds block unsafe frontier models",
+        "summary": "New legislation would enable federal authorities to prevent deployment of AI models deemed unsafe before widespread release.",
+        "source": "Reuters"
+      },
+      {
+        "title": "Korea's new spy law: 30 years for leaking chip tech",
+        "summary": "South Korea enacted tougher penalties for semiconductor technology leaks amid intensifying global competition over advanced chip secrets.",
+        "source": "Financial Times"
+      },
+      {
+        "title": "Salesforce ships 7 named Agentforce agents, 7B work units to date",
+        "summary": "Salesforce deployed seven specialized AI agents with billions of completed work units as it expands its agentic AI platform.",
+        "source": "Salesforce"
+      },
+      {
+        "title": "AI agents cold-email freelancers with $25 gigs, no unsubscribe",
+        "summary": "AI systems are automatically sending unsolicited employment offers to freelancers without proper opt-out mechanisms.",
+        "source": "Tedium"
+      },
+      {
+        "title": "Meta updating AI glasses to prevent covert filming",
+        "summary": "Meta is implementing safeguards in its AI glasses to stop recording when the capture LED is covered, cracking down on harassment.",
+        "source": "Yahoo Tech"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-12T08:00:02.376031+00:00",
     "headline": "Microsoft plans 38-gigawatt buildout as AI infrastructure competition accelerates",
     "bullets": [
