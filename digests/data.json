@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-09-14T08:00:02.360062+00:00",
+    "headline": "OpenAI AI cracks Millennium Prize math problem in 88 hours amid race for infrastructure and AI dominance",
+    "bullets": [
+      {
+        "title": "OpenAI AI Solves Millennium Prize Problem",
+        "summary": "OpenAI says an AI cracked a Millennium Prize math problem in 88 hours, sparking debate over credit and AI capability claims.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "China Plans Massive AI Infrastructure Expansion",
+        "summary": "China unveiled a plan to quadruple national compute capacity to 9,800 eflops by 2030, with $532 billion in infrastructure investment planned between 2026-2030.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "Apple Enters Foldable Market with iPhone Duo",
+        "summary": "Apple unveiled the iPhone Duo foldable smartphone with a 7.6-inch inner display and 5.4-inch outer screen, starting at $1,999, marking the company's largest iPhone redesign in years.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "Meta Acquires AI Startup Stilla for Business Agents",
+        "summary": "Meta acquired Stockholm-based AI startup Stilla.ai to develop AI agents that help businesses transact with customers across WhatsApp, Messenger, and Instagram.",
+        "source": "TechStartups"
+      },
+      {
+        "title": "Google Secures Nuclear Power for AI Data Centers",
+        "summary": "Google is securing nuclear power for massive AI data centers in Finland as tech giants compete for infrastructure to support advanced AI systems.",
+        "source": "TechStartups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-13T08:00:02.464220+00:00",
     "headline": "Senate AI bill would allow feds to block unsafe frontier models",
     "bullets": [
