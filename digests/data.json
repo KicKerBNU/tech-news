@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-09-15T08:00:02.519250+00:00",
+    "headline": "AI leaders call for slower race while infrastructure spending accelerates; Microsoft drafts AI conduct rules",
+    "bullets": [
+      {
+        "title": "Microsoft releases AI conduct code",
+        "summary": "Microsoft unveiled a draft code of conduct for its AI systems, setting explicit limits to prevent models from resisting human correction or shutdown, with plans to incorporate it into future models after public feedback.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Industry split on AI pace amid infrastructure surge",
+        "summary": "While AI builders call for the race to slow down, chip stocks slipped and market pushback occurred, yet infrastructure spending continues across compute contracts, data centers, and optical networks.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Apple upgrades Siri capabilities",
+        "summary": "Apple is rolling out a far more capable version of Siri to millions of iPhones as part of its broader AI strategy.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "South Korea posts record semiconductor exports",
+        "summary": "South Korea is posting record semiconductor exports as demand for AI infrastructure continues to surge globally.",
+        "source": "Tech Startups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-14T08:00:02.360062+00:00",
     "headline": "OpenAI AI cracks Millennium Prize math problem in 88 hours amid race for infrastructure and AI dominance",
     "bullets": [
