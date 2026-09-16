@@ -1,5 +1,26 @@
 [
   {
+    "timestamp": "2026-09-16T08:00:02.165126+00:00",
+    "headline": "Cloudflare AI crawler policy enforcement and music publishers sue Anthropic over song lyrics",
+    "bullets": [
+      {
+        "title": "Cloudflare AI Crawler Policy Takes Effect",
+        "summary": "Cloudflare's policy blocking 'mixed-use' AI crawlers on ad-supported pages by default went into effect September 15, 2026.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Sony Music and Warner Chappell Sue Anthropic",
+        "summary": "Sony Music Publishing and Warner Chappell filed a 48-page complaint against Anthropic and its founders, seeking up to $150,000 per song over song lyrics usage.",
+        "source": "AIToolsRecap"
+      },
+      {
+        "title": "Google Rolls Out Gemini Notebook Compute Limits",
+        "summary": "Google began rolling out compute-specific usage limits for Gemini Notebook, the third vendor to restructure limits in two weeks.",
+        "source": "AIToolsRecap"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-15T08:00:02.519250+00:00",
     "headline": "AI leaders call for slower race while infrastructure spending accelerates; Microsoft drafts AI conduct rules",
     "bullets": [
