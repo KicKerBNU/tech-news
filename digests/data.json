@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-09-17T08:00:02.267344+00:00",
+    "headline": "TechCrunch Disrupt 2026 conference features OpenAI, Anthropic, Replit and major AI industry players",
+    "bullets": [
+      {
+        "title": "Judge Orders Musk to Hand Over Apple Settlement Terms",
+        "summary": "A federal judge has ordered Elon Musk to provide Apple settlement terms following the dismissal of an X and SpaceX antitrust case.",
+        "source": "Politico via AI Weekly"
+      },
+      {
+        "title": "Canada and Germany Fund LawZero AI Initiative",
+        "summary": "Canada and Germany each committed up to $150 million in grants to Yoshua Bengio's LawZero non-profit to support Scientist AI development.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Microsoft AI CEO Critiques Anthropic's Claude Consciousness Claims",
+        "summary": "Mustafa Suleyman published an essay arguing that Anthropic's approach to consciousness in Claude's constitution amounts to circular reasoning.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Biren Technology Seeks $1 Billion Share Placement",
+        "summary": "Shanghai Biren Technology is exploring a roughly $1 billion share placement as China's GPU alternative maker expands funding efforts.",
+        "source": "Bloomberg via AI Weekly"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-16T08:00:02.165126+00:00",
     "headline": "Cloudflare AI crawler policy enforcement and music publishers sue Anthropic over song lyrics",
     "bullets": [
