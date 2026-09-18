@@ -37,6 +37,7 @@ git push
 | Variable | Required | Purpose |
 |----------|----------|---------|
 | `ANTHROPIC_API_KEY` | yes | Claude API for the digest agent |
+| `OPENAI_API_KEY` | recommended | Fallback if Claude fails twice (`gpt-5-nano`, cheap) |
 | `GITHUB_TOKEN` | yes | Fine-grained PAT with **Contents: read and write** on this repo |
 | `CRON_SECRET` | recommended | Protects `POST /api/digest/run` (manual trigger) |
 | `CRON_SCHEDULE` | no | Default `0 8 * * *` (08:00 UTC daily) |

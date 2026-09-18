@@ -18,6 +18,8 @@ export const digestState = {
 function agentEnv(extra = {}) {
   return {
     ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,
+    OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+    OPENAI_DIGEST_MODEL: process.env.OPENAI_DIGEST_MODEL || 'gpt-5-nano',
     RESEND_API_KEY: process.env.RESEND_API_KEY,
     RESEND_FROM_EMAIL: process.env.RESEND_FROM_EMAIL,
     UNSUBSCRIBE_SECRET: process.env.UNSUBSCRIBE_SECRET,
