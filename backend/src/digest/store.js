@@ -27,7 +27,7 @@ export function getLatestDigest() {
   return loadDigests()[0] ?? null;
 }
 
-/** True if the newest local digest entry is from today's UTC date. */
+/** True if the newest local digest entry is from today's UTC date and has real bullets. */
 export function hasDigestForToday(now = new Date()) {
   const latest = getLatestDigest();
   if (!latest?.timestamp) {
@@ -41,7 +41,13 @@ export function hasDigestForToday(now = new Date()) {
     }
 
     const today = now.toISOString().slice(0, 10);
-    return dt.toISOString().slice(0, 10) === today;
+    if (dt.toISOString().slice(0, 10) !== today) {
+      return false;
+    }
+
+    // Empty/thin digests (e.g. "no major news") don't count — allow catch-up regeneration.
+    const bullets = Array.isArray(latest.bullets) ? latest.bullets : [];
+    return bullets.length >= 2;
   } catch {
     return false;
   }
