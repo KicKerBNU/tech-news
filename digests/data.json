@@ -1,8 +1,29 @@
 [
   {
-    "timestamp": "2026-09-18T08:00:02.507392+00:00",
-    "headline": "No major AI/tech announcements in the last few hours",
-    "bullets": []
+    "timestamp": "2026-09-18T08:59:58.940318+00:00",
+    "headline": "King Charles to press Nvidia, OpenAI, Anthropic leaders on AI safety at summit",
+    "bullets": [
+      {
+        "title": "King Charles AI Safety Summit",
+        "summary": "King Charles will press Nvidia, OpenAI, and Anthropic leaders on AI safety at a summit.",
+        "source": "CNBC"
+      },
+      {
+        "title": "AI Chip Talent Crisis in U.S.",
+        "summary": "America faces a critical shortage with 157,000 more workers needed in AI chip roles, as Samsung, Micron and other chipmakers struggle to find skilled personnel.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Gimlet Labs Secures $300 Million AI Hardware Funding",
+        "summary": "Gimlet Labs closed a $300 million funding deal for AI hardware infrastructure, reflecting strong investor appetite for expensive AI infrastructure projects.",
+        "source": "MEAN CEO Blog"
+      },
+      {
+        "title": "Northwestern Artificial Neuron Breakthrough",
+        "summary": "Engineers at Northwestern University have developed printed artificial neurons that can communicate with real brain neurons.",
+        "source": "ScienceDaily"
+      }
+    ]
   },
   {
     "timestamp": "2026-09-17T08:00:02.267344+00:00",
