@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-09-19T08:05:01.709197+00:00",
+    "headline": "OpenAI launches legal research index, Nvidia projects chip sales doubling, and Apple enables AI coding agents",
+    "bullets": [
+      {
+        "title": "OpenAI Drops Legal Research Index",
+        "summary": "OpenAI released a legal-research index spanning 230 million URLs, expanding AI tool availability for legal professionals and researchers.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Nvidia CEO: Chip Sales to Double Next Year",
+        "summary": "Nvidia's Jensen Huang announced the company expects to sell twice as many chips in the coming year, signaling continued strong demand for AI infrastructure.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Apple Enables Coding Agents in Safari",
+        "summary": "Apple enabled AI-powered coding agents to operate within Safari browser, allowing autonomous agents to take action directly.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Google Rolls Out Shared Family Agent",
+        "summary": "Google launched a shared household AI agent enabling family members to access AI capabilities together.",
+        "source": "Tech Startups"
+      },
+      {
+        "title": "Europe Moves to Disable AI Companions for Children by Default",
+        "summary": "European regulators are moving to automatically disable AI companion features for children unless explicitly enabled, addressing safety concerns.",
+        "source": "Tech Startups"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-18T08:59:58.940318+00:00",
     "headline": "King Charles to press Nvidia, OpenAI, Anthropic leaders on AI safety at summit",
     "bullets": [
