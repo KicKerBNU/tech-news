@@ -190,6 +190,49 @@ webapp/src/
   shared/utils/time.js                 generic formatting with no domain meaning (clock, countdown)
 ```
 
+## Digest quality: sources + no-repeat
+
+The agent should not rehash yesterday's stories or lean on weak aggregators.
+
+### Preferred outlets (`agent/sources.json`)
+
+Edit this file anytime — the next digest run loads it automatically (no code change).
+
+```json
+{
+  "preferred": [
+    { "name": "TechCrunch", "url": "https://techcrunch.com", "topics": ["startups", "AI"] }
+  ],
+  "avoid": [
+    "Tech Startups",
+    "Build Fast with AI"
+  ]
+}
+```
+
+| Field | Purpose |
+|-------|---------|
+| `preferred` | Outlets the prompt tells the model to search/cite first (Reuters, Bloomberg, TechCrunch, company blogs, …) |
+| `avoid` | Aggregators / weak sources not to use as the primary citation |
+
+**How to grow the list:** add a new object under `preferred`, commit, push to `master`. Railway's next cron (or catch-up) will use it.
+
+### Deduping against recent digests
+
+Each run:
+
+1. Loads the last **2** digests from `digests/data.json`
+2. Injects their headlines + bullet titles into the prompt as **ALREADY COVERED — do not repeat**
+3. After the model responds, **rejects** the result if too many bullets look like near-duplicates of those prior stories (then Claude/OpenAI retries kick in)
+
+So a story that already shipped yesterday (e.g. “Nvidia chip sales to double”) should not appear again unless there is a genuine new development.
+
+### Model fallback (cost-aware)
+
+1. Claude Haiku — up to 2 attempts  
+2. If both fail → OpenAI `gpt-5-nano` — up to 2 attempts (needs `OPENAI_API_KEY`)  
+3. Empty / placeholder digests (“no major news”) are rejected  
+
 ## Backend (`backend/`)
 
 ```
@@ -198,11 +241,13 @@ backend/src/
   jobs/runDigest.js     Orchestrates pull → agent → commit → newsletter → telegram
   utils/git.js          Clone/sync repo and push digest commits via GITHUB_TOKEN
   utils/exec.js         Child-process helper for python/git commands
-```
 
-The digest agent reads `agent/sources.json` (preferred outlets + avoid list) and injects the
-last 2 digests' headlines/titles into the prompt so it doesn't rehash yesterday's stories.
-Add outlets to `preferred` anytime — no code change needed.
+agent/
+  news_digest.py        Claude (+ OpenAI fallback) digest generator
+  sources.json          Preferred / avoid outlets (edit to grow coverage)
+  send_newsletter.py    Resend batch email
+  send_telegram.py      Telegram Bot API post
+```
 
 Deliberately **not** included, per YAGNI: no repository interface/abstract class
 (there's one data source, so one concrete implementation is enough — add an
@@ -237,4 +282,6 @@ exactly one file, not copy-pasted across five component `<style>` tags.
 - **Raw file caching.** `raw.githubusercontent.com` caches for a few minutes;
   the app cache-busts each fetch, but very rapid manual reloads may still show
   a slightly stale copy.
+- **Digest sources + dedupe:** see [Digest quality: sources + no-repeat](#digest-quality-sources--no-repeat).
+  Edit `agent/sources.json` to grow preferred outlets; recent digests are excluded from the next run.
 - **To change the schedule:** set `CRON_SCHEDULE` on Railway (standard cron syntax, UTC).
