@@ -23,7 +23,9 @@
     { "name": "Anthropic News", "url": "https://www.anthropic.com/news", "topics": ["Anthropic"] },
     { "name": "Google DeepMind Blog", "url": "https://deepmind.google/discover/blog", "topics": ["Google", "research"] },
     { "name": "Microsoft Blog", "url": "https://blogs.microsoft.com", "topics": ["Microsoft", "enterprise"] },
-    { "name": "Nvidia News", "url": "https://nvidianews.nvidia.com", "topics": ["chips", "infrastructure"] }
+    { "name": "Nvidia News", "url": "https://nvidianews.nvidia.com", "topics": ["chips", "infrastructure"] },
+    { "name": "Taipei News", "url": "https://www.taipeitimes.com/", "topics": ["AI", "enterprise"] },
+    { "name": "The Edge Malaysia", "url": "https://theedgemalaysia.com/", "topics": ["AI", "enterprise", "investment"] }
   ],
   "avoid": [
     "Tech Startups",

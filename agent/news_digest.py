@@ -140,14 +140,57 @@ matching exactly this schema:
 }}
 
 Include 2-5 bullets with real sources. Do not invent stories. Do not return an empty
-bullets array. Do not include anything outside the JSON object."""
+bullets array. Your FINAL message must be ONLY the raw JSON object — no preamble,
+no markdown fences, no commentary before or after."""
+
+
+def _extract_json_object(raw: str) -> str:
+    """Pull a JSON object out of model text that may include prose or fences."""
+    raw = (raw or "").strip()
+    if not raw:
+        raise ValueError("empty model response")
+
+    fenced = re.search(r"```(?:json)?\s*(\{[\s\S]*?\})\s*```", raw, flags=re.IGNORECASE)
+    if fenced:
+        return fenced.group(1).strip()
+
+    if raw.startswith("{") and raw.endswith("}"):
+        return raw
+
+    start = raw.find("{")
+    end = raw.rfind("}")
+    if start >= 0 and end > start:
+        return raw[start : end + 1].strip()
+
+    raise ValueError("no JSON object found in model response")
+
+
+def _strip_cite_markup(text: str) -> str:
+    text = re.sub(r"</?cite[^>]*>", "", text or "")
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _clean_digest(parsed: dict) -> dict:
+    """Normalize fields after parse (strip citation markup, whitespace)."""
+    headline = _strip_cite_markup(parsed.get("headline") or "")
+    bullets = []
+    for bullet in parsed.get("bullets") or []:
+        if not isinstance(bullet, dict):
+            continue
+        bullets.append(
+            {
+                "title": _strip_cite_markup(bullet.get("title") or ""),
+                "summary": _strip_cite_markup(bullet.get("summary") or ""),
+                "source": _strip_cite_markup(bullet.get("source") or ""),
+            }
+        )
+    return {"headline": headline, "bullets": bullets}
 
 
 def _parse_json_response(raw: str) -> dict:
-    raw = raw.strip()
-    raw = re.sub(r"^```(json)?|```$", "", raw.strip(), flags=re.MULTILINE).strip()
     try:
-        return json.loads(raw)
+        extracted = _extract_json_object(raw)
+        return _clean_digest(json.loads(extracted))
     except json.JSONDecodeError as exc:
         raise ValueError(f"invalid JSON from model: {exc}") from exc
 
@@ -157,8 +200,8 @@ def call_claude(prompt: str) -> tuple[dict, dict | None]:
 
     response = client.messages.create(
         model=CLAUDE_MODEL,
-        max_tokens=1200,
-        tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 2}],
+        max_tokens=1600,
+        tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}],
         messages=[{"role": "user", "content": prompt}],
     )
 
@@ -171,8 +214,11 @@ def call_claude(prompt: str) -> tuple[dict, dict | None]:
             "outputTokens": response.usage.output_tokens,
         }
 
-    text_blocks = [b.text for b in response.content if b.type == "text"]
-    raw = text_blocks[-1].strip() if text_blocks else "{}"
+    # Prefer the last text block that contains a JSON object; models often
+    # narrate before emitting the final payload after web_search.
+    text_blocks = [b.text for b in response.content if b.type == "text" and b.text]
+    candidates = [t for t in reversed(text_blocks) if "{" in t] or text_blocks
+    raw = candidates[0].strip() if candidates else ""
     return _parse_json_response(raw), usage
 
 
@@ -188,8 +234,8 @@ def call_openai(prompt: str) -> tuple[dict, dict | None]:
     response = client.responses.create(
         model=OPENAI_MODEL,
         tools=[{"type": "web_search"}],
-        max_tool_calls=2,
-        max_output_tokens=1200,
+        max_tool_calls=5,
+        max_output_tokens=1600,
         input=prompt,
     )
 
@@ -212,7 +258,7 @@ def call_openai(prompt: str) -> tuple[dict, dict | None]:
                 text = getattr(part, "text", None)
                 if text:
                     chunks.append(text)
-        raw = chunks[-1].strip() if chunks else "{}"
+        raw = chunks[-1].strip() if chunks else ""
 
     return _parse_json_response(raw), usage
 
@@ -236,6 +282,9 @@ def validate_digest(parsed: dict, recent_coverage: list[dict]) -> None:
         "no notable",
         "quiet day",
         "no announcements",
+        "insufficient",
+        "unable to find",
+        "no verified",
     )
     if any(p in headline.lower() for p in empty_phrases) and len(bullets) < 3:
         raise ValueError(f"digest looks empty/placeholder: {headline!r}")
