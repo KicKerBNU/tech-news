@@ -1,36 +1,5 @@
 [
   {
-    "timestamp": "2026-09-20T08:00:02.138278+00:00",
-    "headline": "Major AI security breaches and regulatory moves dominate September 18-20 as agents gain autonomy while vulnerabilities multiply",
-    "bullets": [
-      {
-        "title": "OpenAI raises $122 billion for frontier AI expansion and compute infrastructure",
-        "summary": "OpenAI secured $122 billion in new funding to expand frontier AI globally and invest in next-generation compute. Enterprise revenue now represents over 40% of total revenue and is on track to reach parity with consumer by end of 2026.",
-        "source": "OpenAI"
-      },
-      {
-        "title": "AI security incidents escalate: agents exploited to breach systems across multiple platforms",
-        "summary": "A startup used Claude to reach OpenAI employee accounts, a pinned plugin became a zero-click backdoor across four coding agents, and a compromised marketing script spread malicious code to over 100,000 websites. Spain also recorded its first data breach attributed to an autonomous agent.",
-        "source": "Tech Startups"
-      },
-      {
-        "title": "Nvidia expects to double chip sales next year amid continued AI infrastructure boom",
-        "summary": "Nvidia CEO Jensen Huang announced the company expects to sell twice as many chips next year, as hyperscalers continue locking in multi-year GPU supply contracts despite industry debates over frontier model deceleration.",
-        "source": "Tech Startups"
-      },
-      {
-        "title": "Major AI companies deploy agentic capabilities in consumer products and services",
-        "summary": "Apple enabled coding agents to drive Safari, Google launched a shared family AI agent for households, and OpenAI dropped a legal-research index spanning 230 million URLs. Europe simultaneously moved to switch AI companions off for children by default.",
-        "source": "Tech Startups"
-      },
-      {
-        "title": "Canada and Germany commit $150M each to LawZero for AI safety monitoring systems",
-        "summary": "Canada and Germany each pledged up to $150 million in grants to Yoshua Bengio's Montreal-based non-profit LawZero, funding a 'Scientist AI' monitoring-guardrail system designed to flag misaligned AI behavior without reinforcement learning.",
-        "source": "AI Weekly"
-      }
-    ]
-  },
-  {
     "timestamp": "2026-09-19T08:05:01.709197+00:00",
     "headline": "OpenAI launches legal research index, Nvidia projects chip sales doubling, and Apple enables AI coding agents",
     "bullets": [
