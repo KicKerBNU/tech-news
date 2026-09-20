@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "notes": "Preferred outlets for SIGNAL digests. Add/remove entries anytime — the agent reads this file each run.",
+  "preferred": [
+    { "name": "TechCrunch", "url": "https://techcrunch.com", "topics": ["startups", "AI", "funding"] },
+    { "name": "The Verge", "url": "https://www.theverge.com", "topics": ["consumer tech", "AI products"] },
+    { "name": "Ars Technica", "url": "https://arstechnica.com", "topics": ["deep tech", "security", "science"] },
+    { "name": "Wired", "url": "https://www.wired.com", "topics": ["AI", "culture", "policy"] },
+    { "name": "MIT Technology Review", "url": "https://www.technologyreview.com", "topics": ["research", "AI"] },
+    { "name": "Reuters", "url": "https://www.reuters.com/technology", "topics": ["markets", "policy", "breaking"] },
+    { "name": "Bloomberg", "url": "https://www.bloomberg.com/technology", "topics": ["markets", "enterprise"] },
+    { "name": "Financial Times", "url": "https://www.ft.com/technology", "topics": ["markets", "policy"] },
+    { "name": "Wall Street Journal", "url": "https://www.wsj.com/tech", "topics": ["markets", "enterprise"] },
+    { "name": "CNBC", "url": "https://www.cnbc.com/technology", "topics": ["markets", "earnings"] },
+    { "name": "BBC Technology", "url": "https://www.bbc.com/news/technology", "topics": ["global", "policy"] },
+    { "name": "Al Jazeera", "url": "https://www.aljazeera.com", "topics": ["global", "policy"] },
+    { "name": "Semafor", "url": "https://www.semafor.com/series/tech", "topics": ["AI", "policy"] },
+    { "name": "Axios", "url": "https://www.axios.com/technology", "topics": ["policy", "business"] },
+    { "name": "The Information", "url": "https://www.theinformation.com", "topics": ["enterprise", "AI"] },
+    { "name": "InfoQ", "url": "https://www.infoq.com", "topics": ["engineering", "AI"] },
+    { "name": "Hugging Face Blog", "url": "https://huggingface.co/blog", "topics": ["open source", "models"] },
+    { "name": "OpenAI Blog", "url": "https://openai.com/blog", "topics": ["OpenAI"] },
+    { "name": "Anthropic News", "url": "https://www.anthropic.com/news", "topics": ["Anthropic"] },
+    { "name": "Google DeepMind Blog", "url": "https://deepmind.google/discover/blog", "topics": ["Google", "research"] },
+    { "name": "Microsoft Blog", "url": "https://blogs.microsoft.com", "topics": ["Microsoft", "enterprise"] },
+    { "name": "Nvidia News", "url": "https://nvidianews.nvidia.com", "topics": ["chips", "infrastructure"] }
+  ],
+  "avoid": [
+    "Tech Startups",
+    "Build Fast with AI",
+    "AI Weekly",
+    "random Substacks with no primary reporting",
+    "repost aggregators that only rewrite press releases without a clear outlet"
+  ]
+}

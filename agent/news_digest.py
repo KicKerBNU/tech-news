@@ -22,6 +22,7 @@ import anthropic
 
 REPO_ROOT = Path(__file__).parent.parent
 DATA_PATH = REPO_ROOT / "digests" / "data.json"
+SOURCES_PATH = Path(__file__).parent / "sources.json"
 CLAUDE_MODEL = "claude-haiku-4-5"
 # Cheapest OpenAI model with Responses + web_search — keep digest cost << $0.10
 OPENAI_MODEL = os.getenv("OPENAI_DIGEST_MODEL", "gpt-5-nano")
@@ -29,8 +30,92 @@ MAX_ENTRIES = 300  # cap file size; oldest entries drop off the end
 MIN_BULLETS = 2
 MAX_CLAUDE_ATTEMPTS = 2
 MAX_OPENAI_ATTEMPTS = 2
+# How many prior digests to treat as "already covered" (dedupe window)
+RECENT_LOOKBACK = 2
+# Reject a digest if this many bullets look like repeats of recent days
+MAX_DUPLICATE_BULLETS = 1
 
-PROMPT = """Search the web for the most notable AI / tech news from the last 24 hours
+
+def load_sources() -> dict:
+    if not SOURCES_PATH.exists():
+        return {"preferred": [], "avoid": []}
+    try:
+        return json.loads(SOURCES_PATH.read_text())
+    except json.JSONDecodeError:
+        print("[digest] WARNING — corrupt sources.json, ignoring", file=sys.stderr)
+        return {"preferred": [], "avoid": []}
+
+
+def normalize_text(text: str) -> str:
+    text = (text or "").lower()
+    text = re.sub(r"[^a-z0-9\s]", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def significant_tokens(text: str) -> set[str]:
+    stop = {
+        "a", "an", "the", "and", "or", "of", "to", "in", "on", "for", "with", "as",
+        "at", "by", "from", "is", "are", "be", "its", "it", "this", "that", "new",
+        "ai", "tech", "says", "after", "over", "into", "amid",
+    }
+    return {t for t in normalize_text(text).split() if len(t) > 2 and t not in stop}
+
+
+def titles_similar(a: str, b: str, threshold: float = 0.55) -> bool:
+    """True if two titles look like the same story (token overlap / containment)."""
+    na, nb = normalize_text(a), normalize_text(b)
+    if not na or not nb:
+        return False
+    if na == nb or na in nb or nb in na:
+        return True
+    ta, tb = significant_tokens(a), significant_tokens(b)
+    if not ta or not tb:
+        return False
+    overlap = len(ta & tb) / max(1, min(len(ta), len(tb)))
+    return overlap >= threshold
+
+
+def collect_recent_coverage(entries: list, lookback: int = RECENT_LOOKBACK) -> list[dict]:
+    """Headlines + bullet titles from the last N digests (for prompt + validation)."""
+    covered: list[dict] = []
+    for entry in entries[:lookback]:
+        if entry.get("headline"):
+            covered.append({"type": "headline", "text": entry["headline"]})
+        for bullet in entry.get("bullets") or []:
+            title = bullet.get("title") or ""
+            if title:
+                covered.append(
+                    {
+                        "type": "bullet",
+                        "text": title,
+                        "source": bullet.get("source") or "",
+                    }
+                )
+    return covered
+
+
+def build_prompt(recent_coverage: list[dict], sources: dict) -> str:
+    preferred = sources.get("preferred") or []
+    avoid = sources.get("avoid") or []
+
+    preferred_lines = "\n".join(
+        f"- {s.get('name')} ({s.get('url')})" for s in preferred if s.get("name")
+    ) or "- (none configured yet)"
+
+    avoid_lines = "\n".join(f"- {name}" for name in avoid) or "- (none)"
+
+    if recent_coverage:
+        covered_lines = "\n".join(f"- {item['text']}" for item in recent_coverage[:40])
+        covered_block = f"""
+ALREADY COVERED (last {RECENT_LOOKBACK} digest(s) — DO NOT repeat these stories or near-duplicates):
+{covered_lines}
+
+Only include a story if it is genuinely NEW information (a material update, not a rewrite).
+"""
+    else:
+        covered_block = ""
+
+    return f"""Search the web for the most notable AI / tech news from the last 24 hours
 (not just the last couple of hours). Prefer concrete announcements, product launches,
 funding, regulation, research breakthroughs, and major company moves.
 
@@ -38,15 +123,21 @@ You MUST find real stories. An empty digest is not acceptable — dig deeper wit
 search if the first results look thin. Cover the full day cycle (US / EU / Asia), not
 only overnight quiet hours.
 
+PREFERRED SOURCES (search / cite these when possible — primary outlets, not aggregators):
+{preferred_lines}
+
+AVOID citing as primary source:
+{avoid_lines}
+{covered_block}
 Respond with ONLY a raw JSON object (no markdown fences, no commentary)
 matching exactly this schema:
 
-{
+{{
   "headline": "one-line summary of the most important story",
   "bullets": [
-    {"title": "story title", "summary": "1-2 sentence summary", "source": "source name"}
+    {{"title": "story title", "summary": "1-2 sentence summary", "source": "source name"}}
   ]
-}
+}}
 
 Include 2-5 bullets with real sources. Do not invent stories. Do not return an empty
 bullets array. Do not include anything outside the JSON object."""
@@ -61,14 +152,14 @@ def _parse_json_response(raw: str) -> dict:
         raise ValueError(f"invalid JSON from model: {exc}") from exc
 
 
-def call_claude() -> tuple[dict, dict | None]:
+def call_claude(prompt: str) -> tuple[dict, dict | None]:
     client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY from env
 
     response = client.messages.create(
         model=CLAUDE_MODEL,
         max_tokens=1200,
         tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 2}],
-        messages=[{"role": "user", "content": PROMPT}],
+        messages=[{"role": "user", "content": prompt}],
     )
 
     usage = None
@@ -85,7 +176,7 @@ def call_claude() -> tuple[dict, dict | None]:
     return _parse_json_response(raw), usage
 
 
-def call_openai() -> tuple[dict, dict | None]:
+def call_openai(prompt: str) -> tuple[dict, dict | None]:
     """Cheap OpenAI fallback via Responses API + web_search."""
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
@@ -99,7 +190,7 @@ def call_openai() -> tuple[dict, dict | None]:
         tools=[{"type": "web_search"}],
         max_tool_calls=2,
         max_output_tokens=1200,
-        input=PROMPT,
+        input=prompt,
     )
 
     usage = None
@@ -113,7 +204,6 @@ def call_openai() -> tuple[dict, dict | None]:
 
     raw = (getattr(response, "output_text", None) or "").strip()
     if not raw:
-        # Fallback: walk output items for message text
         chunks: list[str] = []
         for item in getattr(response, "output", None) or []:
             if getattr(item, "type", None) != "message":
@@ -127,7 +217,7 @@ def call_openai() -> tuple[dict, dict | None]:
     return _parse_json_response(raw), usage
 
 
-def validate_digest(parsed: dict) -> None:
+def validate_digest(parsed: dict, recent_coverage: list[dict]) -> None:
     headline = (parsed.get("headline") or "").strip()
     bullets = parsed.get("bullets") or []
 
@@ -149,6 +239,25 @@ def validate_digest(parsed: dict) -> None:
     )
     if any(p in headline.lower() for p in empty_phrases) and len(bullets) < 3:
         raise ValueError(f"digest looks empty/placeholder: {headline!r}")
+
+    recent_texts = [item["text"] for item in recent_coverage]
+    duplicate_titles: list[str] = []
+    for bullet in bullets:
+        title = (bullet.get("title") or "").strip()
+        if not title:
+            continue
+        if any(titles_similar(title, prev) for prev in recent_texts):
+            duplicate_titles.append(title)
+
+    if len(duplicate_titles) > MAX_DUPLICATE_BULLETS:
+        raise ValueError(
+            "digest rehashes recent coverage: " + "; ".join(duplicate_titles[:3])
+        )
+
+    if any(titles_similar(headline, prev) for prev in recent_texts):
+        # Headline alone matching yesterday is a strong smell — reject unless bullets are fresh
+        if len(duplicate_titles) >= 1:
+            raise ValueError(f"headline overlaps recent coverage: {headline!r}")
 
 
 def load_existing() -> list:
@@ -187,14 +296,14 @@ def already_ran_today(entries: list, now: datetime) -> bool:
         return False
 
 
-def generate_digest(now: datetime) -> tuple[dict, dict | None]:
+def generate_digest(now: datetime, prompt: str, recent_coverage: list[dict]) -> tuple[dict, dict | None]:
     """Try Claude twice, then OpenAI twice. Raises on total failure."""
     last_error: Exception | None = None
 
     for attempt in range(1, MAX_CLAUDE_ATTEMPTS + 1):
         try:
-            parsed, usage = call_claude()
-            validate_digest(parsed)
+            parsed, usage = call_claude(prompt)
+            validate_digest(parsed, recent_coverage)
             print(f"[{now.isoformat()}] Digest from Claude ({CLAUDE_MODEL}) attempt {attempt}")
             return parsed, usage
         except Exception as e:
@@ -209,8 +318,8 @@ def generate_digest(now: datetime) -> tuple[dict, dict | None]:
 
     for attempt in range(1, MAX_OPENAI_ATTEMPTS + 1):
         try:
-            parsed, usage = call_openai()
-            validate_digest(parsed)
+            parsed, usage = call_openai(prompt)
+            validate_digest(parsed, recent_coverage)
             print(f"[{now.isoformat()}] Digest from OpenAI ({OPENAI_MODEL}) attempt {attempt}")
             return parsed, usage
         except Exception as e:
@@ -232,17 +341,26 @@ def main():
         return
 
     # Replace a same-day empty/thin digest if we're regenerating.
-    if entries:
+    working = list(entries)
+    if working:
         try:
-            latest_dt = datetime.fromisoformat(entries[0].get("timestamp", "").replace("Z", "+00:00"))
-            if latest_dt.date() == now.date() and not is_valid_entry(entries[0]):
+            latest_dt = datetime.fromisoformat(working[0].get("timestamp", "").replace("Z", "+00:00"))
+            if latest_dt.date() == now.date() and not is_valid_entry(working[0]):
                 print(f"[{now.isoformat()}] Replacing thin/empty digest from earlier today")
-                entries = entries[1:]
+                working = working[1:]
         except ValueError:
             pass
 
+    recent_coverage = collect_recent_coverage(working, RECENT_LOOKBACK)
+    sources = load_sources()
+    prompt = build_prompt(recent_coverage, sources)
+    print(
+        f"[{now.isoformat()}] Dedupe window: {len(recent_coverage)} prior items; "
+        f"preferred sources: {len(sources.get('preferred') or [])}"
+    )
+
     try:
-        parsed, usage = generate_digest(now)
+        parsed, usage = generate_digest(now, prompt, recent_coverage)
     except Exception as e:
         print(f"[{now.isoformat()}] Failed to get/parse digest: {e}")
         sys.exit(1)
@@ -253,11 +371,11 @@ def main():
         "bullets": parsed.get("bullets", []),
     }
 
-    entries.insert(0, entry)
-    entries = entries[:MAX_ENTRIES]
+    working.insert(0, entry)
+    working = working[:MAX_ENTRIES]
 
-    save(entries)
-    print(f"[{now.isoformat()}] Saved entry. Total entries: {len(entries)}")
+    save(working)
+    print(f"[{now.isoformat()}] Saved entry. Total entries: {len(working)}")
 
     # Parsed back out of stdout by runDigest.js and attached to the telemetry.succeeded()
     # call — see backend/src/jobs/runDigest.js.

@@ -200,6 +200,10 @@ backend/src/
   utils/exec.js         Child-process helper for python/git commands
 ```
 
+The digest agent reads `agent/sources.json` (preferred outlets + avoid list) and injects the
+last 2 digests' headlines/titles into the prompt so it doesn't rehash yesterday's stories.
+Add outlets to `preferred` anytime — no code change needed.
+
 Deliberately **not** included, per YAGNI: no repository interface/abstract class
 (there's one data source, so one concrete implementation is enough — add an
 interface if a second source ever shows up), no Vuex-style modules-within-modules,
