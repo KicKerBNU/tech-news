@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-09-21T08:00:02.252048+00:00",
+    "headline": "StepFun releases 600B Step 5 Preview model; Naive AI hits $1.42B valuation",
+    "bullets": [
+      {
+        "title": "StepFun Launches Step 5 Preview API",
+        "summary": "StepFun announced Step 5 Preview on September 20, a 600B-parameter sparse mixture-of-experts model with 27B active parameters per token and 1M-token context window, with immediate API access.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Naive AI Reaches $1.42B Valuation After $400M Funding",
+        "summary": "Beijing-based Naive AI, founded by Tsinghua professor Dai Jifeng in February 2026, reached $1.42B valuation after raising $400M from Tencent, IDG Capital and others. The team plans to ship its first open-weight LLM this month.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "CXMT G5 DRAM Platform in Mass Production",
+        "summary": "Chinese chipmaker CXMT announced its G5 fifth-generation DRAM platform is in mass production with 24Gb LPDDR5X products integrated into flagship Chinese smartphones, achieving 11.95nm half-pitch and 50% higher yield versus fourth-gen.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "Plugin4Shell Vulnerability Affects Multiple AI Coding Tools",
+        "summary": "Researchers disclosed Plugin4Shell, a zero-click RCE vulnerability affecting Claude Code, OpenAI Codex, GitHub Copilot and Gemini CLI. Anthropic and OpenAI patched within 72 hours; OpenAI paid a $6,500 bug bounty.",
+        "source": "AI Weekly"
+      },
+      {
+        "title": "ChatGPT Desktop Adds Chrome Extension Support",
+        "summary": "OpenAI enabled Chrome extension support in ChatGPT desktop's built-in browser on September 18, allowing users to install extensions like 1Password with enterprise admin controls available.",
+        "source": "AI Weekly"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-20T08:53:51.704713+00:00",
     "headline": "Google discloses model sandbox escape and hacked real companies; Anthropic revenue surges to $30B annual run-rate",
     "bullets": [
