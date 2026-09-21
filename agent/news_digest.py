@@ -2,13 +2,13 @@
 """
 AI/Tech News Digest Agent
 --------------------------
-Called by the backend scheduler on Railway. Asks Claude to find and
-summarize recent AI/tech news via web search, and appends the result as a
-structured entry to digests/data.json (newest entry first).
+Called by the backend scheduler on Railway. Crawls preferred outlets
+(RSS-first, HTML fallback), then asks a cheap LLM (no web_search tools)
+to pick and rewrite 2–5 stories into digests/data.json.
 
-If Claude fails twice, falls back to OpenAI gpt-5-nano (cheap) for up to
-two more attempts. The backend server handles git add/commit/push — this
-script only touches the JSON file.
+If Claude fails twice, falls back to OpenAI gpt-5-nano for up to two
+more attempts. The backend handles git add/commit/push — this script
+only touches the JSON file.
 """
 
 import json
@@ -20,11 +20,15 @@ from pathlib import Path
 
 import anthropic
 
+# Allow `python3 agent/news_digest.py` from repo root (Railway / local).
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from crawl_sources import crawl_preferred_sources, filter_against_recent
+
 REPO_ROOT = Path(__file__).parent.parent
 DATA_PATH = REPO_ROOT / "digests" / "data.json"
 SOURCES_PATH = Path(__file__).parent / "sources.json"
 CLAUDE_MODEL = "claude-haiku-4-5"
-# Cheapest OpenAI model with Responses + web_search — keep digest cost << $0.10
+# Cheap refine model — no search tools; cost stays near one short completion
 OPENAI_MODEL = os.getenv("OPENAI_DIGEST_MODEL", "gpt-5-nano")
 MAX_ENTRIES = 300  # cap file size; oldest entries drop off the end
 MIN_BULLETS = 2
@@ -94,14 +98,7 @@ def collect_recent_coverage(entries: list, lookback: int = RECENT_LOOKBACK) -> l
     return covered
 
 
-def build_prompt(recent_coverage: list[dict], sources: dict) -> str:
-    preferred = sources.get("preferred") or []
-    avoid = sources.get("avoid") or []
-
-    preferred_lines = "\n".join(
-        f"- {s.get('name')} ({s.get('url')})" for s in preferred if s.get("name")
-    ) or "- (none configured yet)"
-
+def build_prompt(candidates: list[dict], recent_coverage: list[dict], avoid: list) -> str:
     avoid_lines = "\n".join(f"- {name}" for name in avoid) or "- (none)"
 
     if recent_coverage:
@@ -115,20 +112,37 @@ Only include a story if it is genuinely NEW information (a material update, not 
     else:
         covered_block = ""
 
-    return f"""Search the web for the most notable AI / tech news from the last 24 hours
-(not just the last couple of hours). Prefer concrete announcements, product launches,
-funding, regulation, research breakthroughs, and major company moves.
+    candidate_lines = []
+    for i, item in enumerate(candidates, start=1):
+        published = item.get("published_at") or "unknown date"
+        snippet = (item.get("summary") or "").strip()
+        if len(snippet) > 220:
+            snippet = snippet[:217] + "..."
+        line = (
+            f"{i}. [{item.get('source')}] {item.get('title')}\n"
+            f"   date: {published}\n"
+            f"   url: {item.get('url')}"
+        )
+        if snippet:
+            line += f"\n   snippet: {snippet}"
+        candidate_lines.append(line)
 
-You MUST find real stories. An empty digest is not acceptable — dig deeper with your
-search if the first results look thin. Cover the full day cycle (US / EU / Asia), not
-only overnight quiet hours.
+    candidates_block = "\n".join(candidate_lines)
 
-PREFERRED SOURCES (search / cite these when possible — primary outlets, not aggregators):
-{preferred_lines}
+    return f"""You are editing a daily AI/tech news digest. Candidates below were already
+crawled from preferred outlets — do NOT invent stories and do NOT claim you
+searched the web. Pick the 2–5 most notable items from this list only.
 
-AVOID citing as primary source:
+Prefer concrete announcements, product launches, funding, regulation, research
+breakthroughs, and major company moves. Cite the source name exactly as shown
+in each candidate.
+
+AVOID citing as primary source (skip these if they appear):
 {avoid_lines}
 {covered_block}
+CANDIDATES:
+{candidates_block}
+
 Respond with ONLY a raw JSON object (no markdown fences, no commentary)
 matching exactly this schema:
 
@@ -139,9 +153,8 @@ matching exactly this schema:
   ]
 }}
 
-Include 2-5 bullets with real sources. Do not invent stories. Do not return an empty
-bullets array. Your FINAL message must be ONLY the raw JSON object — no preamble,
-no markdown fences, no commentary before or after."""
+Include 2–5 bullets. Use only stories from CANDIDATES. Your FINAL message must
+be ONLY the raw JSON object — no preamble, no markdown fences, no commentary."""
 
 
 def _extract_json_object(raw: str) -> str:
@@ -196,12 +209,12 @@ def _parse_json_response(raw: str) -> dict:
 
 
 def call_claude(prompt: str) -> tuple[dict, dict | None]:
+    """Refine crawled candidates — no web_search tools."""
     client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY from env
 
     response = client.messages.create(
         model=CLAUDE_MODEL,
-        max_tokens=1600,
-        tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}],
+        max_tokens=1200,
         messages=[{"role": "user", "content": prompt}],
     )
 
@@ -214,8 +227,6 @@ def call_claude(prompt: str) -> tuple[dict, dict | None]:
             "outputTokens": response.usage.output_tokens,
         }
 
-    # Prefer the last text block that contains a JSON object; models often
-    # narrate before emitting the final payload after web_search.
     text_blocks = [b.text for b in response.content if b.type == "text" and b.text]
     candidates = [t for t in reversed(text_blocks) if "{" in t] or text_blocks
     raw = candidates[0].strip() if candidates else ""
@@ -223,7 +234,7 @@ def call_claude(prompt: str) -> tuple[dict, dict | None]:
 
 
 def call_openai(prompt: str) -> tuple[dict, dict | None]:
-    """Cheap OpenAI fallback via Responses API + web_search."""
+    """Cheap OpenAI fallback — plain completion, no web_search."""
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise RuntimeError("OPENAI_API_KEY is not set")
@@ -233,9 +244,7 @@ def call_openai(prompt: str) -> tuple[dict, dict | None]:
     client = OpenAI(api_key=api_key)
     response = client.responses.create(
         model=OPENAI_MODEL,
-        tools=[{"type": "web_search"}],
-        max_tool_calls=5,
-        max_output_tokens=1600,
+        max_output_tokens=1200,
         input=prompt,
     )
 
@@ -402,11 +411,29 @@ def main():
 
     recent_coverage = collect_recent_coverage(working, RECENT_LOOKBACK)
     sources = load_sources()
-    prompt = build_prompt(recent_coverage, sources)
     print(
         f"[{now.isoformat()}] Dedupe window: {len(recent_coverage)} prior items; "
         f"preferred sources: {len(sources.get('preferred') or [])}"
     )
+
+    candidates, stats = crawl_preferred_sources(sources)
+    recent_texts = [item["text"] for item in recent_coverage]
+    candidates = filter_against_recent(candidates, recent_texts)
+    stats["candidates"] = len(candidates)
+
+    print(
+        f"[{now.isoformat()}] crawled={stats['crawled']} candidates={stats['candidates']} "
+        f"sources_ok={stats['sources_ok']} sources_failed={stats['sources_failed']}"
+    )
+
+    if len(candidates) < MIN_BULLETS:
+        print(
+            f"[{now.isoformat()}] Failed: not enough crawled candidates "
+            f"({len(candidates)}; need >= {MIN_BULLETS})"
+        )
+        sys.exit(1)
+
+    prompt = build_prompt(candidates, recent_coverage, sources.get("avoid") or [])
 
     try:
         parsed, usage = generate_digest(now, prompt, recent_coverage)

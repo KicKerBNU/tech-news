@@ -11,12 +11,18 @@ a live feed.
 ```
 Railway (Express + node-cron)
   → python agent/news_digest.py
+       → crawl agent/sources.json (RSS-first, HTML fallback)
+       → cheap LLM refine (Haiku / gpt-5-nano, no web_search)
   → git commit + push digests/data.json
   → send_newsletter.py + send_telegram.py
 
 Netlify (Vue webapp + subscribe/unsubscribe functions)
   → polls raw.githubusercontent.com/.../digests/data.json
 ```
+
+Discovery is free (HTTP crawl). The LLM only picks and rewrites 2–5 stories from
+that candidate list, so daily cost stays near one short completion — not paid
+web_search with tens of thousands of tokens.
 
 ## 1. Push this to the repo
 
@@ -190,9 +196,11 @@ webapp/src/
   shared/utils/time.js                 generic formatting with no domain meaning (clock, countdown)
 ```
 
-## Digest quality: sources + no-repeat
+## Digest quality: crawl + refine (no paid search)
 
-The agent should not rehash yesterday's stories or lean on weak aggregators.
+The agent **crawls** preferred outlets, then uses a cheap LLM **without** web_search
+to pick and rewrite 2–5 stories. It should not rehash yesterday's stories or lean
+on weak aggregators.
 
 ### Preferred outlets (`agent/sources.json`)
 
@@ -201,7 +209,12 @@ Edit this file anytime — the next digest run loads it automatically (no code c
 ```json
 {
   "preferred": [
-    { "name": "TechCrunch", "url": "https://techcrunch.com", "topics": ["startups", "AI"] }
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com",
+      "rss": "https://techcrunch.com/feed/",
+      "topics": ["startups", "AI"]
+    }
   ],
   "avoid": [
     "Tech Startups",
@@ -212,26 +225,32 @@ Edit this file anytime — the next digest run loads it automatically (no code c
 
 | Field | Purpose |
 |-------|---------|
-| `preferred` | Outlets the prompt tells the model to search/cite first (Reuters, Bloomberg, TechCrunch, company blogs, …) |
+| `preferred[].name` | Outlet name cited in the digest |
+| `preferred[].url` | Homepage / listing page (HTML fallback if RSS fails) |
+| `preferred[].rss` | Optional RSS/Atom feed (preferred crawl path). Use `null` for hard paywalls |
 | `avoid` | Aggregators / weak sources not to use as the primary citation |
 
-**How to grow the list:** add a new object under `preferred`, commit, push to `master`. Railway's next cron (or catch-up) will use it.
+**How to grow the list:** add a new object under `preferred` (with `rss` when available), commit, push to `master`. Railway's next cron (or catch-up) will use it.
+
+Hard paywalls (Bloomberg, FT, WSJ, The Information) can omit `rss`; the crawler soft-skips them instead of burning retries.
 
 ### Deduping against recent digests
 
 Each run:
 
-1. Loads the last **2** digests from `digests/data.json`
-2. Injects their headlines + bullet titles into the prompt as **ALREADY COVERED — do not repeat**
-3. After the model responds, **rejects** the result if too many bullets look like near-duplicates of those prior stories (then Claude/OpenAI retries kick in)
+1. Crawls preferred feeds/pages (~last 36 hours), caps ~40 candidates
+2. Drops candidates that look like the last **2** digests' headlines/bullets
+3. Asks Haiku (then nano) to pick 2–5 from the remaining list and write the digest JSON
+4. **Rejects** the result if too many bullets still look like near-duplicates (retries kick in)
 
-So a story that already shipped yesterday (e.g. “Nvidia chip sales to double”) should not appear again unless there is a genuine new development.
+So a story that already shipped yesterday should not appear again unless there is a genuine new development.
 
 ### Model fallback (cost-aware)
 
-1. Claude Haiku — up to 2 attempts  
-2. If both fail → OpenAI `gpt-5-nano` — up to 2 attempts (needs `OPENAI_API_KEY`)  
-3. Empty / placeholder digests (“no major news”) are rejected  
+1. Crawl preferred sources (no LLM)  
+2. Claude Haiku refine — up to 2 attempts, **no tools**  
+3. If both fail → OpenAI `gpt-5-nano` — up to 2 attempts (needs `OPENAI_API_KEY`)  
+4. Empty / placeholder digests (“no major news”) are rejected  
 
 ## Backend (`backend/`)
 
@@ -243,8 +262,9 @@ backend/src/
   utils/exec.js         Child-process helper for python/git commands
 
 agent/
-  news_digest.py        Claude (+ OpenAI fallback) digest generator
-  sources.json          Preferred / avoid outlets (edit to grow coverage)
+  news_digest.py        Crawl preferred outlets → cheap LLM refine (+ OpenAI fallback)
+  crawl_sources.py      RSS-first / HTML fallback crawler
+  sources.json          Preferred / avoid outlets + optional rss feeds
   send_newsletter.py    Resend batch email
   send_telegram.py      Telegram Bot API post
 ```
@@ -270,7 +290,7 @@ exactly one file, not copy-pasted across five component `<style>` tags.
 - **Catch-up retries:** if the primary run fails (e.g. GitHub temporary rate limits) and today's
   digest is still missing, a second cron (`CRON_RETRY_SCHEDULE`, default every 5 minutes) keeps
   trying until it succeeds or hits `CRON_RETRY_MAX_ATTEMPTS` (default **20**). Once today's entry
-  exists, retries are no-ops (no extra Claude calls). Git fetch/push also retries with backoff on
+  exists, retries are no-ops (no extra LLM refine calls). Git fetch/push also retries with backoff on
   transient errors.
 - **Failure email:** when a digest job fails, Resend emails the same active contacts as the
   newsletter (once per UTC day so retries won't spam). Uses existing `RESEND_API_KEY` /
@@ -282,6 +302,6 @@ exactly one file, not copy-pasted across five component `<style>` tags.
 - **Raw file caching.** `raw.githubusercontent.com` caches for a few minutes;
   the app cache-busts each fetch, but very rapid manual reloads may still show
   a slightly stale copy.
-- **Digest sources + dedupe:** see [Digest quality: sources + no-repeat](#digest-quality-sources--no-repeat).
+- **Digest sources + dedupe:** see [Digest quality: crawl + refine](#digest-quality-crawl--refine-no-paid-search).
   Edit `agent/sources.json` to grow preferred outlets; recent digests are excluded from the next run.
 - **To change the schedule:** set `CRON_SCHEDULE` on Railway (standard cron syntax, UTC).

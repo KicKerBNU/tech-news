@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-09-21T09:50:05.220229+00:00",
+    "headline": "Amazon blocks Meta's Muse AI agent from shopping, as model security incidents prompt industry-wide scrutiny",
+    "bullets": [
+      {
+        "title": "Amazon Blocks Meta's Muse AI Agent from Shopping",
+        "summary": "Amazon has prevented Meta's Muse AI agent from making purchases on behalf of users, citing unauthorized access concerns. The move reflects growing caution around third-party AI agents accessing critical platforms.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Anthropic Releases Threat Intelligence Report on Claude Misuse",
+        "summary": "Anthropic's Threat Intelligence team identified and disrupted operations where threat actors attempted to use Claude for malicious activity over an eight-month period. The report documents how malicious use of Claude has evolved since 2025.",
+        "source": "Anthropic News"
+      },
+      {
+        "title": "Google Analyst Infiltrates Supply-Chain Hacking Gang",
+        "summary": "Google's threat intelligence group disclosed it had placed an undercover analyst inside TeamPCP's inner circle, a notorious supply-chain hacking gang. The operation represents a significant counterintelligence effort against organized cybercriminals.",
+        "source": "Ars Technica"
+      },
+      {
+        "title": "Kubernetes 1.37 Released with AI/ML Workload Optimization Focus",
+        "summary": "The Cloud Native Computing Foundation released Kubernetes 1.37 (Garhwal), emphasizing stability, security, and AI/ML workload optimization with stable metrics API and rootless Kubelet in beta. The release reflects growing emphasis on supporting AI infrastructure.",
+        "source": "InfoQ"
+      },
+      {
+        "title": "Anthropic Proposes Metrics to Measure Pace of AI Development",
+        "summary": "Anthropic unveiled new measurement frameworks to give the public visibility into frontier AI development inside labs. The initiative addresses concerns about transparency in how quickly advanced AI systems are being developed.",
+        "source": "Anthropic News"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-21T08:00:02.252048+00:00",
     "headline": "StepFun releases 600B Step 5 Preview model; Naive AI hits $1.42B valuation",
     "bullets": [
