@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-09-22T08:00:02.703872+00:00",
+    "headline": "Alibaba unveils new AI chip and data center expansion as OpenAI pushes global AI safety standards",
+    "bullets": [
+      {
+        "title": "Alibaba Unveils New AI Chip and Global Data Center Expansion",
+        "summary": "Alibaba shares jumped 3% in Hong Kong as the tech giant announced a new AI chip and plans to significantly expand its global data center capacity, signaling major investment in AI infrastructure.",
+        "source": "CNBC"
+      },
+      {
+        "title": "OpenAI Proposes Global AI Safety Standards and Calls for US-Led Coalition",
+        "summary": "OpenAI has released international AI safety standards and called for a global US-led coalition on AI safety, outlining a path to shared standards for coordinated evaluation, reporting, and governance ahead of UN General Assembly discussions.",
+        "source": "Axios"
+      },
+      {
+        "title": "Cloudflare Introduces Agent Development Lifecycle to Replace Traditional SDLC",
+        "summary": "Cloudflare has introduced the Agent Development Lifecycle framework to enhance AI-driven engineering, replacing traditional software development approaches and addressing bottlenecks in testing, deployment, and maintenance.",
+        "source": "InfoQ"
+      },
+      {
+        "title": "Meta's Muse AI Agent Surpasses Early ChatGPT Download Metrics",
+        "summary": "Meta's Muse personal AI agent has achieved 730,000 to 2.5 million downloads within days of launch, outpacing ChatGPT's mobile debut performance and demonstrating strong early market traction.",
+        "source": "CNBC"
+      },
+      {
+        "title": "California Tightens AI Data Center Energy and Water Use Regulations",
+        "summary": "California Governor Gavin Newsom signed seven bills designed to prevent AI data centers from passing utility costs onto residents, requiring providers to manage energy and water consumption more responsibly.",
+        "source": "The Verge"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-21T09:50:05.220229+00:00",
     "headline": "Amazon blocks Meta's Muse AI agent from shopping, as model security incidents prompt industry-wide scrutiny",
     "bullets": [
