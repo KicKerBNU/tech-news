@@ -129,13 +129,33 @@ Only include a story if it is genuinely NEW information (a material update, not 
 
     candidates_block = "\n".join(candidate_lines)
 
-    return f"""You are editing a daily AI/tech news digest. Candidates below were already
-crawled from preferred outlets — do NOT invent stories and do NOT claim you
-searched the web. Pick the 2–5 most notable items from this list only.
+    return f"""You write SIGNAL — a daily AI/tech brief for busy NON-TECHNICAL readers
+(founders, operators, curious professionals). Candidates below were already
+crawled — do NOT invent stories and do NOT claim you searched the web. Pick
+2–5 items from this list only.
 
-Prefer concrete announcements, product launches, funding, regulation, research
-breakthroughs, and major company moves. Cite the source name exactly as shown
-in each candidate.
+AUDIENCE & VOICE
+- Assume no engineering background. Avoid jargon (API, LLM, sparse MoE, kubelet,
+  tokens, inference, etc.). If a technical term is unavoidable, explain it in
+  plain words in the same sentence.
+- Write like a sharp newsletter, not a press release or changelog.
+- Short, concrete, human. Every line should be easy to say out loud.
+
+WHAT TO PICK (engagement > geek detail)
+Prefer stories that make people talk, argue, or rethink something:
+- Power, money, jobs, privacy, safety, regulation, culture, everyday products
+- Surprising company moves, human stakes, “what this means for normal people”
+Skip: version numbers, release notes, niche infra/tooling, pure research minutiae
+unless there is a clear human or business angle.
+
+HOW TO WRITE EACH BULLET
+- title: plain-language hook (not the outlet’s raw headline if it is too technical)
+- summary: 1–2 sentences. First = what happened. Second = why it matters / what’s
+  at stake for regular people or work life. Invite a reaction without asking a
+  question or using hype.
+- source: cite the outlet name exactly as shown in the candidate
+
+Cite only sources from CANDIDATES. Prefer primary outlets over aggregators.
 
 AVOID citing as primary source (skip these if they appear):
 {avoid_lines}
@@ -147,9 +167,9 @@ Respond with ONLY a raw JSON object (no markdown fences, no commentary)
 matching exactly this schema:
 
 {{
-  "headline": "one-line summary of the most important story",
+  "headline": "one plain-language line that captures the day’s big idea",
   "bullets": [
-    {{"title": "story title", "summary": "1-2 sentence summary", "source": "source name"}}
+    {{"title": "plain-language title", "summary": "1-2 simple sentences with stakes", "source": "source name"}}
   ]
 }}
 
@@ -398,13 +418,14 @@ def main():
         print(f"[{now.isoformat()}] Digest already exists for today (UTC) — skipping")
         return
 
-    # Replace a same-day empty/thin digest if we're regenerating.
+    # Replace a same-day digest when forcing, or when regenerating a thin/empty one.
     working = list(entries)
     if working:
         try:
             latest_dt = datetime.fromisoformat(working[0].get("timestamp", "").replace("Z", "+00:00"))
-            if latest_dt.date() == now.date() and not is_valid_entry(working[0]):
-                print(f"[{now.isoformat()}] Replacing thin/empty digest from earlier today")
+            if latest_dt.date() == now.date() and (force or not is_valid_entry(working[0])):
+                reason = "force regenerate" if force else "thin/empty digest from earlier today"
+                print(f"[{now.isoformat()}] Replacing today's digest ({reason})")
                 working = working[1:]
         except ValueError:
             pass
