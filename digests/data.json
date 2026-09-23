@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-09-23T08:00:02.742527+00:00",
+    "headline": "OpenAI and Anthropic release cheaper, more efficient AI models in major pivot toward cost optimization",
+    "bullets": [
+      {
+        "title": "OpenAI and Anthropic Launch Cheaper Models",
+        "summary": "OpenAI introduced GPT-6 Sol and GPT-6 Luna while Anthropic unveiled Claude Opus 5.5, marking a strategic shift from competing on raw capability to emphasizing affordability and efficiency. The move reflects growing focus on cost as the AI industry pivots toward mainstream adoption.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Google Open-Sources AX Orchestrator for AI Agent Workloads",
+        "summary": "Google has open-sourced AX, a Kubernetes-style orchestrator designed to manage autonomous AI agent workloads with resource-efficient task suspension and stateful actor management. This enables developers to build and deploy sophisticated AI agent applications at scale.",
+        "source": "InfoQ"
+      },
+      {
+        "title": "Qualcomm Launches Snapdragon 8 Elite Gen 6 with AI Focus",
+        "summary": "Qualcomm released the Snapdragon 8 Elite Gen 6 and its high-end variant, the 8 Elite Extreme Gen 6, with enhanced AI capabilities including the ability to run 30B mixture-of-expert models locally on Android devices. The launch reflects industry emphasis on on-device AI processing.",
+        "source": "The Verge"
+      },
+      {
+        "title": "NVIDIA Isaac ROS 5.0 Advances Open-Source Robotics Development",
+        "summary": "NVIDIA unveiled Isaac ROS 5.0 with new tools and physical AI models for building sophisticated robotics applications that can perceive, reason, and act in dynamic environments. The release supports developers building agentic robotic systems.",
+        "source": "Nvidia News"
+      },
+      {
+        "title": "OpenAI Consults Elite Mathematicians on Strategic Direction",
+        "summary": "Following a string of spectacular but mishandled mathematical results that damaged its reputation, OpenAI announced it is consulting elite mathematicians to chart a more responsible path forward for advancing AI capabilities in technical domains.",
+        "source": "The Verge"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-22T08:00:02.703872+00:00",
     "headline": "Alibaba unveils new AI chip and data center expansion as OpenAI pushes global AI safety standards",
     "bullets": [
