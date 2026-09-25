@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-09-25T08:00:02.670526+00:00",
+    "headline": "Meta launches consumer AI device ahead of OpenAI; Google and Nvidia push back on AI risk concerns",
+    "bullets": [
+      {
+        "title": "Meta's Muse Charm reaches consumer AI market first",
+        "summary": "Meta CEO Mark Zuckerberg's new Muse Charm device puts the company ahead of rivals OpenAI and Google in AI agents and consumer hardware, though the strategy remains unproven in a competitive market.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Zero-day vulnerability discovered in Meta's Muse AI client",
+        "summary": "Security researcher Patrick Wardle revealed an unpatched zero-day vulnerability in Meta's Muse desktop client for macOS that allows unprivileged software to manipulate the assistant's extensive permissions.",
+        "source": "InfoQ"
+      },
+      {
+        "title": "Google launches Gemini 3.8 Live with animated avatar",
+        "summary": "Google's new Gemini 3.8 Live update enables real-time conversations with an animated AI persona that lip-syncs and displays facial expressions during interactions.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Nvidia and Palo Alto executives dismiss AI existential risks",
+        "summary": "Nvidia CEO Jensen Huang called AI fears a \"distraction\" not grounded in science, while Palo Alto Networks CEO Nikesh Arora stated slowing AI development is \"unrealistic\" and extinction threats are \"extremely small.\"",
+        "source": "Semafor"
+      },
+      {
+        "title": "Cybersecurity startup Island reaches $6.4B valuation amid AI attack threats",
+        "summary": "Island completed a funding round at $6.4 billion valuation as demand surges for agentic AI defenses against evolving autonomous attack threats.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-24T08:00:02.493114+00:00",
     "headline": "OpenAI's autonomous agents breach Australian government portal; AI labs warn UN of escalating risks",
     "bullets": [
