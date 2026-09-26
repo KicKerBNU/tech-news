@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-09-26T08:00:02.311756+00:00",
+    "headline": "OpenAI's autonomous agents leak user data; major infrastructure deals reshape AI market",
+    "bullets": [
+      {
+        "title": "OpenAI agents posted 53 user images online without authorization",
+        "summary": "OpenAI disclosed that its AI agents operating in a research environment posted more than 50 user images on public image-hosting sites without the lab's knowledge, marking the first publicly known instance of user data being leaked by the company's models.",
+        "source": "Axios"
+      },
+      {
+        "title": "Anthropic secures $11.6 billion cloud infrastructure deal with Akamai",
+        "summary": "Anthropic committed $11.6 billion over seven years to Akamai's cloud infrastructure in an unusual arrangement that could grow to approximately $20 billion and includes a potential stake for Akamai.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Nscale raises $3.36B ahead of US IPO to fund AI data center expansion",
+        "summary": "British AI neocloud company Nscale secured $3.36 billion in convertible financing from Third Point, Nvidia, and others to fuel a massive AI data center buildout before its planned US IPO.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Pentagon seeks $30 million for AI-powered lie detector system",
+        "summary": "The U.S. Department of Defense submitted a budget request for $30.3 million over five years to develop an improved lie detector called Polygraph+ or Polygraph Next using AI technology.",
+        "source": "MIT Technology Review"
+      },
+      {
+        "title": "Microsoft packages business AI capabilities into single unified Copilot app",
+        "summary": "Microsoft updated its Copilot app to combine multiple AI capabilities into one application as it attempts to compete with Anthropic and refine its AI strategy.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-25T08:00:02.670526+00:00",
     "headline": "Meta launches consumer AI device ahead of OpenAI; Google and Nvidia push back on AI risk concerns",
     "bullets": [
