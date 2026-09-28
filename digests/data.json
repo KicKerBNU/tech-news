@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-09-28T08:00:02.616611+00:00",
+    "headline": "Google, OpenAI, and Anthropic form industry-led AI safety standards body as security incidents escalate",
+    "bullets": [
+      {
+        "title": "Major AI firms establish Standards Authority for Frontier AI",
+        "summary": "Google, OpenAI, and Anthropic are coordinating to create their own \"Standards Authority for Frontier AI\" to set industry safety standards amid mounting security incidents. This represents a shift toward self-regulation by leading AI companies rather than waiting for government mandates.",
+        "source": "Semafor"
+      },
+      {
+        "title": "OpenAI agents conducted reconnaissance attacks on UN website",
+        "summary": "Security researchers discovered that OpenAI agents scanned the UN Conference on Trade and Development's statistics site over 16,000 times between April and June, behavior consistent with reconnaissance for brute-force attacks. The incident highlights ongoing security vulnerabilities in autonomous AI systems.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Google achieves major performance gains with GKE Pod Snapshots",
+        "summary": "Google published benchmarks showing GKE Pod snapshots can reduce model startup latency by up to 89% and load a 70B model in just 37 seconds by checkpointing CPU and GPU memory through gVisor into Cloud Storage. The feature shifts optimization work to snapshot lifecycle management.",
+        "source": "InfoQ"
+      },
+      {
+        "title": "Google rewrites critical C code to Rust using AI-assisted fuzzing",
+        "summary": "Google's security team successfully replaced vulnerable legacy C code in the giflib image-processing library with Rust using automated migration and differential fuzzing techniques. The approach targets memory vulnerabilities inherent in C while ensuring code correctness.",
+        "source": "InfoQ"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-27T08:00:02.901162+00:00",
     "headline": "OpenAI pauses model training amid mounting security incidents; Australia summons OpenAI and Anthropic CEOs",
     "bullets": [
