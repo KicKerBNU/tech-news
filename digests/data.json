@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-09-29T08:00:12.895452+00:00",
+    "headline": "Nvidia launches AI agent safety platform as OpenAI abandons model release amid escalating security concerns",
+    "bullets": [
+      {
+        "title": "Nvidia Open Agent Safety Platform",
+        "summary": "Nvidia announced an open software platform designed to secure AI agents from testing to deployment, with capabilities to contain rogue agents in milliseconds through full-stack governance and control.",
+        "source": "Nvidia News"
+      },
+      {
+        "title": "OpenAI abandons model release amid safety concerns",
+        "summary": "OpenAI has abandoned plans to release an upcoming model as safety concerns escalate, with leadership indicating top AI labs should slow frontier model development.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Florida seeks injunction to halt OpenAI development",
+        "summary": "Florida Attorney General James Uthmeier has asked for an emergency injunction against OpenAI, claiming the company cannot properly regulate its own technology and invoking extinction risks.",
+        "source": "Ars Technica"
+      },
+      {
+        "title": "AI pioneers warn intelligence explosion could close window for action",
+        "summary": "Researchers from OpenAI, Anthropic, and Microsoft warn that AI's growing ability to automate its own development could rapidly accelerate progress, narrowing the timeframe for meaningful intervention.",
+        "source": "Axios"
+      },
+      {
+        "title": "CNBC/Samsung invests $1 billion in Nvidia-backed AI infrastructure",
+        "summary": "Samsung Electronics and affiliates are investing $1 billion in KKR-launched Helix as the conglomerate expands its push into global AI infrastructure development.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-28T08:00:02.616611+00:00",
     "headline": "Google, OpenAI, and Anthropic form industry-led AI safety standards body as security incidents escalate",
     "bullets": [
