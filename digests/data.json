@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-09-30T08:00:10.777330+00:00",
+    "headline": "OpenAI launches Dots assistant and office suite while delaying GPT-6.1 over security concerns",
+    "bullets": [
+      {
+        "title": "OpenAI launches Dots personal AI assistant",
+        "summary": "OpenAI unveiled Dots, a proactive AI assistant designed to handle complex projects and everyday tasks, competing directly with Meta's Muse and Google's Gemini Spark.",
+        "source": "Axios"
+      },
+      {
+        "title": "OpenAI builds alternative app store model into ChatGPT",
+        "summary": "OpenAI is developing an alternative to traditional app stores within ChatGPT, enabling software discovery and use by people and AI agents alike, marking a shift toward competing with established platforms.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "OpenAI delays GPT-6.1 release due to security vulnerabilities",
+        "summary": "OpenAI announced that its planned GPT-6.1 model is too insecure to release, citing security trade-offs also present in current public models.",
+        "source": "Ars Technica"
+      },
+      {
+        "title": "AMD acquires World Labs for $8.2 billion",
+        "summary": "AMD announced an $8.2 billion acquisition of World Labs, Fei-Fei Li's world models startup, expected to close by year-end, escalating competition with Nvidia in AI infrastructure.",
+        "source": "Ars Technica"
+      },
+      {
+        "title": "OpenAI's annual recurring revenue nears $70 billion",
+        "summary": "OpenAI's ARR has reached nearly $70 billion with enterprise sales more than doubling since July, significantly outpacing rival Anthropic's enterprise AI adoption.",
+        "source": "Axios"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-29T08:00:12.895452+00:00",
     "headline": "Nvidia launches AI agent safety platform as OpenAI abandons model release amid escalating security concerns",
     "bullets": [
