@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-01T08:00:03.123311+00:00",
+    "headline": "Google launches Gemini 4 Argon while FTC probes AI safety concerns across industry",
+    "bullets": [
+      {
+        "title": "Google unveils Gemini 4 Argon to cybersecurity partners",
+        "summary": "Google revealed its next-generation AI model, Gemini 4 Argon, delivering frontier performance in software engineering, enterprise knowledge work, and complex workflows. The model is initially available only to trusted cyber defenders due to its advanced capabilities.",
+        "source": "Axios"
+      },
+      {
+        "title": "FTC launches formal investigation into AI safety practices",
+        "summary": "The Federal Trade Commission announced investigations into OpenAI, Anthropic, and other AI companies over potential safety risks posed by their products, marking heightened regulatory scrutiny of the industry.",
+        "source": "Semafor"
+      },
+      {
+        "title": "OpenAI disrupts Chinese model-distillation campaign by Moonshot AI",
+        "summary": "OpenAI disclosed it identified and disrupted a wide-scale attempt by China's Moonshot AI to extract protected reasoning from its models through distillation, citing rising AI-race tensions between Washington and Beijing.",
+        "source": "OpenAI Blog"
+      },
+      {
+        "title": "Microsoft makes Azure Container Apps Express and Sandboxes generally available",
+        "summary": "Microsoft announced general availability of Container Apps Express alongside the Container Apps Sandboxes microVM compute layer, enabling subsecond startup times and zero-scale deployments without environment provisioning.",
+        "source": "InfoQ"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-09-30T08:00:10.777330+00:00",
     "headline": "OpenAI launches Dots assistant and office suite while delaying GPT-6.1 over security concerns",
     "bullets": [
