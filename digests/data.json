@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-02T08:00:02.629306+00:00",
+    "headline": "OpenAI launches GPT-6 Astra Ultrafast on Nvidia hardware; Broadcom finances Anthropic's $42B chip lease",
+    "bullets": [
+      {
+        "title": "OpenAI releases GPT-6 Astra Ultrafast powered by Nvidia Blackwell GPUs",
+        "summary": "GPT-6 Astra Ultrafast is now available in the OpenAI API and to eligible ChatGPT Work and Codex users, leveraging Nvidia Blackwell GPUs with inference optimizations for accelerated performance.",
+        "source": "Nvidia News"
+      },
+      {
+        "title": "Broadcom to lend Anthropic $42 billion for chip leasing",
+        "summary": "Broadcom joins chipmakers in financing AI infrastructure buildout by providing a $42 billion lending facility to Anthropic for leasing chips, reflecting industry trends in AI capital expenditure.",
+        "source": "Semafor"
+      },
+      {
+        "title": "Kevin Mandia's Armadin security startup raises $255.5M at $2.5B valuation",
+        "summary": "Former Mandiant founder Kevin Mandia's new startup Armadin, which uses agent swarms to test and protect enterprise systems, has raised $255.5 million in funding.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Interpol warns AI is accelerating and concealing cyberattacks",
+        "summary": "An Interpol executive warns that AI is making existing cyber threats faster and harder to detect, while companies face new risks from agentic AI systems.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-01T08:00:03.123311+00:00",
     "headline": "Google launches Gemini 4 Argon while FTC probes AI safety concerns across industry",
     "bullets": [
