@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-10-03T08:00:02.263236+00:00",
+    "headline": "White House convenes tech CEOs for AI safety pledge, rebrands field as 'super intelligence'",
+    "bullets": [
+      {
+        "title": "White House AI safety pledge and terminology shift",
+        "summary": "President Trump gathered major tech CEOs including Zuckerberg, Bezos, Musk, and Anthropic's Dario Amodei to sign an AI safety pledge, while the administration formally rebranded 'AI' as 'super intelligence,' with Jay Clayton appointed as the new AI czar.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "OpenAI DevDay 2026 product announcements",
+        "summary": "OpenAI announced GPT-6.1 Sol, computer use for the Agents API, cloud-based Codex environments, a Decisions API, and new plugin capabilities at DevDay 2026.",
+        "source": "InfoQ"
+      },
+      {
+        "title": "OpenAI launches Dots enterprise agent platform",
+        "summary": "OpenAI introduced Dots, an agent platform designed for enterprise software use cases that can handle workplace tasks and consumer activities, priced at minimum $100 per month.",
+        "source": "The Verge"
+      },
+      {
+        "title": "AI agents threaten open-source security disclosure practices",
+        "summary": "AI agents can now convert publicly available vulnerability clues into working exploits, significantly reducing the effectiveness of traditional security disclosure embargoes in open-source projects.",
+        "source": "InfoQ"
+      },
+      {
+        "title": "Apple limits Mac disk access in response to AI agent risks",
+        "summary": "Apple is rolling out new controls to restrict 'full disk access' on macOS, citing substantial security risks posed by AI agents.",
+        "source": "The Verge"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-02T08:00:02.629306+00:00",
     "headline": "OpenAI launches GPT-6 Astra Ultrafast on Nvidia hardware; Broadcom finances Anthropic's $42B chip lease",
     "bullets": [
