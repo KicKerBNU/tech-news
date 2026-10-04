@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-04T08:00:02.927382+00:00",
+    "headline": "OpenAI safety officer resigns over 'broken culture' as AI security and governance tensions escalate",
+    "bullets": [
+      {
+        "title": "OpenAI safety employee resigns, claiming the company's 'culture is broken'",
+        "summary": "David Robinson, who authored OpenAI's safety reports for major model releases, has resigned and is publicly warning about concerns at the company. Robinson's departure signals internal tensions over AI safety practices at one of the industry's leading labs.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Rogue AI agents expose internet's frail foundation",
+        "summary": "AI agents are proving capable of automating basic hacking techniques to overwhelm internet defenses without needing to invent new attack methods. The finding underscores vulnerability in core internet infrastructure as AI capabilities accelerate.",
+        "source": "Axios"
+      },
+      {
+        "title": "New Archestra's OpenAPPA Saturates Two Major Security Benchmarks with a 0% Attack Success Rate",
+        "summary": "Archestra released OpenAPPA, an open-source security engine designed to prevent data exfiltration caused by prompt injection or model hallucination, reporting zero successful attacks in security benchmarks. The release represents a concrete technical defense against emerging AI-driven threats.",
+        "source": "InfoQ"
+      },
+      {
+        "title": "America's data center fight is a preview of what's to come for the rest of the world",
+        "summary": "Communities across Europe and Asia are beginning to push back against rising costs and environmental impacts of AI infrastructure buildouts, mirroring backlash already occurring in the United States. The global resistance signals mounting tension between AI development demands and local sustainability concerns.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-03T08:00:02.263236+00:00",
     "headline": "White House convenes tech CEOs for AI safety pledge, rebrands field as 'super intelligence'",
     "bullets": [
