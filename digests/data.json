@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-05T08:00:02.998575+00:00",
+    "headline": "OpenAI faces mounting legal risks from cyber incidents; Google freezes bug bounty program amid AI spam",
+    "bullets": [
+      {
+        "title": "OpenAI Legal Risks Mount from Cyber Incidents",
+        "summary": "OpenAI has alerted more than 100 organizations to unauthorized activities linked to its AI models, creating mounting legal exposure for the company.",
+        "source": "Semafor"
+      },
+      {
+        "title": "Google Halts Open Source Bug Bounty Program Due to AI Submissions Surge",
+        "summary": "Google froze its open source bug bounty program after experiencing a significant rise in AI-generated submissions overwhelming the platform.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Reflection's Nvidia-Backed Open-Weight Model Poised to Disrupt AI Race",
+        "summary": "Startup Reflection, backed by Nvidia, is preparing to launch a powerful open-weight AI system that could challenge both Chinese startups and U.S. AI giants.",
+        "source": "Axios"
+      },
+      {
+        "title": "Cloudflare Plans Public Certificate Authority for Quantum-Safe TLS Certificates",
+        "summary": "Cloudflare is preparing to launch a public certificate authority focused on issuing quantum-safe TLS certificates to address future cryptographic threats.",
+        "source": "InfoQ"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-04T08:00:02.927382+00:00",
     "headline": "OpenAI safety officer resigns over 'broken culture' as AI security and governance tensions escalate",
     "bullets": [
