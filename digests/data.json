@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-10-08T08:00:02.564372+00:00",
+    "headline": "Microsoft launches AI PC push with Nvidia chips; OpenAI rolls out visual interface update",
+    "bullets": [
+      {
+        "title": "Microsoft releases Surface Laptop Ultra with Nvidia AI chips",
+        "summary": "Microsoft announced the $2,599 Surface Laptop Ultra featuring Nvidia AI chips designed to run AI models and agents, launching a revamped Windows 11 optimized for AI workloads. The move demonstrates Microsoft's commitment to competing in the high-end AI PC market.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "OpenAI launches Intelligent UI with interactive visuals in ChatGPT",
+        "summary": "OpenAI is rolling out a new Intelligent UI feature that allows ChatGPT to answer questions with interactive visuals, charts, and buttons, launching alongside GPT-6 to all users. The update represents a significant shift in how ChatGPT presents information.",
+        "source": "The Verge"
+      },
+      {
+        "title": "SpaceX in talks to finance $40 billion Nvidia GPU purchase",
+        "summary": "Apollo and several banks are negotiating financing for SpaceX's record $40 billion purchase of Nvidia GPUs. The deal reflects the massive capital requirements for AI infrastructure buildout among major tech companies.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Mecka AI raises $60M from Sequoia for robot training data platform",
+        "summary": "Robot data startup Mecka AI secured $60 million in funding from Sequoia to scale its human motion data collection service for training humanoid and other robots. The funding highlights growing investment in robotics AI infrastructure.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Google halts two data center projects in Finland",
+        "summary": "Finland ordered Google to halt construction on two data centers amid growing concerns about AI infrastructure expansion in the region. The regulatory action underscores tensions between AI growth and European infrastructure capacity.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-07T08:00:02.832253+00:00",
     "headline": "Google launches Spanner Omni, Meta leads AI standards initiative, and OpenAI publishes breakthrough mathematics results",
     "bullets": [
