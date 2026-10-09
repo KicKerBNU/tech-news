@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-09T08:00:02.334373+00:00",
+    "headline": "OpenAI's annualized revenue falls to $50B amid researcher firings and safety concerns",
+    "bullets": [
+      {
+        "title": "OpenAI Reports $50B Annualized Revenue, Down from Previous $70B Projections",
+        "summary": "OpenAI told investors it hit roughly $50 billion in annualized revenue at the end of September, contradicting earlier reports that claimed the figure was around $70 billion. The significant downward revision marks a major divergence from market expectations.",
+        "source": "CNBC"
+      },
+      {
+        "title": "OpenAI Defends Firing of Three Safety Researchers Over 'Breach of Trust'",
+        "summary": "OpenAI defended its decision to terminate three safety researchers, characterizing it as a response to a 'significant breach of trust.' The researchers have disputed misconduct allegations and warned the firings create a chilling effect on AI safety culture.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Anthropic Launches Critical Infrastructure Security Initiative and Updates Usage Policy",
+        "summary": "Anthropic announced a new cybersecurity program bringing advanced AI models to companies protecting power grids and water utilities, while also updating its usage policy to ban model abuse and election interference. The company simultaneously launched free security scans for open-source projects.",
+        "source": "Axios"
+      },
+      {
+        "title": "Nvidia-Backed Australian AI Firm Firmus Withdraws IPO Amid Market Volatility",
+        "summary": "Nvidia-backed Australian AI data center operator Firmus withdrew its planned IPO citing recent market volatility and prevailing market conditions, signaling investor caution in the AI infrastructure sector.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-08T08:00:02.564372+00:00",
     "headline": "Microsoft launches AI PC push with Nvidia chips; OpenAI rolls out visual interface update",
     "bullets": [
