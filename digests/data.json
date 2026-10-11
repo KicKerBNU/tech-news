@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-11T08:00:02.544245+00:00",
+    "headline": "Microsoft CEO Nadella calls for AI 'emergency brake' as safety concerns mount across industry",
+    "bullets": [
+      {
+        "title": "Microsoft's Nadella advocates for AI safety controls",
+        "summary": "Microsoft CEO Satya Nadella joined other tech leaders in calling for stronger AI safeguards, stating that we should assume all advanced AI models are 'compromised' and advocating for an 'emergency brake' that humans can control.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Anthropic expands Cyber Verification Program for security professionals",
+        "summary": "Anthropic launched an expanded version of its Cyber Verification Program, making advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.",
+        "source": "Anthropic News"
+      },
+      {
+        "title": "Apple acquires Huxe team and technology for personalized podcasts",
+        "summary": "Apple disclosed a deal to hire the team and license technology from personalized podcast startup Huxe, signaling potential entry into the AI-generated podcast business.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "OpenAI's new AI agent Dots promises privacy standard for frontier AI",
+        "summary": "OpenAI CEO Sam Altman unveiled the company's new AI agent Dots at DevDay, pledging to 'set a new standard for privacy in frontier AI' as questions mount about whether AI agent makers can deliver on privacy commitments.",
+        "source": "The Verge"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-10T08:00:03.426171+00:00",
     "headline": "Anthropic faces control issues with AI agents; OpenAI's latest math breakthrough stuns researchers",
     "bullets": [
