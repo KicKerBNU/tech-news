@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-12T08:00:10.589773+00:00",
+    "headline": "Anthropic launches Claude Haiku 5.5 and $100M engineer training program; Nvidia commits $1B to US science",
+    "bullets": [
+      {
+        "title": "Anthropic Introduces Claude Haiku 5.5",
+        "summary": "Anthropic announced Claude Haiku 5.5, positioning it as the fastest, cheapest, and most capable small model yet, designed for high-volume, cost-sensitive work.",
+        "source": "Anthropic News"
+      },
+      {
+        "title": "Anthropic Invests $100 Million in Engineer Training Initiative",
+        "summary": "Anthropic announced a $100 million investment to train 10,000 engineers and address the enterprise AI talent gap.",
+        "source": "Anthropic News"
+      },
+      {
+        "title": "Nvidia Commits $1 Billion to Advance US Science",
+        "summary": "Nvidia announced a commitment of $1 billion over the next five years to advance US science initiatives.",
+        "source": "Nvidia News"
+      },
+      {
+        "title": "AI Dynamic Pricing Threatens Consumer Privacy",
+        "summary": "As retailers adopt AI tools for operations, experts warn that collecting detailed consumer data increases risks of personalized pricing that could affect grocery and food costs.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-11T08:00:02.544245+00:00",
     "headline": "Microsoft CEO Nadella calls for AI 'emergency brake' as safety concerns mount across industry",
     "bullets": [
