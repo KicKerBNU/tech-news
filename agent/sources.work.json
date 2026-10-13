@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "notes": "Outlets for the SIGNAL work-disruption digest (AI + jobs/labor). RSS-first; omit rss for hard paywalls.",
+  "preferred": [
+    { "name": "EPI Blog", "url": "https://www.epi.org/blog/", "rss": "https://www.epi.org/blog/feed/", "topics": ["labor", "jobs", "economy"] },
+    { "name": "Labor Notes", "url": "https://labornotes.org/", "rss": "https://labornotes.org/feed", "topics": ["unions", "labor", "workplace"] },
+    { "name": "Guardian Technology", "url": "https://www.theguardian.com/uk/technology", "rss": "https://www.theguardian.com/uk/technology/rss", "topics": ["AI", "jobs", "regulation"] },
+    { "name": "Rest of World", "url": "https://restofworld.org/", "rss": "https://restofworld.org/feed/", "topics": ["global", "labor", "AI"] },
+    { "name": "TechCrunch", "url": "https://techcrunch.com", "rss": "https://techcrunch.com/feed/", "topics": ["layoffs", "startups", "AI"] },
+    { "name": "The Verge", "url": "https://www.theverge.com", "rss": "https://www.theverge.com/rss/index.xml", "topics": ["workplace", "AI products"] },
+    { "name": "Wired", "url": "https://www.wired.com", "rss": "https://www.wired.com/feed/rss", "topics": ["labor", "AI", "culture"] },
+    { "name": "MIT Technology Review", "url": "https://www.technologyreview.com", "rss": "https://www.technologyreview.com/feed/", "topics": ["jobs", "AI", "policy"] },
+    { "name": "Ars Technica", "url": "https://arstechnica.com", "rss": "https://feeds.arstechnica.com/arstechnica/index", "topics": ["automation", "policy"] },
+    { "name": "CNBC", "url": "https://www.cnbc.com/technology", "rss": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=19854910", "topics": ["jobs", "markets", "earnings"] },
+    { "name": "CNBC Economy", "url": "https://www.cnbc.com/economy/", "rss": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=20910258", "topics": ["jobs", "economy"] },
+    { "name": "BBC Business", "url": "https://www.bbc.com/news/business", "rss": "https://feeds.bbci.co.uk/news/business/rss.xml", "topics": ["jobs", "economy", "policy"] },
+    { "name": "BBC Technology", "url": "https://www.bbc.com/news/technology", "rss": "https://feeds.bbci.co.uk/news/technology/rss.xml", "topics": ["AI", "workplace"] },
+    { "name": "Axios", "url": "https://www.axios.com", "rss": "https://api.axios.com/feed/", "topics": ["policy", "business", "labor"] },
+    { "name": "Semafor", "url": "https://www.semafor.com", "rss": "https://www.semafor.com/rss.xml", "topics": ["AI", "policy", "labor"] },
+    { "name": "Al Jazeera", "url": "https://www.aljazeera.com", "rss": "https://www.aljazeera.com/xml/rss/all.xml", "topics": ["global", "labor", "policy"] },
+    { "name": "Guardian Business", "url": "https://www.theguardian.com/business", "rss": "https://www.theguardian.com/business/rss", "topics": ["jobs", "economy", "labor"] },
+    { "name": "Reuters", "url": "https://www.reuters.com/business", "rss": null, "topics": ["jobs", "markets", "policy"] },
+    { "name": "Bloomberg", "url": "https://www.bloomberg.com/economics", "rss": null, "topics": ["jobs", "markets"] },
+    { "name": "Financial Times", "url": "https://www.ft.com/companies", "rss": null, "topics": ["jobs", "policy"] },
+    { "name": "Wall Street Journal", "url": "https://www.wsj.com/economy", "rss": null, "topics": ["jobs", "economy"] },
+    { "name": "The Information", "url": "https://www.theinformation.com", "rss": null, "topics": ["enterprise", "workforce"] },
+    { "name": "OpenAI Blog", "url": "https://openai.com/blog", "rss": "https://openai.com/blog/rss.xml", "topics": ["AI", "policy"] },
+    { "name": "Anthropic News", "url": "https://www.anthropic.com/news", "rss": null, "topics": ["AI", "policy", "safety"] },
+    { "name": "Microsoft Blog", "url": "https://blogs.microsoft.com", "rss": "https://blogs.microsoft.com/feed/", "topics": ["enterprise", "workforce"] }
+  ],
+  "avoid": [
+    "Tech Startups",
+    "Build Fast with AI",
+    "AI Weekly",
+    "random Substacks with no primary reporting",
+    "repost aggregators that only rewrite press releases without a clear outlet"
+  ]
+}

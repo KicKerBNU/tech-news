@@ -2,27 +2,28 @@
 
 Repo: https://github.com/KicKerBNU/tech-news
 
-Fully autonomous pipeline: an Express backend on **Railway** runs the digest agent daily,
-commits results to `digests/data.json`, and a Vue app on Netlify polls that file to show
-a live feed.
+Fully autonomous pipeline: an Express backend on **Railway** runs two digest agents daily
+(main AI/tech + work-disruption), commits `digests/*.json`, and a Vue app on Netlify polls
+the main feed (`digests/data.json`). The work digest is API-only.
 
 ## Architecture
 
 ```
 Railway (Express + node-cron)
-  → python agent/news_digest.py
-       → crawl agent/sources.json (RSS-first, HTML fallback)
+  → python agent/news_digest.py   → digests/data.json   (main AI/tech brief)
+  → python agent/work_digest.py   → digests/work.json   (AI + jobs/labor)
+       → crawl preferred sources (RSS-first, HTML fallback)
        → cheap LLM refine (Haiku / gpt-5-nano, no web_search)
-  → git commit + push digests/data.json
-  → send_newsletter.py + send_telegram.py
+  → git commit + push digests/*.json
+  → send_newsletter.py + send_telegram.py   (main digest only)
 
 Netlify (Vue webapp + subscribe/unsubscribe functions)
   → polls raw.githubusercontent.com/.../digests/data.json
 ```
 
 Discovery is free (HTTP crawl). The LLM only picks and rewrites 2–5 stories from
-that candidate list, so daily cost stays near one short completion — not paid
-web_search with tens of thousands of tokens.
+that candidate list, so daily cost stays near short completions — not paid
+web_search with tens of thousands of tokens. Work digest is **API-only** for now.
 
 ## 1. Push this to the repo
 
@@ -63,7 +64,7 @@ git push
 ### Public news API
 
 ```bash
-# Latest daily digest
+# Latest daily digest (main AI/tech brief)
 curl -sS "https://tech-news-production-af46.up.railway.app/api/digest"
 
 # Or alias
@@ -71,9 +72,16 @@ curl -sS "https://tech-news-production-af46.up.railway.app/api/digest/latest"
 
 # Recent history (newest first, max 50)
 curl -sS "https://tech-news-production-af46.up.railway.app/api/digest?limit=5"
+
+# Work-disruption digest (AI + jobs/labor) — API only, not on the website/newsletter
+curl -sS "https://tech-news-production-af46.up.railway.app/api/digest/work"
+curl -sS "https://tech-news-production-af46.up.railway.app/api/digest/work/latest"
+curl -sS "https://tech-news-production-af46.up.railway.app/api/digest/work?limit=5"
 ```
 
-No auth required — same content as Telegram/email/the website feed.
+No auth required. The **main** digest (`/api/digest`) matches Telegram/email/the website feed.
+The **work** digest (`/api/digest/work`) covers layoffs, role changes, automation backlash,
+and workplace AI regulation — stored in `digests/work.json`, generated on the same daily cron.
 
 ### Manual run (don't wait for cron)
 
@@ -262,11 +270,13 @@ backend/src/
   utils/exec.js         Child-process helper for python/git commands
 
 agent/
-  news_digest.py        Crawl preferred outlets → cheap LLM refine (+ OpenAI fallback)
+  news_digest.py        Main crawl → cheap LLM refine (+ OpenAI fallback)
+  work_digest.py        Work-disruption crawl → refine (jobs/labor focus)
   crawl_sources.py      RSS-first / HTML fallback crawler
-  sources.json          Preferred / avoid outlets + optional rss feeds
-  send_newsletter.py    Resend batch email
-  send_telegram.py      Telegram Bot API post
+  sources.json          Preferred outlets for the main digest
+  sources.work.json     Preferred outlets for the work digest
+  send_newsletter.py    Resend batch email (main digest only)
+  send_telegram.py      Telegram Bot API post (main digest only)
 ```
 
 Deliberately **not** included, per YAGNI: no repository interface/abstract class

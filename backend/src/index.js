@@ -1,7 +1,12 @@
 import cron from 'node-cron';
 import express from 'express';
 
-import { getLatestDigest, hasDigestForToday, loadDigests } from './digest/store.js';
+import {
+  getLatestDigest,
+  hasAllDigestsForToday,
+  hasDigestForToday,
+  loadDigests,
+} from './digest/store.js';
 import { digestState, runDigestJob } from './jobs/runDigest.js';
 import { ensureGitRepo } from './utils/git.js';
 
@@ -69,8 +74,8 @@ function resetCatchUpIfNewDay() {
 }
 
 /**
- * Catch-up: if today's digest is missing after the primary cron window,
- * try again (idempotent — Claude is skipped once today's entry exists).
+ * Catch-up: if today's main or work digest is missing after the primary cron window,
+ * try again (idempotent — each agent skips once its own today's entry exists).
  * Stops after CRON_RETRY_MAX_ATTEMPTS (default 20) failures for the UTC day.
  */
 async function maybeRunCatchUp() {
@@ -85,7 +90,7 @@ async function maybeRunCatchUp() {
     return;
   }
 
-  if (hasDigestForToday()) {
+  if (hasAllDigestsForToday()) {
     catchUpState.attempts = 0;
     catchUpState.exhausted = false;
     return;
@@ -103,12 +108,14 @@ async function maybeRunCatchUp() {
 
   catchUpState.attempts += 1;
   console.log(
-    `[retry] No digest for today yet — catch-up attempt ${catchUpState.attempts}/${maxCatchUpAttempts}`,
+    `[retry] Missing digest(s) for today (main=${hasDigestForToday(new Date(), 'data')}, ` +
+      `work=${hasDigestForToday(new Date(), 'work')}) — catch-up attempt ` +
+      `${catchUpState.attempts}/${maxCatchUpAttempts}`,
   );
 
   try {
     await runDigestJob({ trigger: 'retry' });
-    if (hasDigestForToday()) {
+    if (hasAllDigestsForToday()) {
       catchUpState.attempts = 0;
       catchUpState.exhausted = false;
     }
@@ -123,6 +130,39 @@ async function maybeRunCatchUp() {
   }
 }
 
+/**
+ * Shared handler for GET /api/digest and GET /api/digest/work.
+ * @param {import('express').Request} req
+ * @param {import('express').Response} res
+ * @param {'data' | 'work'} kind
+ */
+function respondWithDigest(req, res, kind) {
+  try {
+    const digests = loadDigests(kind);
+    if (digests.length === 0) {
+      res.status(404).json({ ok: false, error: `No ${kind === 'work' ? 'work ' : ''}digests available yet` });
+      return;
+    }
+
+    const rawLimit = req.query.limit;
+    if (rawLimit === undefined) {
+      res.json({ ok: true, kind, digest: digests[0] });
+      return;
+    }
+
+    const limit = Math.min(Math.max(Number.parseInt(String(rawLimit), 10) || 1, 1), 50);
+    res.json({
+      ok: true,
+      kind,
+      count: Math.min(limit, digests.length),
+      digests: digests.slice(0, limit),
+    });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    res.status(500).json({ ok: false, error: message });
+  }
+}
+
 app.get('/health', (_req, res) => {
   resetCatchUpIfNewDay();
   res.json({
@@ -133,46 +173,53 @@ app.get('/health', (_req, res) => {
     maxCatchUpAttempts,
     catchUpAttempts: catchUpState.attempts,
     catchUpExhausted: catchUpState.exhausted,
-    hasDigestForToday: hasDigestForToday(),
+    hasDigestForToday: hasDigestForToday(new Date(), 'data'),
+    hasWorkDigestForToday: hasDigestForToday(new Date(), 'work'),
+    hasAllDigestsForToday: hasAllDigestsForToday(),
     lastRun: digestState.lastRun,
   });
 });
 
 /**
- * Public daily news API.
+ * Public daily news API (main SIGNAL brief).
  * - GET /api/digest          → latest digest only
  * - GET /api/digest?limit=5  → newest N digests (max 50)
  */
 app.get('/api/digest', (req, res) => {
+  respondWithDigest(req, res, 'data');
+});
+
+app.get('/api/digest/latest', (_req, res) => {
   try {
-    const digests = loadDigests();
-    if (digests.length === 0) {
+    const digest = getLatestDigest('data');
+    if (!digest) {
       res.status(404).json({ ok: false, error: 'No digests available yet' });
       return;
     }
-
-    const rawLimit = req.query.limit;
-    if (rawLimit === undefined) {
-      res.json({ ok: true, digest: digests[0] });
-      return;
-    }
-
-    const limit = Math.min(Math.max(Number.parseInt(String(rawLimit), 10) || 1, 1), 50);
-    res.json({ ok: true, count: Math.min(limit, digests.length), digests: digests.slice(0, limit) });
+    res.json({ ok: true, kind: 'data', digest });
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     res.status(500).json({ ok: false, error: message });
   }
 });
 
-app.get('/api/digest/latest', (_req, res) => {
+/**
+ * Work-disruption digest API (AI + jobs/labor). API-only — not on the website/newsletter.
+ * - GET /api/digest/work          → latest
+ * - GET /api/digest/work?limit=5  → newest N
+ */
+app.get('/api/digest/work', (req, res) => {
+  respondWithDigest(req, res, 'work');
+});
+
+app.get('/api/digest/work/latest', (_req, res) => {
   try {
-    const digest = getLatestDigest();
+    const digest = getLatestDigest('work');
     if (!digest) {
-      res.status(404).json({ ok: false, error: 'No digests available yet' });
+      res.status(404).json({ ok: false, error: 'No work digests available yet' });
       return;
     }
-    res.json({ ok: true, digest });
+    res.json({ ok: true, kind: 'work', digest });
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     res.status(500).json({ ok: false, error: message });
@@ -188,7 +235,9 @@ app.get('/api/digest/status', (_req, res) => {
     maxCatchUpAttempts,
     catchUpAttempts: catchUpState.attempts,
     catchUpExhausted: catchUpState.exhausted,
-    hasDigestForToday: hasDigestForToday(),
+    hasDigestForToday: hasDigestForToday(new Date(), 'data'),
+    hasWorkDigestForToday: hasDigestForToday(new Date(), 'work'),
+    hasAllDigestsForToday: hasAllDigestsForToday(),
     lastRun: digestState.lastRun,
   });
 });

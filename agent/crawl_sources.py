@@ -376,14 +376,21 @@ def diversify_candidates(items: list[dict], limit: int = MAX_CANDIDATES) -> list
     return out
 
 
-def crawl_preferred_sources(sources: dict) -> tuple[list[dict], dict]:
+def crawl_preferred_sources(
+    sources: dict,
+    *,
+    recency_hours: int | None = None,
+    item_filter=None,
+) -> tuple[list[dict], dict]:
     """
     Crawl all preferred outlets. Returns (candidates, stats).
 
-    stats: { crawled, candidates, sources_ok, sources_failed, failures }
+    Optional item_filter(item) -> bool is applied after crawl/dedupe and
+    before diversify/cap, so topic-specific digests keep relevant stories.
     """
     preferred = sources.get("preferred") or []
-    cutoff = _now() - timedelta(hours=RECENCY_HOURS)
+    hours = RECENCY_HOURS if recency_hours is None else max(1, int(recency_hours))
+    cutoff = _now() - timedelta(hours=hours)
     collected: list[dict] = []
     failures: list[str] = []
     sources_ok = 0
@@ -420,7 +427,10 @@ def crawl_preferred_sources(sources: dict) -> tuple[list[dict], dict]:
 
     collected.sort(key=_sort_key, reverse=True)
     crawled_count = len(collected)
-    candidates = diversify_candidates(dedupe_candidates(collected), MAX_CANDIDATES)
+    deduped = dedupe_candidates(collected)
+    if item_filter is not None:
+        deduped = [item for item in deduped if item_filter(item)]
+    candidates = diversify_candidates(deduped, MAX_CANDIDATES)
 
     stats = {
         "crawled": crawled_count,

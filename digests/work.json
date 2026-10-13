@@ -1,0 +1,28 @@
+[
+  {
+    "timestamp": "2026-10-13T10:53:49.801427+00:00",
+    "headline": "AI is outpacing workplace safety rules, while Amazon's robot army raises questions about human jobs",
+    "bullets": [
+      {
+        "title": "Microsoft president warns AI is less regulated than milk",
+        "summary": "Microsoft's Brad Smith is calling for urgent government oversight of AI systems, saying the technology has fewer safety rules than household products. The warning comes as AI companies face growing pressure to put guardrails in place before the technology disrupts more industries.",
+        "source": "Guardian Technology"
+      },
+      {
+        "title": "Amazon now has over 1 million robot workers\u2014here's what it means for humans",
+        "summary": "The second-largest U.S. employer has doubled down on automation, deploying robots across warehouses and fulfillment centers. The shift raises hard questions about what happens to the hundreds of thousands of human workers who currently do those jobs.",
+        "source": "Ars Technica"
+      },
+      {
+        "title": "IMF warns AI is a 'slow-moving tsunami' hitting young workers hardest",
+        "summary": "International Monetary Fund leaders say artificial intelligence is reshaping the global job market, with the youngest workers facing the steepest exposure to AI-driven displacement. The World Bank is now urging governments to adopt emergency-level employment support measures.",
+        "source": "CNBC Economy"
+      },
+      {
+        "title": "Fired OpenAI researchers claim they were let go for pushing safety concerns",
+        "summary": "Several researchers at OpenAI say the company terminated them for prioritizing AI safety over commercial speed, though OpenAI disputes this and claims they mishandled sensitive information. The clash highlights growing tension between safety advocates and AI companies racing to deploy new systems.",
+        "source": "BBC Technology"
+      }
+    ]
+  }
+]
