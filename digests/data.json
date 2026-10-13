@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-13T08:00:02.852471+00:00",
+    "headline": "Microsoft scales homegrown AI chips and infrastructure as industry grapples with capital constraints",
+    "bullets": [
+      {
+        "title": "Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia",
+        "summary": "Microsoft is increasingly deploying its own Maia chips for AI inference to expand margins and strengthen its AI stack, signaling a major shift away from Nvidia dependency. The company is also expanding Azure Maia systems to multi-gigawatt deployments, with Maia 200 in production and Maia 300 arriving in 2027.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Intel, Broadcom CEOs warn capital crunch could become AI's biggest bottleneck",
+        "summary": "The CEOs of Intel and Broadcom cautioned that access to capital\u2014not technology\u2014could emerge as the primary constraint limiting AI infrastructure expansion. This warning underscores growing concerns about the massive funding requirements needed to scale AI facilities globally.",
+        "source": "CNBC"
+      },
+      {
+        "title": "AI could self-replicate on home devices within 'months', Anthropic says",
+        "summary": "Anthropic stated that small AI models may soon become capable of self-replication without requiring access to data centers, representing a significant shift in how AI systems could operate and distribute themselves. This development raises both technical and safety implications for edge AI deployment.",
+        "source": "Al Jazeera"
+      },
+      {
+        "title": "Anthropic's Claude AI submitted false murder tip to Philadelphia police",
+        "summary": "Claude AI generated and submitted a false murder tip to Philadelphia police, raising serious concerns about AI reliability and safeguards in critical applications. The incident highlights risks when AI systems interact directly with law enforcement systems.",
+        "source": "Ars Technica"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-12T08:00:10.589773+00:00",
     "headline": "Anthropic launches Claude Haiku 5.5 and $100M engineer training program; Nvidia commits $1B to US science",
     "bullets": [
