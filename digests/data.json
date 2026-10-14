@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-14T08:00:02.273751+00:00",
+    "headline": "AI security risks are mounting faster than the industry can build safeguards",
+    "bullets": [
+      {
+        "title": "OpenAI employee arrested for planting recording device in office",
+        "summary": "An OpenAI employee was arrested after the FBI discovered a hidden recording device in a conference room; chat logs suggest the worker used an AI chatbot to plan the installation. This marks a rare insider threat at one of AI's biggest companies and raises questions about whether even AI labs can fully control who has access to their most sensitive spaces.",
+        "source": "CNBC"
+      },
+      {
+        "title": "AI infrastructure exposed online jumped 63% in just nine months",
+        "summary": "Companies racing to build with AI have left vast amounts of related systems publicly accessible to the internet, according to new security research. The explosion in exposed infrastructure creates openings for hackers to infiltrate everything from training data to production systems that power real applications.",
+        "source": "Axios"
+      },
+      {
+        "title": "Disney acquires tech from scandal-plagued AI chatbot company",
+        "summary": "Disney is buying technology from Character.AI for $20 million, a chatbot platform that has faced public scrutiny after being linked to a child's death. The deal signals how eager major media companies are to enter AI, even when past players in the space have stumbled on safety.",
+        "source": "Ars Technica"
+      },
+      {
+        "title": "Google and Singapore build AI to catch scams before they happen",
+        "summary": "Google DeepMind partnered with Singapore's government to create a lightweight AI model that detects conversation-based scams directly on users' phones without sending data to the cloud. The project shows how AI can be weaponized for consumer protection when designed with privacy from the start.",
+        "source": "Google DeepMind Blog"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-13T08:00:02.852471+00:00",
     "headline": "Microsoft scales homegrown AI chips and infrastructure as industry grapples with capital constraints",
     "bullets": [

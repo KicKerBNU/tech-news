@@ -1,5 +1,26 @@
 [
   {
+    "timestamp": "2026-10-14T08:00:10.080804+00:00",
+    "headline": "AI adoption backfire: companies scrambling to fix worker errors and quality problems",
+    "bullets": [
+      {
+        "title": "Companies rushing into AI are now cleaning up the mess",
+        "summary": "Meta and other firms that rapidly deployed AI tools are discovering workers are spending time fixing low-quality output and errors instead of doing their actual jobs. The speed of adoption outpaced the ability to manage real workplace fallout.",
+        "source": "Guardian Business"
+      },
+      {
+        "title": "Graduates gaming job applications with AI, but say they have no choice",
+        "summary": "Young people are increasingly using AI to misrepresent themselves on job applications\u2014inflating skills they don't have or exaggerating experience. Researchers say applicants feel pressured into the practice because competition is so fierce.",
+        "source": "BBC Technology"
+      },
+      {
+        "title": "Factory robots that can switch tasks in minutes, not weeks\u2014more jobs at risk",
+        "summary": "A startup called Industrial Next is making robots flexible enough to handle complex, delicate work that has traditionally required human labor, and switch between different tasks much faster than before. This technology could accelerate automation across manufacturing.",
+        "source": "TechCrunch"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-13T10:53:49.801427+00:00",
     "headline": "AI is outpacing workplace safety rules, while Amazon's robot army raises questions about human jobs",
     "bullets": [
