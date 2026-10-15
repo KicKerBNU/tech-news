@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-15T08:00:11.553396+00:00",
+    "headline": "Bank of America's AI security bill: 1,000 new contractor jobs to clean up AI-exposed flaws",
+    "bullets": [
+      {
+        "title": "Bank of America hires 1,000 contractors to patch AI-exposed software holes",
+        "summary": "Bank of America brought in 1,000 contract workers after Anthropic's AI system found critical software vulnerabilities in their systems. The hiring surge offers a rare window into the real cost of defending against AI threats\u2014and shows how AI discoveries can create unexpected job surges, at least temporarily.",
+        "source": "CNBC"
+      },
+      {
+        "title": "McKinsey now has job candidates interview with AI clients",
+        "summary": "The consulting giant is adding a 10-minute conversation with an AI simulation of a client to its entry-level interview process. The shift signals how even prestigious firms are reshaping how they evaluate new hires\u2014blurring the line between who's being tested and whether it's fair.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Netflix cuts 1,000 jobs\u2014its steepest layoff since 2022",
+        "summary": "The streaming company is slashing 6% of its global workforce. While not explicitly tied to AI, the move reflects ongoing pressure on tech companies to cut costs and boost efficiency as they compete in a crowded market.",
+        "source": "BBC Business"
+      },
+      {
+        "title": "World Bank warns of AI 'crisis' in labor markets\u2014young workers hit hardest",
+        "summary": "International financial leaders are sounding the alarm that AI is disrupting jobs like a \"slow-moving tsunami,\" with entry-level workers facing the most exposure. The warning comes as governments and employers scramble to figure out how to keep people employed as automation accelerates.",
+        "source": "CNBC Economy"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-14T08:00:10.080804+00:00",
     "headline": "AI adoption backfire: companies scrambling to fix worker errors and quality problems",
     "bullets": [
