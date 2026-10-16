@@ -1,5 +1,26 @@
 [
   {
+    "timestamp": "2026-10-16T08:00:11.189244+00:00",
+    "headline": "AI surveillance at work expands while hiring slows\u2014workers face closer monitoring and fewer jobs",
+    "bullets": [
+      {
+        "title": "Your boss can now watch more than ever before\u2014AI transforms workplace monitoring",
+        "summary": "AI is supercharging workplace surveillance systems, giving employers unprecedented power to track and analyze worker activity in real time. As companies deploy these tools, workers have little say in how closely they're monitored or what data is collected.",
+        "source": "Guardian Technology"
+      },
+      {
+        "title": "September hiring and wage growth both slow down, signaling softer job market",
+        "summary": "The latest jobs report shows hiring momentum cooling and wage growth stalling for workers. The slowdown raises concerns about job security and earning power as the economy loses steam.",
+        "source": "EPI Blog"
+      },
+      {
+        "title": "AI job applications backfire: graduates flooding employers with fake credentials",
+        "summary": "Recent research shows graduates increasingly use AI to misrepresent themselves on applications, gaming the system out of desperation. But employers are catching on, and mass automated applications are damaging job seekers' credibility.",
+        "source": "BBC Technology"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-15T08:00:11.553396+00:00",
     "headline": "Bank of America's AI security bill: 1,000 new contractor jobs to clean up AI-exposed flaws",
     "bullets": [

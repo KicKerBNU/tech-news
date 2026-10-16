@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-16T08:00:02.217112+00:00",
+    "headline": "Tech giants race to prove AI investments will pay off\u2014and the FTC is watching",
+    "bullets": [
+      {
+        "title": "ChatGPT can now read your open browser tabs",
+        "summary": "OpenAI's Chrome extension now accesses the tabs you already have open, letting ChatGPT pull information from your active browsing. That's convenient for work\u2014and a new thing to think about if you care who sees what you're looking at online.",
+        "source": "The Verge"
+      },
+      {
+        "title": "AWS and Anthropic deploy armies of specialized engineers to make AI investments work",
+        "summary": "Amazon and Anthropic are betting big that sending specialized engineering teams directly into companies will prove AI spending actually delivers real returns. The move signals Silicon Valley is past the hype phase and into the painful reality of delivering results.",
+        "source": "CNBC"
+      },
+      {
+        "title": "FTC probes OpenAI and Anthropic over security incidents",
+        "summary": "Federal regulators are investigating whether the two AI giants' data breaches and security failures harmed Americans, with potential fines matching what companies face for delaying data breach disclosures. This marks the first real regulatory consequence for AI firms' messy security track record.",
+        "source": "Ars Technica"
+      },
+      {
+        "title": "Apple and Meta team up to bring powerful open AI model to Macs",
+        "summary": "The two companies\u2014who've battled for years over privacy\u2014are joining forces to run Meta's Muse AI model on high-end Apple computers. It's a rare truce that signals serious competition to OpenAI and Google in consumer AI.",
+        "source": "Axios"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-15T08:00:02.388587+00:00",
     "headline": "Eight states sue OpenAI over ChatGPT safety; Anthropic hits $16.8B in revenue before IPO",
     "bullets": [
