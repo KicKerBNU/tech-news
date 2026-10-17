@@ -1,5 +1,26 @@
 [
   {
+    "timestamp": "2026-10-17T08:00:14.237123+00:00",
+    "headline": "Robotaxis threaten drivers as driverless cars roll into London and Canada",
+    "bullets": [
+      {
+        "title": "London taxi drivers fear for jobs as robotaxis expand",
+        "summary": "Uber-backed driverless cars are rolling into London, and taxi drivers are protesting that their livelihoods are on the line. Worker groups and city politicians are demanding more control over whether these autonomous vehicles should be allowed to operate.",
+        "source": "Guardian Technology"
+      },
+      {
+        "title": "Paysend CEO limits AI access to top performers, bucking trend",
+        "summary": "While most companies roll out AI tools company-wide, one London CEO is restricting advanced AI to high performers only. The move highlights growing tension over how workplace AI gets distributed and who benefits from automation.",
+        "source": "CNBC"
+      },
+      {
+        "title": "AI job applications backfire as graduates game the system",
+        "summary": "More graduates are using AI to misrepresent themselves in job applications, flooding employers with inflated credentials and fake experience. Employers are now wary of AI-assisted applications, and workers say they feel forced to cut corners just to be noticed.",
+        "source": "BBC Technology"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-16T08:00:11.189244+00:00",
     "headline": "AI surveillance at work expands while hiring slows\u2014workers face closer monitoring and fewer jobs",
     "bullets": [
