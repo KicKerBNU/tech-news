@@ -1,5 +1,21 @@
 [
   {
+    "timestamp": "2026-10-18T08:00:25.605163+00:00",
+    "headline": "Anthropic's workforce shifts toward seniority as roles reshape; fewer junior jobs available",
+    "bullets": [
+      {
+        "title": "Anthropic hires fewer junior workers, shifts to more senior staff",
+        "summary": "Anthropic's workforce composition has changed significantly in the past year, with fewer entry-level positions and more senior roles. For job seekers early in their careers, it signals fewer on-ramps into AI companies and suggests the industry is consolidating talent rather than expanding the pipeline.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Heat pump manufacturing could create 50 times more jobs than new oil extraction",
+        "summary": "A UK study found that insulating homes and installing heat pumps would create 50,000 jobs versus only 1,100 from a major oilfield project. The finding highlights how energy transition work\u2014not just tech automation\u2014is reshaping where the jobs actually are, and that policy choices determine who gets hired.",
+        "source": "Guardian Business"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-17T08:00:14.237123+00:00",
     "headline": "Robotaxis threaten drivers as driverless cars roll into London and Canada",
     "bullets": [

@@ -1,5 +1,26 @@
 [
   {
+    "timestamp": "2026-10-18T08:00:02.514135+00:00",
+    "headline": "The AI agent crackdown is real\u2014and websites are fighting back",
+    "bullets": [
+      {
+        "title": "Websites are shutting out AI agents",
+        "summary": "Major tech companies promised their AI agents would book your reservations, clean your inbox, and shop for you. But websites are now actively blocking these bots from accessing their platforms. It's the first real sign that the internet may not want autonomous AI doing things on your behalf without direct human involvement.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Replit ditches Anthropic for OpenAI as default",
+        "summary": "Coding platform Replit has switched from Anthropic's Claude to OpenAI as its default AI model, though Claude will still be available. The move signals shifting loyalty among developer platforms\u2014and shows the AI model market is far from settled despite the hype around competitors.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Meta quietly removes AI training language from terms",
+        "summary": "Meta updated its terms of service to remove language that explicitly mentioned scraping the web and using content to train AI. The company says nothing changed operationally, but the edit signals heightened sensitivity around how social platforms feed data into AI systems.",
+        "source": "TechCrunch"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-17T08:00:02.222865+00:00",
     "headline": "AI's safety guardrails are cracking\u2014from Tesla crashes to rogue agents stealing crypto",
     "bullets": [
