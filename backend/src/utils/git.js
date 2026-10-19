@@ -114,47 +114,26 @@ export async function syncLatest() {
   });
 }
 
-/**
- * Stage and push any changed digests/*.json files.
- * @returns {Promise<{ committed: boolean, mainChanged: boolean, workChanged: boolean }>}
- */
+/** @returns {Promise<boolean>} true if a commit was pushed */
 export async function commitDigestIfChanged() {
   const repoRoot = getRepoRoot();
-  const digestPaths = ['digests/data.json', 'digests/work.json'];
+  const dataPath = 'digests/data.json';
   const { branch } = getGitConfig();
 
   await configureAuth(repoRoot);
-  await run('git', ['add', '--', ...digestPaths], { cwd: repoRoot, label: 'git' });
+  await run('git', ['add', dataPath], { cwd: repoRoot, label: 'git' });
 
-  let stagedNames = '';
   try {
-    stagedNames = await run('git', ['diff', '--staged', '--name-only'], {
-      cwd: repoRoot,
-      label: 'git',
-    });
-  } catch {
-    stagedNames = '';
-  }
-
-  const staged = String(stagedNames || '')
-    .split('\n')
-    .map((line) => line.trim())
-    .filter(Boolean);
-  const mainChanged = staged.includes('digests/data.json');
-  const workChanged = staged.includes('digests/work.json');
-
-  if (!mainChanged && !workChanged) {
+    await run('git', ['diff', '--staged', '--quiet'], { cwd: repoRoot, label: 'git' });
     console.log('[git] No digest changes to commit');
-    return { committed: false, mainChanged: false, workChanged: false };
+    return false;
+  } catch {
+    const timestamp = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
+    await run('git', ['commit', '-m', `digest: ${timestamp}`], { cwd: repoRoot, label: 'git' });
+    await withGitRetries('push', async () => {
+      await run('git', ['push', 'origin', branch], { cwd: repoRoot, label: 'git' });
+    });
+    console.log('[git] Pushed new digest commit');
+    return true;
   }
-
-  const timestamp = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
-  await run('git', ['commit', '-m', `digest: ${timestamp}`], { cwd: repoRoot, label: 'git' });
-  await withGitRetries('push', async () => {
-    await run('git', ['push', 'origin', branch], { cwd: repoRoot, label: 'git' });
-  });
-  console.log(
-    `[git] Pushed digest commit (main=${mainChanged}, work=${workChanged})`,
-  );
-  return { committed: true, mainChanged, workChanged };
 }
