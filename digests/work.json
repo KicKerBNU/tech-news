@@ -1,5 +1,26 @@
 [
   {
+    "timestamp": "2026-10-19T08:00:11.550140+00:00",
+    "headline": "Delivery robots hit the streets\u2014and workers are fighting back",
+    "bullets": [
+      {
+        "title": "Woman arrested for blocking Philadelphia delivery robot",
+        "summary": "A Philadelphia resident was arrested for standing in the way of an Uber delivery robot and refusing to move, citing job loss concerns. The incident highlights growing tension between automation rollout and workers worried about their livelihoods.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Cities push back against robotaxi expansion with new rules",
+        "summary": "Local governments are moving to regulate and restrict robotaxis operating in their jurisdictions. The crackdown signals growing concern about autonomous vehicles displacing drivers before communities are ready.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Disney absorbs majority of Character.AI workforce as startup winds down",
+        "summary": "Disney agreed to hire most of Character.AI's employees as the AI startup falters, offering a rare bright spot for tech workers facing industry layoffs. The acquisition shields workers from job loss but raises questions about consolidation in AI roles.",
+        "source": "TechCrunch"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-18T08:00:25.605163+00:00",
     "headline": "Anthropic's workforce shifts toward seniority as roles reshape; fewer junior jobs available",
     "bullets": [

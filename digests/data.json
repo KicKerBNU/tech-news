@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-19T08:00:02.772473+00:00",
+    "headline": "AI companies race to prove they're trustworthy\u2014while always-listening devices blur the line between helpful and creepy",
+    "bullets": [
+      {
+        "title": "Anthropic lets outside watchdog run its own investigations",
+        "summary": "The AI company gave an independent monitor full access to its systems and promised not to censor their findings\u2014a rare public accountability move in an industry often criticized for opacity. This matters because it sets a precedent: if other AI makers don't follow, they'll look like they have something to hide.",
+        "source": "Ars Technica"
+      },
+      {
+        "title": "Anthropic donates 5% of company shares to a 'public benefit' fund",
+        "summary": "Claude's maker committed part of its ownership to a fund that could give money to nonprofits or directly to communities affected by AI. It's a financial gesture that locks in the company's stated values\u2014or, skeptics might say, a way to look good while staying profitable.",
+        "source": "Al Jazeera"
+      },
+      {
+        "title": "AI wearables are getting creative with privacy laws and worrying people",
+        "summary": "New always-listening devices from Apple, Amazon, Meta and startups are finding gray areas in wiretapping rules, but the legal risks\u2014and the creep factor of constant surveillance\u2014are real. Workers and parents are already worried about who's listening when they think they're private.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Cities are moving to curb robotaxis before they take over roads",
+        "summary": "Local governments are pushing back against self-driving taxis with new rules and restrictions, not waiting for the tech industry to sort out safety on its own. The battle over who controls urban streets\u2014humans or algorithms\u2014is heating up right now.",
+        "source": "The Verge"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-18T08:00:02.514135+00:00",
     "headline": "The AI agent crackdown is real\u2014and websites are fighting back",
     "bullets": [
