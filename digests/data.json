@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-20T08:00:02.497105+00:00",
+    "headline": "Microsoft warns AI agents are security risks\u2014and the chip wars heat up as Amazon and Nvidia clash",
+    "bullets": [
+      {
+        "title": "Microsoft: AI agents are insider threats you can't control",
+        "summary": "Microsoft is telling companies to treat AI agents like potential security breaches, warning that advanced AI models built by OpenAI and Anthropic can't be fully trusted when deployed in corporate systems. It's a stark admission from a major tech player that the AI tools everyone's adopting come with real risks.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "U.S. bans Chinese AI startup DeepSeek from federal systems",
+        "summary": "The Department of Homeland Security has locked DeepSeek technology out of federal civilian agencies' computer systems, escalating tech tensions between the U.S. and China. This signals government worry about foreign AI tools having access to sensitive infrastructure.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Amazon takes direct aim at Nvidia with new AI tool for rival chips",
+        "summary": "Amazon is releasing TorchNeuron, a developer tool designed to let engineers build AI apps on Amazon's own chips instead of Nvidia's near-monopoly hardware. This is the cloud giant's most aggressive move yet to break Nvidia's stranglehold on AI chip development.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Former OpenAI employee accused of spying for Saudi Arabia",
+        "summary": "An ex-OpenAI worker is facing accusations of planting a surveillance device at the company, with court filings claiming Saudi government backing. The case highlights how geopolitical rivals are willing to infiltrate top AI labs to steal capabilities.",
+        "source": "Ars Technica"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-19T08:00:02.772473+00:00",
     "headline": "AI companies race to prove they're trustworthy\u2014while always-listening devices blur the line between helpful and creepy",
     "bullets": [
