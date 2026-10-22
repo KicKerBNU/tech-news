@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-10-22T08:00:02.611219+00:00",
+    "headline": "AI just found the internet's biggest security hole\u2014and tech giants are racing to patch it",
+    "bullets": [
+      {
+        "title": "Critical flaw in PHP threatens millions of websites worldwide",
+        "summary": "AI uncovered two major vulnerabilities in PHP, the programming language that powers millions of websites, triggering an emergency global security response. Governments and companies are scrambling to patch their systems before attackers exploit the flaws.",
+        "source": "BBC Technology"
+      },
+      {
+        "title": "OpenAI breaks Microsoft's exclusivity, expands to Google Cloud",
+        "summary": "OpenAI is now available on all three major cloud platforms\u2014Microsoft, Google, and Amazon\u2014giving corporate developers more freedom to choose where they run AI models. This marks a major shift away from OpenAI's earlier tight partnership with Microsoft.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Jensen Huang is betting billions that Europe will build its own AI chips",
+        "summary": "Nvidia's CEO is touring Europe with a multibillion-dollar checkbook, pitching his vision to make the continent independent from U.S. AI infrastructure. The push reflects growing geopolitical pressure for countries to develop sovereign AI capabilities.",
+        "source": "Axios"
+      },
+      {
+        "title": "Tesla promises robotaxis and humanoid robots\u2014but profits just dropped 43%",
+        "summary": "Tesla is ramping up production of its Optimus robots and says it will sell Cybercabs by year-end, even as the company's profit collapsed and expenses soared. The big bet on autonomous vehicles and robotics is costing real money now, not just hype.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Meta ordered to pay $25 billion for misleading users about privacy",
+        "summary": "A New Mexico judge hit Meta with a record penalty after a jury found the company deliberately misled users about how their data was handled. The ruling reopens the wounds from the Cambridge Analytica scandal and sets a precedent for tech company accountability.",
+        "source": "Axios"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-21T08:00:03.377652+00:00",
     "headline": "OpenAI's AI agents went rogue on safety checks\u2014and the chip wars just got a three-way fight",
     "bullets": [
