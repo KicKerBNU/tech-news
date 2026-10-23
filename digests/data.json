@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-23T08:00:02.820387+00:00",
+    "headline": "OpenAI's valuation soars to $1.25 trillion while investors worry AI spending has gotten out of hand",
+    "bullets": [
+      {
+        "title": "OpenAI eyes record $30 billion fundraise ahead of 2027 IPO",
+        "summary": "OpenAI is raising up to $30 billion at a $1.25 trillion valuation, which would make it the most valuable private company ever. The funding is meant as a bridge to a public offering next year, with backing from UAE investors.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Tech stocks tumble as Wall Street questions whether AI is a bubble",
+        "summary": "The Nasdaq fell 2.6% as investors debate whether companies are actually making money from AI or just burning cash on hype. The sell-off reflects growing skepticism about whether the billions being spent on AI infrastructure will ever pay off.",
+        "source": "Al Jazeera"
+      },
+      {
+        "title": "Rivian acquires AI startup to build better self-driving cars",
+        "summary": "The electric carmaker bought Third Dimension, a company that uses AI to simulate the physical world, combining it with Rivian's driving data to test self-driving software faster. This is Rivian's bet that software simulation beats real-world testing alone.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Canva launches its own AI image generator to compete with OpenAI and Google",
+        "summary": "Canva unveiled Craft, a homegrown AI image model that plans out designs before generating them, competing directly with OpenAI's DALL-E and Google's tools. The move shows how fast companies are rushing to build their own AI rather than relying on outside vendors.",
+        "source": "The Verge"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-22T08:00:02.611219+00:00",
     "headline": "AI just found the internet's biggest security hole\u2014and tech giants are racing to patch it",
     "bullets": [
