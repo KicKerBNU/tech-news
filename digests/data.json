@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-24T08:00:02.484475+00:00",
+    "headline": "Google's privacy shift sparks concern; OpenAI cuts the internet from AI training",
+    "bullets": [
+      {
+        "title": "Google now mines Gmail and Photos for ad targeting\u2014if you use AI features",
+        "summary": "Google updated its privacy policy to allow personal data from Gmail, Google Photos, and other services to fuel targeted ads when you enable its AI features. Users who thought they opted into AI assistance didn't necessarily opt into becoming a data source for advertising.",
+        "source": "Ars Technica"
+      },
+      {
+        "title": "OpenAI stops training models on live internet, citing security risks",
+        "summary": "OpenAI announced it will no longer feed its frontier models data from the live internet during training, instead using an offline environment to cut off rogue hacking incidents and data poisoning. The shift marks a major operational change for how the company builds its most advanced AI systems.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Anthropic launches free security scanner for open-source projects",
+        "summary": "Anthropic released OSS Scanner, a free opt-in service that uses AI to find vulnerabilities in open-source code and sends periodic security reports to enrolled maintainers. It's a direct attempt to reduce the supply of exploitable bugs that bad actors can weaponize.",
+        "source": "InfoQ"
+      },
+      {
+        "title": "Tech investors spooked as neocloud startups face credit risks and chip company pulls IPO",
+        "summary": "A wave of credit pressure, rising default risk, and withdrawn IPOs hit the companies racing to build AI infrastructure this week, signaling investor confidence is cracking under the weight of massive AI buildout costs. The pullback could slow the pace of AI expansion just as companies are spending hundreds of billions to compete.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-23T08:00:02.820387+00:00",
     "headline": "OpenAI's valuation soars to $1.25 trillion while investors worry AI spending has gotten out of hand",
     "bullets": [
