@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-25T08:00:02.827782+00:00",
+    "headline": "AI model bias emerges as real problem; Pennsylvania forces disclosure on fake ads",
+    "bullets": [
+      {
+        "title": "AI picks sides: Grok favors Republicans, OpenAI favors Democrats",
+        "summary": "Researchers found that Grok's AI overwhelmingly recommends Republican candidates while OpenAI's GPT favors Democrats, disagreeing on more than 90% of nearly 500 election races. This shows that different AI systems can encode different political leanings, raising questions about whose values are baked into the tools we trust.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Pennsylvania requires AI-generated ads to be labeled",
+        "summary": "Governor Josh Shapiro signed a law requiring any AI-generated ad\u2014images, videos, or audio\u2014to carry a clear disclosure. It's the first state-level rule of its kind, setting a template for how regulators might push back against deepfakes and deceptive AI content.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Database startup PingCAP hit by major breach; 10.6 TB stolen",
+        "summary": "A cyber extortion group called FulcrumSec claimed to have stolen source code and customer data from PingCAP's internal systems. The breach exposes what happens when infrastructure companies get compromised\u2014their customers' data goes with them.",
+        "source": "InfoQ"
+      },
+      {
+        "title": "AI tools make old security bugs newly dangerous",
+        "summary": "Security researchers used AI to uncover years-old vulnerabilities in the PHP programming language that had gone unnoticed, and then AI-assisted attacks began exploiting them. The faster AI finds bugs, the faster attackers can weaponize them if patches don't keep up.",
+        "source": "Wired"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-24T08:00:02.484475+00:00",
     "headline": "Google's privacy shift sparks concern; OpenAI cuts the internet from AI training",
     "bullets": [
