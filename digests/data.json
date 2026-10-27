@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-27T08:00:02.701231+00:00",
+    "headline": "Anthropic goes public with a sobering message: AI could pose existential risks",
+    "bullets": [
+      {
+        "title": "Anthropic's IPO filing warns of catastrophic AI risks",
+        "summary": "As the first pure AI company to go public, Anthropic is being unusually blunt in its SEC filing: its own technology could pose existential threats to humanity. The company is burning through staggering amounts of money\u2014$80 billion in losses in the first half of the year\u2014to compete in an energy-hungry arms race, raising real questions about whether the payoff will ever justify the cost.",
+        "source": "Axios"
+      },
+      {
+        "title": "AI's hidden climate cost: Anthropic's methane dependency",
+        "summary": "Anthropic's IPO paperwork exposes a rarely discussed problem: generative AI requires enormous amounts of electrical power, creating a methane and climate dependency that the company itself flags as a competitive risk. As data centers compete for scarce power supply, this constraint could reshape how AI gets built and deployed.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Microsoft offers buyouts to 60,000 employees as AI drives efficiency",
+        "summary": "Microsoft is offering voluntary buyouts to roughly half its workforce, signaling that AI-driven automation is reshaping how many white-collar jobs get done. The move reflects a broader tech industry bet that AI will let companies do more with fewer people\u2014a trade-off between infrastructure investment and headcount.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Toyota bets $1 billion on humanoid robots, targeting 400,000 deployments",
+        "summary": "Toyota is jumping into the humanoid robot race with plans to deploy 400,000 robots and a billion-dollar commitment, leveraging two decades of robotics data to compete with nimble Chinese startups. The move signals that manufacturing's future is increasingly automated, even as companies struggle to find skilled human operators.",
+        "source": "Semafor"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-26T08:00:02.726552+00:00",
     "headline": "AI's payoff problem, Claude's breach, and Musk's $40B chip bet",
     "bullets": [
