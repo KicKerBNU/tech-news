@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-29T08:00:03.781374+00:00",
+    "headline": "Microsoft's AI bet is paying off\u2014but Google stumbled, and a DHS breach exposed 41,000 federal workers",
+    "bullets": [
+      {
+        "title": "Microsoft posts record profit as cloud AI revenue explodes",
+        "summary": "Microsoft hit $92.3 billion in quarterly revenue, up 19%, with Azure cloud services growing 48%\u2014driven largely by AI workloads. The win comes just days after Microsoft offered buyouts to 60,000 employees, showing the company is making money faster than it's cutting costs.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Google misses earnings expectations and nearly doubles AI spending",
+        "summary": "Alphabet's stock fell 7% after the company revealed it spent over $50 billion on AI in Q3 alone, yet missed profit projections. The spending spree isn't translating into the bottom-line gains investors expected.",
+        "source": "Semafor"
+      },
+      {
+        "title": "Hacker steals personal data on 41,000 DHS employees",
+        "summary": "A breach exposed names, job titles, phone numbers, emails, and office locations of federal workers across ICE, CBP, and other Department of Homeland Security agencies. The incident underscores how easily sensitive government employee information can be weaponized for targeting or impersonation.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Microsoft secretly made $10 billion from OpenAI",
+        "summary": "Microsoft revealed it collected $10 billion in revenue from commercial deals and revenue-sharing agreements with OpenAI last quarter. The disclosure lays bare Microsoft's financial dependency on a single AI partner\u2014a risk if OpenAI's technology or leadership stumbles.",
+        "source": "TechCrunch"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-28T08:00:02.792869+00:00",
     "headline": "AI's bill comes due: energy crisis, safety risks, and a $400 billion bet",
     "bullets": [
