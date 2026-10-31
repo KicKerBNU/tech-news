@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-10-31T08:00:02.667046+00:00",
+    "headline": "Big Tech's AI bet is getting expensive\u2014and the bill is coming due",
+    "bullets": [
+      {
+        "title": "AI giants agree on a way to let publishers block web scraping",
+        "summary": "OpenAI, Google, Microsoft, and Anthropic announced they'll adopt a shared standard letting websites opt out of having their content used to train AI systems. This gives publishers a real lever for the first time, though enforcing it will depend on whether the companies actually honor the requests.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Anthropic's IPO could saddle it with junk-bond ratings before it even goes public",
+        "summary": "Credit agencies are expected to give Anthropic a low investment grade when it hits the market, making it more expensive and harder for the company to borrow money for its massive AI infrastructure bills. For a company burning billions to keep up with OpenAI and Google, that's a problem.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Intel's stock collapses as investors panic about AI spending payoff",
+        "summary": "Intel fell 28% in a single day\u2014its worst day since the 1970s\u2014as the broader market got spooked about whether tech giants' trillion-dollar AI bets will ever generate real returns. The sell-off wiped $12 billion off the government's stake in the chipmaker.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Malicious code snuck onto thousands of developer computers via fake Claude plugin",
+        "summary": "A supply-chain attack planted malicious code in a bogus Anthropic Claude extension that infected around 5,000 developer machines before a coding flaw stopped it from causing worse damage. It's a reminder that the rush to build AI tools is outpacing security checks.",
+        "source": "Wired"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-30T08:00:03.012250+00:00",
     "headline": "AI's power grab is draining the grid\u2014and someone has to pay for it",
     "bullets": [
