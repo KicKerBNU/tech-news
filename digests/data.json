@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-01T08:00:03.320271+00:00",
+    "headline": "AI's real-world jobs crisis: humans still do the work, while courts block data center deals",
+    "bullets": [
+      {
+        "title": "The AI agent secret: humans are still behind the curtain",
+        "summary": "Startups marketing AI agents that handle customer service and logistics\u2014like Dazzle and Duckbill\u2014are quietly employing human workers to jump in when the software gets stuck. The pitch promises automation; the reality is a hybrid model that raises questions about what counts as real AI and whether investors know what they're actually buying.",
+        "source": "CNBC"
+      },
+      {
+        "title": "SpaceX loses legal battle over Mississippi data center pollution",
+        "summary": "A federal judge refused to throw out an NAACP lawsuit against SpaceX's Colossus data centers and power plant in Southaven, Mississippi, which have drawn community complaints about air quality for years. The ruling keeps alive one of the first major environmental challenges to AI infrastructure expansion in the US.",
+        "source": "CNBC"
+      },
+      {
+        "title": "AI found 500+ security bugs Google's own engineers missed",
+        "summary": "Google's PageBreak AI agent discovered more than 500 cross-site scripting vulnerabilities in company web apps since January, catching flaws that human code reviewers overlooked. It's a rare win for automation\u2014catching real security problems at scale without needing a human in the loop.",
+        "source": "InfoQ"
+      },
+      {
+        "title": "An AI agent performed gene therapy on a live mouse's brain",
+        "summary": "A biotech startup let an AI agent independently choose and inject a gene therapy treatment into a mouse's brain, and it worked. The moment signals a near-term future where lab work moves from human hands to autonomous systems\u2014faster, but also raising questions about oversight and when things go wrong.",
+        "source": "Wired"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-10-31T08:00:02.667046+00:00",
     "headline": "Big Tech's AI bet is getting expensive\u2014and the bill is coming due",
     "bullets": [
