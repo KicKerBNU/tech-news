@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-02T08:00:03.259699+00:00",
+    "headline": "AI's infrastructure crunch is real: capacity sold out, costs mounting, and companies are getting desperate",
+    "bullets": [
+      {
+        "title": "AWS capacity booked solid through 2027\u2014and into 2028",
+        "summary": "Amazon says its large committed cloud capacity is nearly fully sold out through 2027, with parts of 2028 already claimed by customers. This signals the relentless demand for AI computing power is straining supply, which means startups and smaller players may face serious delays or higher costs to build AI systems.",
+        "source": "InfoQ"
+      },
+      {
+        "title": "OpenAI's spin campaign: rebrand data centers as 'compute campuses'",
+        "summary": "Fresh off the midterm elections, OpenAI is launching a policy and PR push to rebrand unpopular data centers as \"AI compute campuses.\" Data centers face fierce local opposition over energy use and environmental impact, so the company is betting on language to soften public and political resistance.",
+        "source": "Axios"
+      },
+      {
+        "title": "South Korea is betting big on AI dominance\u2014$21 billion into semiconductors and data centers",
+        "summary": "South Korea's 2027 budget will allocate 21.3 trillion won (roughly $21 billion) to semiconductors, AI infrastructure, and data centers as part of a push for a sovereign AI model. This signals a geopolitical race: countries are now competing directly on AI hardware and capacity, not just software.",
+        "source": "CNBC"
+      },
+      {
+        "title": "AI's investment bill is coming due\u2014and earnings are starting to disappoint",
+        "summary": "After disappointing tech earnings, some investors are pulling back on expectations for how much money the massive AI buildout will actually generate. The trillion-dollar bet on AI infrastructure is starting to face real questions about whether the payoff will justify the spending.",
+        "source": "Semafor"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-01T08:00:03.320271+00:00",
     "headline": "AI's real-world jobs crisis: humans still do the work, while courts block data center deals",
     "bullets": [
