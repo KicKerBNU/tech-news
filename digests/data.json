@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-03T08:00:02.550134+00:00",
+    "headline": "AI's security arms race heats up as hackers target everyday devices, while OpenAI courts government allies",
+    "bullets": [
+      {
+        "title": "Android partner's secret backdoor infected 1.3 million devices into a botnet",
+        "summary": "Google discovered that one of its Android TV manufacturing partners had hidden malicious code in 1.3 million set-top boxes, turning them into a botnet for hacking. This shows how vulnerabilities can hide deep in the supply chain of devices millions of people own\u2014TVs, streaming boxes, home systems\u2014without anyone knowing.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Supermarket fridges across Europe knocked offline in coordinated cyber-attack",
+        "summary": "Hackers hit dozens of European supermarkets by taking control of their refrigeration systems, spoiling food and disrupting operations. The attack reveals that basic internet-connected equipment is now a target, raising questions about whether U.S. stores face the same risk.",
+        "source": "Axios"
+      },
+      {
+        "title": "OpenAI hires national security advisor as it prepares to harden defenses",
+        "summary": "OpenAI appointed Dan Driscoll, a national security expert, to advise on how AI should be used responsibly in defense and cyber work\u2014a signal that the company sees itself as a strategic infrastructure player. The move also includes raising bounties for security researchers who find bugs, suggesting OpenAI expects more attacks.",
+        "source": "OpenAI Blog"
+      },
+      {
+        "title": "Ford promises never to sell your driving data to brokers",
+        "summary": "Ford committed publicly not to sell customer driving habits to third-party data companies, breaking from competitors who've faced legal pressure over the practice. For drivers, it's a rare privacy win\u2014though it also shows how common such sales have become.",
+        "source": "The Verge"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-02T08:00:03.259699+00:00",
     "headline": "AI's infrastructure crunch is real: capacity sold out, costs mounting, and companies are getting desperate",
     "bullets": [
