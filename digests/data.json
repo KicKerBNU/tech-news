@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-04T08:00:03.066594+00:00",
+    "headline": "AMD's chip bonanza shows AI's real money is in the gear, not the software\u2014and hackers are getting bolder",
+    "bullets": [
+      {
+        "title": "AMD hits record profits on AI chip frenzy",
+        "summary": "AMD just posted its largest and most profitable quarter ever, with data center revenues nearly doubling on explosive demand for AI chips. The wins show that while everyone talks about AI software and models, the real money\u2014and power\u2014flows to companies that build the physical hardware that runs it all.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Hackers stole $6.3 billion from Binance using fake job interviews and AI tricks",
+        "summary": "North Korean-linked attackers pulled off the largest crypto theft ever by posing as recruiters and weaponizing internal AI tools over several months. It's a grim reminder that security experts have warned about these exact tactics for years\u2014yet even the world's biggest crypto exchange got caught flat-footed.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Google's search hostage deal: want AI-free classrooms, lose search entirely",
+        "summary": "After schools and politicians erupted over Google forcing AI into search, the company offered a workaround\u2014but only if schools keep Google Search off entirely. It's a jarring choice that shows how tightly AI is now woven into everyday tools, and how hard it is to opt out.",
+        "source": "Ars Technica"
+      },
+      {
+        "title": "Data centers are burning jet engines because the grid can't keep up",
+        "summary": "With the wait for new power connections and turbines stretching years, data center builders are dusting off old discarded jet engines as a last resort. The move is less efficient and worse for the environment\u2014a sign that AI's infrastructure crunch has shifted from a warning to a crisis forcing bad decisions.",
+        "source": "TechCrunch"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-03T08:00:02.550134+00:00",
     "headline": "AI's security arms race heats up as hackers target everyday devices, while OpenAI courts government allies",
     "bullets": [
