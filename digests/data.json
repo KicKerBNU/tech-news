@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-05T08:00:02.641760+00:00",
+    "headline": "Voters just slammed the brakes on AI data centers, and tech giants are scrambling",
+    "bullets": [
+      {
+        "title": "America votes down AI data center expansion",
+        "summary": "Voters rejected nearly every ballot measure supporting new AI data centers during the 2026 midterms, with anti-data-center measures passing in key states like Texas that were supposed to be ground zero for Big Tech's buildout. This could force companies like Google, Amazon, and Microsoft to rethink where and how fast they expand their power-hungry server farms.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Tech stocks surge, but data center bets take a hit",
+        "summary": "Apple, Amazon, Google, Meta, and Microsoft all rallied after the midterms cleared political uncertainty, but companies tied to data center growth and Elon Musk saw their stocks fall. The split signals that Wall Street likes big tech's core businesses but has doubts about the AI infrastructure gold rush.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Qualcomm and chipmakers pivot hard toward data centers",
+        "summary": "With smartphone sales down roughly 20 percent, Qualcomm is aggressively chasing data center business to fill the gap\u2014a bet that assumes the AI server boom will keep growing despite voter pushback. The move shows chip companies are all-in on AI infrastructure even as the political winds shift.",
+        "source": "The Verge"
+      },
+      {
+        "title": "OpenAI is already playing politics for the 2028 race",
+        "summary": "OpenAI's chief political strategist is pitching a \"new social contract\" framed as good for Americans but designed to shape the 2028 election in AI's favor. The move shows tech's biggest player is hedging bets by trying to engineer political cover before the next cycle.",
+        "source": "TechCrunch"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-04T08:00:03.066594+00:00",
     "headline": "AMD's chip bonanza shows AI's real money is in the gear, not the software\u2014and hackers are getting bolder",
     "bullets": [
