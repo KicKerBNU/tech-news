@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-06T08:00:03.459222+00:00",
+    "headline": "OpenAI pivots to transparency as midterm backlash reshapes AI's political future",
+    "bullets": [
+      {
+        "title": "OpenAI ditches secrecy around data centers after voter pushback",
+        "summary": "Following this week's midterm elections where voters rejected AI data center expansion, OpenAI announced it will stop using nondisclosure agreements in its infrastructure deals and commit to keeping energy costs stable for residents. The move signals the industry is scrambling to rebuild public trust after a historic electoral rebuke.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Perplexity launches workplace AI agents to challenge OpenAI and Anthropic",
+        "summary": "Perplexity released \"Teammates,\" always-on AI agents that can juggle multiple roles and pull from existing projects and company memory, directly competing with OpenAI and Anthropic's enterprise offerings. The shift shows the battle for AI supremacy is moving from chatbots to workplace automation.",
+        "source": "The Verge"
+      },
+      {
+        "title": "OpenAI signals it could go public in 2027",
+        "summary": "OpenAI president Greg Brockman told the Wall Street Journal tech conference the company is IPO-ready, pointing to growing enterprise wins against rival Anthropic. An IPO would reshape Silicon Valley's power structure and force the company to answer to shareholders rather than just Sam Altman.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Palo Alto Networks makes a $500M bet on AI agent security",
+        "summary": "The cybersecurity giant is in talks to buy Clutch, a startup focused on protecting AI agents from misuse, valuing it at roughly six times its last funding round. The deal reflects growing fears that autonomous AI systems need their own security layer to keep bad actors from hijacking them.",
+        "source": "TechCrunch"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-05T08:00:02.641760+00:00",
     "headline": "Voters just slammed the brakes on AI data centers, and tech giants are scrambling",
     "bullets": [
