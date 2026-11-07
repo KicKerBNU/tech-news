@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-07T08:00:02.599457+00:00",
+    "headline": "AI's trillion-dollar dreams hit real-world headwinds\u2014and China's playing hardball",
+    "bullets": [
+      {
+        "title": "OpenAI hits $1.25 trillion valuation despite voter backlash on data centers",
+        "summary": "OpenAI just raised $11 billion in fresh funding, pushing its total value to $1.25 trillion\u2014making it one of the world's most valuable companies. The timing is notable: voters just rejected most AI data center projects nationwide, yet the company is doubling down on expansion anyway.",
+        "source": "The Verge"
+      },
+      {
+        "title": "China recruited Nvidia executive to spy on Jensen Huang",
+        "summary": "China's Ministry of State Security enlisted an executive from Megaspeed to gather intelligence on Nvidia's CEO, according to reporting by The New York Times. The move signals how geopolitical tension over AI chips is escalating into direct espionage.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Chinese AI models are now nearly as good at hacking as OpenAI's",
+        "summary": "DeepSeek and GLM\u2014open-source Chinese AI models anyone can download for free\u2014showed near-parity with OpenAI's advanced cybersecurity tool in a hacking simulation. The gap between American and Chinese AI capabilities is narrowing faster than expected.",
+        "source": "Wired"
+      },
+      {
+        "title": "Microsoft consolidating data center partnerships as AI buildout strains resources",
+        "summary": "Microsoft is cutting ties with many cloud partners and focusing investment on its own data centers as the massive costs of AI infrastructure become harder to sustain. It's a sign that even tech giants are hitting limits on how much AI infrastructure the economics can bear.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-06T08:00:03.459222+00:00",
     "headline": "OpenAI pivots to transparency as midterm backlash reshapes AI's political future",
     "bullets": [
