@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-08T08:00:03.172666+00:00",
+    "headline": "Tech's data center dream hits a wall\u2014voters and hackers are both fighting back",
+    "bullets": [
+      {
+        "title": "Chip giant Nvidia accidentally cleared sales to a shell company in China",
+        "summary": "The US government approved Nvidia's H200 AI chips for delivery to what turned out to be an empty office in China, raising questions about whether either the Commerce Department or Nvidia are actually vetting who gets these powerful machines. This is exactly the kind of oversight failure that could give China the advanced hardware it needs to close the AI gap.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Tech companies face lawsuits over child safety while rushing AI into schools",
+        "summary": "Snap, Meta, and Google are being sued for teen safety issues just as they're pushing AI tools into classrooms\u2014creating a dangerous contradiction between their own legal problems and their classroom expansion plans. Schools and parents are caught in the middle of companies trying to look responsible while racing to embed AI everywhere.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Cybersecurity firm Chainalysis hacked by AI-powered attackers",
+        "summary": "Hackers stole credentials and access tokens for all of Chainalysis's customers in a \"multifront cyberattack\" that used AI agents, proving that the cybersecurity world itself is now a target\u2014and vulnerable in new ways. If the company that helps catch crypto criminals can be breached this badly, almost anyone can.",
+        "source": "Ars Technica"
+      },
+      {
+        "title": "Election backlash puts the brakes on AI data center expansion in Texas and beyond",
+        "summary": "Voters across the country just rejected candidates pushing for massive data center buildouts, and that same wave is hitting Texas\u2014once the epicenter of AI infrastructure plans. Even as OpenAI's CFO says they'll keep spending on data centers anyway, the political ground has shifted and local communities now have real ammunition to slow or block new projects.",
+        "source": "MIT Technology Review"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-07T08:00:02.599457+00:00",
     "headline": "AI's trillion-dollar dreams hit real-world headwinds\u2014and China's playing hardball",
     "bullets": [
