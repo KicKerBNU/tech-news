@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-09T08:00:03.087675+00:00",
+    "headline": "Nvidia's CEO faces a national security crisis as Trump weighs in, while Meta's top strategist abandons ship for an AI startup",
+    "bullets": [
+      {
+        "title": "Nvidia's Jensen Huang caught in affair with suspected Chinese spy",
+        "summary": "Nvidia announced an investigation into CEO Jensen Huang's relationship with a woman recruited by China's intelligence agency to spy on him. The scandal threatens the credibility of the world's most powerful AI executive at a moment when U.S. national security officials are deeply focused on China's tech ambitions.",
+        "source": "BBC Technology"
+      },
+      {
+        "title": "Trump publicly backs Huang despite the spy scandal",
+        "summary": "President Trump defended Nvidia's CEO on Sunday even as the company's board launched a formal investigation into his affair. The move signals political protection for one of tech's most important figures, complicating how the scandal plays out internally and in Washington.",
+        "source": "Axios"
+      },
+      {
+        "title": "Meta's chief strategist jumps to AI infrastructure startup Fireworks",
+        "summary": "Dave Wehner, who shaped Meta's trillion-dollar strategy, is leaving to become CFO of Fireworks, a startup valued at $17.5 billion. The departure suggests major players see faster opportunity and autonomy in smaller, focused AI companies than in Big Tech's sprawling empires.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Amazon's home robot team is trying again with a new design",
+        "summary": "After Astro largely flopped, Amazon quietly formed a new robotics team and is hiring for an undisclosed \"new-to-world robot product.\" The move shows Amazon refuses to cede the home robot market to competitors, even after a public failure.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-08T08:00:03.172666+00:00",
     "headline": "Tech's data center dream hits a wall\u2014voters and hackers are both fighting back",
     "bullets": [
