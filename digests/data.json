@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-11T08:00:02.799861+00:00",
+    "headline": "Nvidia's CEO scandal threatens US AI dominance while regulators tighten the screws",
+    "bullets": [
+      {
+        "title": "Chinese university dodges US chip ban, raising questions about enforcement",
+        "summary": "A Chinese university purchased restricted Nvidia AI chips despite strict US export controls meant to slow China's AI progress. The discovery exposes potential loopholes in how America is trying to maintain its technological edge.",
+        "source": "Al Jazeera"
+      },
+      {
+        "title": "Nvidia CEO under investigation for alleged Chinese espionage relationship",
+        "summary": "Jensen Huang, who runs the company powering the AI boom, is being investigated by a top federal prosecutor after reports of an affair with a suspected Chinese spy. Commerce Secretary Lutnick received classified warnings about the relationship, and Republican lawmakers are demanding answers about national security risks.",
+        "source": "Semafor"
+      },
+      {
+        "title": "New York AI law puts OpenAI and Anthropic under formal government watch",
+        "summary": "OpenAI and Anthropic must now register with New York, disclose safety practices, and report critical incidents\u2014or face fines. It's the first major state-level enforcement of AI safety rules, signaling regulators are ready to police the industry.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "OpenAI buys travel startup and pivots ChatGPT toward Google-like search",
+        "summary": "OpenAI acquired Odessia, a travel platform founded by the Sonder CEO, and is rolling out new business profiles to make ChatGPT a discovery engine for finding services and products. The moves suggest OpenAI is moving beyond just answering questions toward competing with Google's core business.",
+        "source": "TechCrunch"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-10T08:00:04.123792+00:00",
     "headline": "Australia cracks down on rogue AI after government hack, while Anthropic eyes public markets",
     "bullets": [
