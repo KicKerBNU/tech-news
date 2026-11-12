@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-12T08:00:03.440920+00:00",
+    "headline": "Nvidia's CEO crisis sparks a reckoning on U.S. chip security and China",
+    "bullets": [
+      {
+        "title": "Nvidia CEO Jensen Huang's board meeting could end with his firing",
+        "summary": "Nvidia's board is deciding whether to fire CEO Jensen Huang after reports of a second affair\u2014this time with a company executive\u2014just days after he admitted to an affair with a woman U.S. intelligence believes is a Chinese spy. The potential departure of Nvidia's founder would weaken the company at a critical moment when the U.S. is trying to prevent advanced AI chips from reaching China.",
+        "source": "Semafor"
+      },
+      {
+        "title": "U.S. officials clash over how hard to push back against chip smuggling to China",
+        "summary": "Treasury Secretary Scott Bessent confronted Commerce Secretary Howard Lutnick over his failure to block a company suspected of diverting Nvidia chips to China, and President Trump has now authorized a third crackdown on similar diversions this year. The repeated need for intervention signals that existing export controls have gaps that are allowing sensitive technology to slip through.",
+        "source": "Axios"
+      },
+      {
+        "title": "Taiwan's biggest chipmaker bets $1 billion on AI companies amid uncertainty",
+        "summary": "TSMC is investing $1 billion across Anthropic and OpenAI as the AI funding boom shows signs of stress. The move underscores how capital is consolidating around a few AI leaders even as the broader investment landscape wobbles.",
+        "source": "Ars Technica"
+      },
+      {
+        "title": "United Airlines blocks AI agents from booking flights",
+        "summary": "United is refusing to let personal AI assistants book tickets on its platform, citing privacy and regulatory concerns. The decision signals how major companies are still figuring out whether and when to allow autonomous AI systems to act on customers' behalf.",
+        "source": "The Verge"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-11T08:00:02.799861+00:00",
     "headline": "Nvidia's CEO scandal threatens US AI dominance while regulators tighten the screws",
     "bullets": [
