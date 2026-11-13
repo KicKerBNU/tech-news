@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-13T08:00:02.629867+00:00",
+    "headline": "Nvidia's leadership crisis opens doors for rivals as chip smuggling debate shifts to what's technically possible",
+    "bullets": [
+      {
+        "title": "Nvidia admits it could track smuggled chips \u2014 contradicting what it told the public",
+        "summary": "Nvidia privately told a U.S. congressman that it could technically implement anti-smuggling measures on its chips, even though the company had publicly questioned whether such tracking was feasible. The revelation undercuts Nvidia's previous stance and suggests the company may have misled regulators about what's possible.",
+        "source": "MIT Technology Review"
+      },
+      {
+        "title": "Massive Microsoft outage leaves millions without email access",
+        "summary": "Outlook and related Microsoft services went down across the globe, affecting tens of thousands of users and straining the company's other systems. The outage wasn't a cyberattack, but the company has struggled to restore service, raising questions about the fragility of critical cloud infrastructure.",
+        "source": "BBC Technology"
+      },
+      {
+        "title": "Chip startup Cerebras surges on Microsoft partnership and beat earnings",
+        "summary": "Cerebras announced a major new deal with Microsoft after already securing partnerships with Amazon and Oracle, and reported stronger-than-expected quarterly revenue. The announcement signals that competition in AI chip manufacturing is intensifying as Nvidia faces leadership turmoil.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Google's new AI model gets better at messy, complicated questions",
+        "summary": "Google's latest Gemini 4 Hydrogen model improves at parsing multi-part questions, typos, and highly specific requests that typically stump AI systems. The upgrade moves Google closer to search-like capabilities that could challenge how people currently look things up.",
+        "source": "The Verge"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-12T08:00:03.440920+00:00",
     "headline": "Nvidia's CEO crisis sparks a reckoning on U.S. chip security and China",
     "bullets": [
