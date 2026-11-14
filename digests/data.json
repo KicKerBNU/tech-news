@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-11-14T08:00:03.622080+00:00",
+    "headline": "Nvidia's leadership crisis triggers ripple effects across startups, government, and the bottom line",
+    "bullets": [
+      {
+        "title": "Huang's exit could dry up billions in startup funding",
+        "summary": "Nvidia poured tens of billions into AI startups under Jensen Huang. With him departing, venture capitalists and founders are bracing for smaller checks and lower valuations on their bets. The loss of a single person's clout is reshaping how the entire AI ecosystem gets financed.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Banned Nvidia chips power China's best AI anyway",
+        "summary": "New research shows China's most advanced AI models were trained on Nvidia chips the U.S. banned from export. The export controls that Huang helped shape aren't stopping what they were supposed to stop, raising hard questions about whether the strategy works at all.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Microsoft's outage proves we're dangerously reliant on one company",
+        "summary": "Courts, Congress, and governments worldwide ground to a halt when Microsoft's email and collaboration tools went down for a day. The incident is a stark reminder that critical institutions have no backup plan when a single tech vendor fails.",
+        "source": "Axios"
+      },
+      {
+        "title": "OpenAI's AI agents can now spend your money",
+        "summary": "ChatGPT Wallet lets OpenAI's Dots agents make purchases on your behalf, rolling out today for Pro subscribers. The shift from AI that advises to AI that acts puts real financial risk in automated hands for the first time at scale.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Hackers stole thousands of Uber drivers' licenses",
+        "summary": "The ridesharing giant confirmed that hackers breached Fireworks AI, an AI cloud company, and made off with drivers' license information stored there. It's a reminder that outsourcing sensitive data to AI startups comes with hidden exposure.",
+        "source": "TechCrunch"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-13T08:00:02.629867+00:00",
     "headline": "Nvidia's leadership crisis opens doors for rivals as chip smuggling debate shifts to what's technically possible",
     "bullets": [
