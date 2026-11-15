@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-15T08:00:02.892688+00:00",
+    "headline": "AI's trust crisis deepens as Nvidia's fall reshapes power and money in tech",
+    "bullets": [
+      {
+        "title": "The board member who fired Altman says we still can't trust AI CEOs",
+        "summary": "Helen Toner, who orchestrated Sam Altman's removal from OpenAI's board, argues the industry's leaders remain unfit to police themselves. As tech companies face new scrutiny from incoming administrations, her warning cuts to the heart of a sector betting heavily on self-regulation.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Tesla's Cybercab offer has a catch buried in the fine print",
+        "summary": "Tesla is letting select customers buy its autonomous two-seater, but the terms reveal it's not truly yours to use as you wish. The details underscore how manufacturers are keeping control of the vehicles even as they hand over the keys.",
+        "source": "The Verge"
+      },
+      {
+        "title": "A robot startup backed by Eric Trump misses payroll after CEO borrowed $4.6 million",
+        "summary": "Foundation Future Industries has hit a cash crunch as its CEO used company funds to buy a home, leaving staff unpaid. The collapse raises questions about governance and due diligence in startups getting political backing.",
+        "source": "CNBC"
+      },
+      {
+        "title": "AI's four colliding crises will test whether the industry can regulate itself",
+        "summary": "Tech titans are supposed to police themselves on AI safety and data use, but a four-pronged crisis of trust\u2014involving chip smuggling, espionage concerns, job fears, and Capitol Hill skepticism\u2014is forcing the government's hand. Self-governance is crumbling in real time.",
+        "source": "Axios"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-14T08:00:03.622080+00:00",
     "headline": "Nvidia's leadership crisis triggers ripple effects across startups, government, and the bottom line",
     "bullets": [
