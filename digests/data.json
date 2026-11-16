@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-16T08:00:02.848579+00:00",
+    "headline": "Nvidia's implosion sparks government crackdown and reshapes AI's power structure",
+    "bullets": [
+      {
+        "title": "Congress tightens AI chip exports after Nvidia spy scandal",
+        "summary": "Both Democrats and Republicans are pushing to restrict how U.S. companies ship advanced AI chips abroad, directly responding to the scandal involving ex-CEO Jensen Huang and a suspected Chinese spy. The moves could reshape which countries can build competitive AI systems and where billions in revenue flows.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Nvidia's earnings under fire\u2014Treasury Secretary questions China sales",
+        "summary": "Treasury Secretary Scott Bessent is asking whether Nvidia inflated its profits through questionable sales to China and called for an outside CEO to rebuild trust. The scrutiny signals that Nvidia's accounting and leadership decisions are now a federal-level concern, not just a boardroom problem.",
+        "source": "Axios"
+      },
+      {
+        "title": "Your 401(k) took a hit from Nvidia's scandal",
+        "summary": "Nvidia's stock plunged nearly 30% in a month, wiping out retirement savings for millions of Americans who didn't realize how much of their portfolios were tied to the company. The collapse shows how concentrated wealth in a single company\u2014and its leadership crisis\u2014ripples through everyday people's finances.",
+        "source": "Axios"
+      },
+      {
+        "title": "Anthropic's $1.4 trillion IPO tests whether AI can recover its reputation",
+        "summary": "Anthropic is going public amid market turmoil, political backlash, and the Nvidia crisis, essentially betting that investors still believe in AI's future despite recent shocks. The valuation and demand will signal whether the industry can separate itself from scandal-plagued peers.",
+        "source": "Semafor"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-15T08:00:02.892688+00:00",
     "headline": "AI's trust crisis deepens as Nvidia's fall reshapes power and money in tech",
     "bullets": [
