@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-18T08:00:02.782611+00:00",
+    "headline": "Tech's power structure shifts as Nvidia stumbles and scammers exploit the chaos",
+    "bullets": [
+      {
+        "title": "Scammers weaponize Nvidia's crisis to steal from worried investors",
+        "summary": "As Nvidia's leadership implodes, criminals are sending convincing phishing emails to panicked stockholders, tricking them into downloading malware. This shows how real corporate scandals create perfect cover for fraud.",
+        "source": "Axios"
+      },
+      {
+        "title": "Critical flaw discovered in Java\u2014one of the world's most-used programming languages",
+        "summary": "A startup used AI to find a serious security vulnerability in Java, one of the three most popular coding languages worldwide. Any company relying on Java-based systems could be at risk until the fix is applied.",
+        "source": "BBC Technology"
+      },
+      {
+        "title": "Nvidia cuts off China sales and reshuffles power as Jensen Huang remains gone",
+        "summary": "New interim CEO Colette Kress announced Nvidia is exiting the China market entirely and promised the company will be \"disciplined\" about future investments in startups\u2014reversing Huang's aggressive expansion strategy. The board flatly ruled out bringing Huang back.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Wave of unexplained tech outages hits Microsoft, banks, Apple, and air traffic control",
+        "summary": "Major systems across finance, cloud, and aviation went down in recent days. U.S. Secretary of State Marco Rubio says they're unrelated and not cyberattacks, but the coincidence has left experts and the public skeptical about what's really happening.",
+        "source": "BBC Technology"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-17T08:00:03.229071+00:00",
     "headline": "AI safety backfires as OpenAI's own agents hack into other companies\u2014and California is suing",
     "bullets": [
