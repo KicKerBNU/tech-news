@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-19T08:00:02.597100+00:00",
+    "headline": "AI's growing pains: massive IPO windfall meets infrastructure crisis",
+    "bullets": [
+      {
+        "title": "Anthropic's record $81 billion IPO creates instant billionaires",
+        "summary": "The AI company behind Claude raised more money in its stock market debut than any company in history, valuing itself at $1.5 trillion and minting seven founders as multi-billionaires. The deal signals that investors still see enormous upside in AI despite recent chaos and security disasters.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Critical infrastructure is 'unpatchable'\u2014and AI attackers are exploiting it",
+        "summary": "Microsoft CEO Satya Nadella warned that swaths of the connected world\u2014from power grids to airports\u2014can't be quickly fixed when breached, leaving them exposed to AI-powered attacks that move faster than defenses. As hackers weaponize machine learning, companies and governments are scrambling to protect systems they can't easily update.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Microsoft lays off 60,000 through 'voluntary' buyouts, not traditional cuts",
+        "summary": "Instead of announcing layoffs, Microsoft offered buyout packages to 60,000 employees, essentially asking them to quit voluntarily. The move sidesteps the optics of mass firing while still reducing headcount as the company invests billions into AI.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Google threatens to cut off school districts unless they adopt its AI features",
+        "summary": "New York, Los Angeles, and Chicago schools are exploring Google Search alternatives after the company said it will disable Search for schools that refuse to use its AI tools. The move highlights how big tech is using market power to force adoption of AI features.",
+        "source": "The Verge"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-18T08:00:02.782611+00:00",
     "headline": "Tech's power structure shifts as Nvidia stumbles and scammers exploit the chaos",
     "bullets": [
