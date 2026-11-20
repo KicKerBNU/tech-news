@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-11-20T08:00:02.819410+00:00",
+    "headline": "AI's wild week: Anthropic soars while security chaos spreads, and everyone's watching the fallout",
+    "bullets": [
+      {
+        "title": "JPMorgan, Visa, Mastercard hit in major breach as cyber paranoia peaks",
+        "summary": "A third-party hack exposed customer data at three financial giants, intensifying public fear after weeks of unexplained tech outages across airlines, banks, and core services. When systems fail this often and this visibly, trust erodes fast\u2014and that hits your wallet and security first.",
+        "source": "Semafor"
+      },
+      {
+        "title": "Meta's AI boom is wrecking its climate promises",
+        "summary": "The company's greenhouse gas emissions jumped 45% last year as it built out massive AI data centers, forcing it to rethink its net-zero goal for 2030. AI's invisible cost\u2014the electricity and carbon footprint of training and running these systems\u2014is now too big to ignore.",
+        "source": "Axios"
+      },
+      {
+        "title": "Trump replaces cyber security chief amid intelligence concerns",
+        "summary": "The administration swapped out National Cyber Director Sean Cairncross and appointed Pentagon official Kirsten Davies to the role. The timing matters: it's happening as Congress pushes to tighten chip export controls to China and investigations swirl around leadership at Nvidia.",
+        "source": "Axios"
+      },
+      {
+        "title": "Apple is building its own AI agent to run your Mac",
+        "summary": "The iPhone maker is developing AI that can control your computer directly, putting it in direct competition with Claude, OpenAI's new Dots, and Meta's agents. Apple is betting that building AI deeply into its hardware gives it an edge competitors can't match.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Some developers are losing joy in their work as AI makes coding too easy",
+        "summary": "AI coding tools are making engineers faster and more productive, but developers are telling CNBC the craft has lost its fun\u2014the struggle and problem-solving that made the work feel meaningful. Efficiency gains are real, but so is the creeping sense that the work is becoming empty.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-19T08:00:02.597100+00:00",
     "headline": "AI's growing pains: massive IPO windfall meets infrastructure crisis",
     "bullets": [
