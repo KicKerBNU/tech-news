@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-21T08:00:05.843620+00:00",
+    "headline": "AI's power crunch hits hard: governments scramble to fund it, Trump taxes companies moving it abroad, and private data is leaking everywhere",
+    "bullets": [
+      {
+        "title": "Trump threatens massive tax on AI data centers built outside the US",
+        "summary": "President Trump said he'll either block U.S. companies from building AI data centers overseas or slap a \"tremendous tax\" on them if they do. This marks a major shift to keep AI infrastructure\u2014and the jobs and power it demands\u2014inside America, even as cities like Phoenix struggle with the strain.",
+        "source": "Axios"
+      },
+      {
+        "title": "Transcription firm used by police and tech giants exposed confidential customer data with no password",
+        "summary": "A cloud server holding police interview recordings, bodycam footage, and other sensitive transcriptions sat publicly accessible online\u2014a simple but catastrophic security lapse. The breach exposes how fragile the security is for data flowing through the AI supply chain.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Researcher proves AI systems leak private user data at alarming rates",
+        "summary": "A test planting 2 million hidden, trackable secrets into the AI supply chain revealed that supposedly private information doesn't stay private\u2014it flows through models and leaks out. This is a wake-up call that confidentiality promises in AI are largely hollow.",
+        "source": "Ars Technica"
+      },
+      {
+        "title": "OpenAI tightens control over who can resell its AI models",
+        "summary": "OpenAI now requires all third-party platforms offering access to its technology to get the company's approval first, centralizing power over its entire ecosystem. The move signals how much control one company wants over the AI tools everyone else depends on.",
+        "source": "Semafor"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-20T08:00:02.819410+00:00",
     "headline": "AI's wild week: Anthropic soars while security chaos spreads, and everyone's watching the fallout",
     "bullets": [
