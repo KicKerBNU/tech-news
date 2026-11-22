@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-22T08:00:03.610516+00:00",
+    "headline": "AI's reality check: Anthropic goes public while markets tumble, UN gives up on killer robots, and Hollywood considers selling your face",
+    "bullets": [
+      {
+        "title": "Anthropic pulls off record IPO despite market meltdown",
+        "summary": "The AI safety startup behind Claude went public on Nasdaq as tech stocks cratered and investor sentiment soured. The company bet its future on the public markets at precisely the worst moment\u2014a sign either of confidence or desperation depending who you ask.",
+        "source": "CNBC"
+      },
+      {
+        "title": "UN fails to agree on rules for autonomous weapons",
+        "summary": "Diplomats in Geneva couldn't reach consensus on how to regulate military AI systems that make kill decisions without human input. The deadlock leaves a critical global governance gap as these weapons develop faster than policy can follow.",
+        "source": "The Verge"
+      },
+      {
+        "title": "Hollywood actors now licensing their AI faces to startups",
+        "summary": "An actor has licensed his digital likeness to a microdrama company in a trend already common in China. The long-term consequences for acting jobs, consent, and deepfake liability remain untested and troubling.",
+        "source": "TechCrunch"
+      },
+      {
+        "title": "Kenya's new internet metering law sparks privacy alarm",
+        "summary": "Kenya's proposed bill to charge users per gigabyte of data has triggered warnings from privacy advocates about surveillance and rising costs for already-expensive connectivity. It's a bellwether for how governments may control internet access in the Global South.",
+        "source": "Al Jazeera"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-21T08:00:05.843620+00:00",
     "headline": "AI's power crunch hits hard: governments scramble to fund it, Trump taxes companies moving it abroad, and private data is leaking everywhere",
     "bullets": [
