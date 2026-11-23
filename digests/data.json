@@ -1,5 +1,36 @@
 [
   {
+    "timestamp": "2026-11-23T08:00:02.974381+00:00",
+    "headline": "AI solves a 170-year math mystery, but the economy's getting nervous",
+    "bullets": [
+      {
+        "title": "Claude cracks Riemann Hypothesis\u2014a problem mathematicians couldn't solve since 1859",
+        "summary": "Two independent teams verified that an Anthropic mathematician used Claude (an AI assistant) to prove the Riemann Hypothesis, one of math's biggest unsolved puzzles. This signals AI is now competing at the frontier of human knowledge\u2014and winning.",
+        "source": "Semafor"
+      },
+      {
+        "title": "Traders bet the AI bubble may be overblown despite Anthropic's record IPO",
+        "summary": "Markets are pulling back expectations of a major Fed interest rate hike in December, even as Anthropic just had a blockbuster IPO and tech earnings came in strong. Wall Street is signaling real doubt that AI hype will translate into sustained profits.",
+        "source": "Semafor"
+      },
+      {
+        "title": "Eric Trump's robot startup cutting employee health benefits as cash dries up",
+        "summary": "Foundation (backed by Eric Trump) is slashing worker benefits and hunting for emergency loans while waiting on a delayed $150 million investment from South Korea. The company's cash crunch reveals the real costs behind flashy AI robotics startups.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Claude is leaking developer secrets through a convenience feature",
+        "summary": "Security researchers found that Claude Code's \"Don't Ask Again\" button stores sensitive credentials locally on developers' machines, and those secrets ended up exposed in public repositories. A reminder that even helpful AI features can quietly become security disasters.",
+        "source": "InfoQ"
+      },
+      {
+        "title": "Intelligence chief now controls both spycraft and U.S. cyber policy",
+        "summary": "Jay Clayton, the Director of National Intelligence, is taking on the role of acting national cyber director while awaiting Senate confirmation of a permanent replacement. The move consolidates power over America's digital defense at a moment of rising tech risks.",
+        "source": "Axios"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-22T08:00:03.610516+00:00",
     "headline": "AI's reality check: Anthropic goes public while markets tumble, UN gives up on killer robots, and Hollywood considers selling your face",
     "bullets": [
