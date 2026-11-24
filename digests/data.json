@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-24T08:00:02.800891+00:00",
+    "headline": "Trump brings back Nvidia's CEO\u2014and sparks a national security showdown",
+    "bullets": [
+      {
+        "title": "Huang returns to Nvidia despite spy scandal\u2014Trump intervened",
+        "summary": "Jensen Huang is back as Nvidia CEO after Trump pushed the board to reinstate him, overruling concerns about his ties to alleged Chinese espionage. The move has Congress and state governors furious, warning that personal loyalty to the president now trumps security vetting for one of America's most critical tech leaders.",
+        "source": "Semafor"
+      },
+      {
+        "title": "US blacklists Megaspeed chip firm over Nvidia scandal fallout",
+        "summary": "The Commerce Department is banning US companies from selling chips to Singapore-based Megaspeed without a license, after the firm was accused of funneling AI chips to China through executives tied to Huang. The move signals the government is tightening controls on who can access cutting-edge hardware.",
+        "source": "BBC Technology"
+      },
+      {
+        "title": "Signal, airlines, and banks now blocking AI agents over safety fears",
+        "summary": "Privacy app Signal has joined United Airlines and JPMorgan Chase in restricting how AI agents can operate on their platforms, citing customer risks. The pattern suggests companies are pumping the brakes on autonomous AI as real-world problems pile up.",
+        "source": "CNBC"
+      },
+      {
+        "title": "CrowdStrike buys Zscaler for $44B as AI hacking fears surge",
+        "summary": "The two cybersecurity giants are merging, betting that companies will pay massive premiums to defend against AI-powered attacks. The deal signals that corporate fears about AI-driven breaches are driving serious capital flows in security.",
+        "source": "Semafor"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-23T08:00:02.974381+00:00",
     "headline": "AI solves a 170-year math mystery, but the economy's getting nervous",
     "bullets": [
