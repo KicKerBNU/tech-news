@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-25T08:00:03.041673+00:00",
+    "headline": "AI's money problems are starting to show, even as Nvidia's CEO makes a dramatic comeback",
+    "bullets": [
+      {
+        "title": "Big Tech can't easily borrow for AI anymore",
+        "summary": "Banks and lenders are getting pickier about lending to tech companies spending huge sums on AI infrastructure, making it harder for companies to fund the AI buildout. This could slow down the entire race to build bigger AI systems.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Inside Anthropic: employees say new AI models are too dangerous to release",
+        "summary": "More than two dozen employees at Anthropic and OpenAI believe their unreleased AI models have become so powerful that letting them loose could be unsafe. This suggests the rapid push to build ever-larger AI systems is bumping up against real safety limits.",
+        "source": "Axios"
+      },
+      {
+        "title": "Microsoft's massive cloud outage exposed hidden fragility",
+        "summary": "Internal memos from Microsoft reveal the company declared a \"Code Red\" emergency during a historic cloud outage, exposing how quickly things can spiral when systems fail. As companies rush to pile AI workloads onto the cloud, these kinds of cascading failures could get worse.",
+        "source": "Ars Technica"
+      },
+      {
+        "title": "UK warns companies: AI-powered hackers are exploiting old, lazy security",
+        "summary": "British cyber officials say that attackers using AI tools are systematically finding and exploiting basic security mistakes that companies have ignored for years. The message: companies need to fix their foundations before AI hacking gets worse.",
+        "source": "TechCrunch"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-24T08:00:02.800891+00:00",
     "headline": "Trump brings back Nvidia's CEO\u2014and sparks a national security showdown",
     "bullets": [
