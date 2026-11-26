@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-26T08:00:02.632652+00:00",
+    "headline": "AI's governance crisis deepens as regulators and rating agencies lose confidence in the industry",
+    "bullets": [
+      {
+        "title": "Democrats demand AI safety guardrails as company insiders admit models are too risky to release",
+        "summary": "Prominent Democrats are calling for new restrictions on AI development after reports that employees at OpenAI and Anthropic fear their most powerful models cannot be safely released to the public. The push signals growing political pressure to slow AI rollout before incidents force regulators' hands.",
+        "source": "Axios"
+      },
+      {
+        "title": "S&P threatens to downgrade Nvidia's credit rating over governance risks",
+        "summary": "Credit rating agency S&P Global flagged \"rising\" management and governance risk at Nvidia, signaling it may cut the company's rating by one notch. The warning reflects investor concern about Nvidia's leadership concentration and decision-making as the company faces mounting national security scrutiny.",
+        "source": "CNBC"
+      },
+      {
+        "title": "SpaceX wins FCC approval to launch 1 million AI-equipped satellites into orbit",
+        "summary": "The FCC authorized SpaceX to deploy up to 1 million data center satellites as part of its \"Starmind\" initiative, marking an aggressive move to build computing power in space. The move reflects how AI infrastructure competition is pushing companies to explore unconventional deployment options.",
+        "source": "The Verge"
+      },
+      {
+        "title": "US tightens restrictions on Nvidia chips sold to China, forcing chip resellers to find new buyers",
+        "summary": "New U.S. export rules have tightened remote access to advanced AI chips for China-linked customers, forcing Nvidia GPU resellers to scramble for alternative buyers. The move escalates the tech cold war and could reshape who gets access to cutting-edge AI hardware.",
+        "source": "CNBC"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-25T08:00:03.041673+00:00",
     "headline": "AI's money problems are starting to show, even as Nvidia's CEO makes a dramatic comeback",
     "bullets": [
