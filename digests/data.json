@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-27T08:00:02.563395+00:00",
+    "headline": "SAP cuts 10,000 jobs for AI pivot while Nvidia's export curbs ripple across Asia",
+    "bullets": [
+      {
+        "title": "SAP slashing 10,000 jobs to bet everything on AI",
+        "summary": "The German software giant is eliminating at least 10,000 positions as it restructures around artificial intelligence. For enterprise workers, this signals a painful reshuffling across the industry\u2014older roles disappearing, new ones uncertain.",
+        "source": "CNBC"
+      },
+      {
+        "title": "Nvidia freezes chip shipments to Southeast Asia",
+        "summary": "The chip maker has halted orders to Malaysia, Singapore, Thailand, and Indonesia, enforcing tighter U.S. export controls. This could starve the region's AI ambitions and force customers to scramble for alternatives or workarounds.",
+        "source": "Semafor"
+      },
+      {
+        "title": "Android developers forced to expose home addresses publicly",
+        "summary": "Google is requiring independent app makers to publish their phone number and address on the Play Store starting next year as part of a transparency push. Small developers worry this opens them to harassment, stalking, or worse.",
+        "source": "The Verge"
+      },
+      {
+        "title": "OpenAI users face new usage caps as Chat and Work merge",
+        "summary": "Heavy ChatGPT subscribers will hit limits sooner once OpenAI combines its Chat and Work experiences into one meter. Paying users who rely on the tool for work may need to adjust habits or pay more.",
+        "source": "TechCrunch"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-26T08:00:02.632652+00:00",
     "headline": "AI's governance crisis deepens as regulators and rating agencies lose confidence in the industry",
     "bullets": [
