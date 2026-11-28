@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-11-28T08:00:02.804794+00:00",
+    "headline": "AI shopping bots hit a wall as retailers fight back; Anthropic eyes the IPO market",
+    "bullets": [
+      {
+        "title": "AI shopping agents blocked by major retailers",
+        "summary": "OpenAI, Meta, Google, and others built AI agents to help people shop online, but Amazon and a growing number of retailers are blocking them from accessing their sites. It's a sign that the promise of AI automation may run into real-world resistance when it threatens a company's control over how customers browse and buy.",
+        "source": "CNBC"
+      },
+      {
+        "title": "UK pension services still offline after suspected cyber attack",
+        "summary": "The Department for Work and Pensions has been down for days after what may have been a hacker breach, leaving millions without access to benefit information. The government won't confirm the attack, raising questions about transparency when critical social services go dark.",
+        "source": "BBC Technology"
+      },
+      {
+        "title": "Anthropic launches IPO roadshow",
+        "summary": "The AI safety company is hitting the investment circuit ahead of a potential public offering, joining OpenAI's rivals in the race to go public. It signals that AI startups are moving from hype to serious capital markets scrutiny.",
+        "source": "Anthropic News"
+      },
+      {
+        "title": "Israel bets billions on data centers to become an AI superpower",
+        "summary": "The country is fast-tracking infrastructure to process data and boost military tech, treating AI dominance as a national security priority. It reflects how AI infrastructure is becoming geopolitical competition, not just a tech business.",
+        "source": "Al Jazeera"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-27T08:00:02.563395+00:00",
     "headline": "SAP cuts 10,000 jobs for AI pivot while Nvidia's export curbs ripple across Asia",
     "bullets": [
